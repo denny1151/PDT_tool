@@ -79,7 +79,9 @@ async function exchangeHistory(league) {
         if (payment !== chaosId && payment !== divineId) continue;
         if (!positive(volume[item]) || !positive(volume[payment])) continue;
         const quote = prices.get(item) ?? {};
-        quote[payment === chaosId ? 'chaos' : 'divine'] = volume[payment] / volume[item];
+        const unit = payment === chaosId ? 'chaos' : 'divine';
+        quote[unit] = volume[payment] / volume[item];
+        quote[`${unit}Volume`] = volume[item];
         prices.set(item, quote);
       }
     }
@@ -131,7 +133,9 @@ const items = catalog.map(({ marketId, alternativeIds, ...item }) => {
   const activeIds = alternativeIds?.filter((id) => history?.prices.has(id));
   const id = marketId ?? (activeIds?.length === 1 ? activeIds[0] : undefined);
   const pair = history?.prices.get(id);
-  return { ...item, ...reference.get(nameKey(item.name)), chaosPerItem: pair?.chaos, divinePerItem: pair?.divine };
+  return { ...item, ...reference.get(nameKey(item.name)),
+    chaosPerItem: pair?.chaos, divinePerItem: pair?.divine,
+    chaosVolume: pair?.chaosVolume, divineVolume: pair?.divineVolume };
 });
 await writeFile(limitsPath, JSON.stringify(Object.fromEntries(Object.entries(sources).map(([name, source]) => [name, source.retryAt]))));
 const snapshot = {

@@ -43,9 +43,10 @@ function batchRoute(quantity, buyPrice, sellPrice, buyRate, sellRate, buyUnit, s
   return { buy, sell, buyUnit, sellUnit, gross, roi: gross / cost * 100 };
 }
 
-function withQuotes(item, divineRate, quantity) {
+function withQuotes(item, divineRate, quantity, minimum) {
   const { chaosPerItem: chaos, divinePerItem: divine } = item;
   if (!(chaos > 0 && divine > 0 && divineRate > 0)) return item;
+  if (!(item.chaosVolume >= minimum && item.divineVolume >= minimum)) return { ...item, thinVolume: true };
   const chaosRoute = batchRoute(quantity, chaos, divine, 1, divineRate, 'chaos', 'divine');
   const divineRoute = batchRoute(quantity, divine, chaos, divineRate, 1, 'divine', 'chaos');
   const bestRoute = (chaosRoute?.gross ?? -Infinity) >= (divineRoute?.gross ?? -Infinity) ? chaosRoute : divineRoute;
@@ -56,7 +57,7 @@ function quoteCell(row, route, buyUnit, sellUnit) {
   const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '');
   if (!route) return;
   const profit = document.createElement('small');
-  profit.textContent = `估計毛利 ${format(route.gross, ' C')} · 報酬率 ${format(route.roi, '%')}`;
+  profit.textContent = `歷史試算 ${format(route.gross, ' C')} · ${format(route.roi, '%')}`;
   profit.className = tone(route.gross);
   td.append(profit);
 }
@@ -66,11 +67,13 @@ function renderRows() {
   const category = $('category').value;
   const target = Math.max(0, $('target').valueAsNumber || 0) / 100;
   const quantity = $('batch-size').valueAsNumber;
+  const inputMinimum = $('min-volume').valueAsNumber;
+  const minimum = Math.max(quantity, Number.isSafeInteger(inputMinimum) && inputMinimum >= 1 ? inputMinimum : 5);
   const validBatch = Number.isSafeInteger(quantity) && quantity >= 1 && $('batch-size').validity.valid;
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
     [item.name, item.nameZh].some((name) => name?.toLowerCase().includes(query)))
-    .map((item) => validBatch ? withQuotes(item, snapshot.divine, quantity) : item);
+    .map((item) => validBatch ? withQuotes(item, snapshot.divine, quantity, minimum) : item);
 
   matches.sort((a, b) => {
     const left = a[sort];
@@ -104,6 +107,13 @@ function renderRows() {
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
     cell(row, Number.isFinite(item.spread) ? format(item.spread) : '').className = tone(item.spread);
+    const hasVolumes = item.chaosVolume > 0 || item.divineVolume > 0;
+    const volumes = cell(row, hasVolumes ? `${format(item.chaosVolume)} / ${format(item.divineVolume)}` : '');
+    if (item.thinVolume) {
+      const note = document.createElement('small');
+      note.textContent = `未達 ${format(minimum)} 件`;
+      volumes.append(note);
+    }
     cell(row, format(item.volume));
     const button = document.createElement('button');
     button.type = 'button';
@@ -113,7 +123,7 @@ function renderRows() {
     row.insertCell().append(button);
   }
   if (!matches.length) {
-    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 10;
+    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 11;
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
   $('prev').disabled = page === 0;
@@ -122,11 +132,11 @@ function renderRows() {
 
 function selectItem(item, quantity) {
   const route = item.bestRoute;
-  const note = route ? '已帶入整批估算，可改填掛單總價' : `每件參考賣價 ${format(item.chaos, ' C')}`;
+  const note = '填入弗斯特目前的整批買賣總價';
   $('selected').textContent = [item.nameZh ?? item.name, note].join(' · ');
-  controls.buy.value = route?.buy ?? '';
+  controls.buy.value = '';
   controls.buyUnit.value = route?.buyUnit ?? 'chaos';
-  controls.sell.value = route?.sell ?? '';
+  controls.sell.value = '';
   controls.sellUnit.value = route?.sellUnit ?? 'chaos';
   controls.quantity.value = quantity;
   controls.fee.value = 0;
@@ -208,7 +218,7 @@ async function refresh() {
   const button = $('refresh');
   button.disabled = true;
   try {
-    const response = await fetch('./data/market.json?v=faustus', { cache: 'no-cache' });
+    const response = await fetch('./data/market.json?v=trade-volume', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (!data.sources || !Array.isArray(data.categories)) throw new Error('Stale market snapshot');
@@ -234,7 +244,7 @@ async function refresh() {
   }
 }
 
-for (const field of ['category', 'search', 'target', 'batch-size']) {
+for (const field of ['category', 'search', 'target', 'batch-size', 'min-volume']) {
   $(field).addEventListener('input', () => { page = 0; renderRows(); });
 }
 for (const heading of headings) {
