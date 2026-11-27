@@ -5,11 +5,48 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+
+concurrency:
+  group: public-market-blob
+  cancel-in-progress: false
 
 jobs:
   refresh:
-    uses: ./.github/workflows/pages.yml
-    with:
-      public-refresh: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache
+          key: poe-market-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            poe-market-blob-
+            poe-market-
+      - id: cooldown
+        run: |
+          now=$(date +%s)
+          last=$(cat .cache/public-refresh-at 2>/dev/null || true)
+          if [[ "$last" =~ ^[0-9]+$ ]] && (( now - last < 600 )); then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "A public refresh already ran within 10 minutes." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - if: steps.cooldown.outputs.skip != 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - if: steps.cooldown.outputs.skip != 'true'
+        run: node scripts/refresh-market.mjs
+      - if: steps.cooldown.outputs.skip != 'true'
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+          PDT_MARKET_SNAPSHOT_URL: ${{ vars.PDT_MARKET_SNAPSHOT_URL }}
+        run: node scripts/publish-market-blob.mjs
+      - if: steps.cooldown.outputs.skip != 'true'
+        run: date +%s > .cache/public-refresh-at
+      - if: steps.cooldown.outputs.skip != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache
+          key: poe-market-blob-${{ github.run_id }}-${{ github.run_attempt }}

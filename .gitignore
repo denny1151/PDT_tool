@@ -1,4 +1,5 @@
 .cache/
+node_modules/
 site/data/market.json
 site/data/refresh-api.json
 backend/.vercel/

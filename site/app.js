@@ -307,9 +307,10 @@ function renderSources() {
 }
 
 async function readMarketSnapshot(version = 'gold-efficiency') {
-  const response = await fetch(`./data/market.json?v=${version}`, {
-    cache: 'no-cache', signal: AbortSignal.timeout(10_000),
-  });
+  const { marketUrl } = await marketConfig;
+  const url = new URL(marketUrl || './data/market.json', document.baseURI);
+  url.searchParams.set('v', version);
+  const response = await fetch(url, { cache: 'no-cache', signal: AbortSignal.timeout(10_000) });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const data = await response.json();
   if (!data.sources || !Array.isArray(data.categories) || !Number.isFinite(Date.parse(data.fetchedAt))) {
@@ -348,10 +349,9 @@ async function refresh(data) {
     renderRows();
   }
 }
-const publicRefreshUrl = fetch('./data/refresh-api.json', { cache: 'no-cache' })
-  .then(async (response) => response.ok ? (await response.json()).url : '')
-  .then((url) => /^https:\/\/[a-z0-9-]+\.vercel\.app\/api\/refresh$/.test(url) ? url : '')
-  .catch(() => '');
+const marketConfig = fetch('./data/refresh-api.json', { cache: 'no-cache', signal: AbortSignal.timeout(10_000) })
+  .then(async (response) => response.ok ? await response.json() : {})
+  .catch(() => ({}));
 
 function showDispatchStatus(message, runId) {
   const status = $('dispatch-status');
@@ -380,7 +380,7 @@ async function waitForPublishedSnapshot(runId, requestedAt) {
           return;
         }
         earliestSnapshot = Date.parse(run.created_at) || requestedAt;
-        showDispatchStatus('抓價完成，正在等待 Pages 提供新快照…', runId);
+        showDispatchStatus('抓價完成，正在讀取新快照…', runId);
       } else if ([403, 429].includes(response?.status)) {
         earliestSnapshot = requestedAt;
       }
@@ -462,9 +462,9 @@ async function dispatchMarket() {
 
 $('dispatch').addEventListener('click', async () => {
   $('dispatch').disabled = true;
-  const url = await publicRefreshUrl;
+  const { url } = await marketConfig;
   $('dispatch').disabled = false;
-  if (url) requestPublicRefresh(url);
+  if (/^https:\/\/[a-z0-9-]+\.vercel\.app\/api\/refresh$/.test(url)) requestPublicRefresh(url);
   else if (dispatchToken) dispatchMarket();
   else $('dispatch-dialog').showModal();
 });
