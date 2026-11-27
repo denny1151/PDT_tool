@@ -41,6 +41,16 @@ button:disabled { opacity: .48; cursor: default; }
 .market-guide dl { margin: .1rem .75rem .85rem; line-height: 1.6; }
 .market-guide dt { margin-top: .6rem; font-weight: 600; }
 .market-guide dd { margin: .15rem 0 0; color: var(--muted); }
+.candidate-grid, .quote-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: .8rem; padding: 0 1rem 1rem; }
+.candidate-grid article, .quote-results article { min-width: 0; padding: .8rem; border: 1px solid var(--line); border-radius: .45rem; overflow-wrap: anywhere; }
+.candidate-grid h3, .quote-results h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.candidate-grid p { color: var(--muted); font-size: .875rem; }
+.candidate-grid label { grid-template-columns: auto minmax(0, 8rem); align-items: center; }
+.candidate-grid ol { margin: .65rem 0 0; padding-left: 1.4rem; }
+.candidate-grid li { padding: .5rem 0; }
+.candidate-grid li + li { border-top: 1px solid var(--line); }
+.candidate-grid li button { margin: .2rem 0; text-align: left; }
+.candidate-grid li small, .quote-results small { display: block; margin-top: .25rem; }
 .market-sort { display: none; }
 .market-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th, td { text-align: right; border-top: 1px solid var(--line); padding: .65rem .7rem; overflow-wrap: anywhere; }

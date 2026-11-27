@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
-  <link rel="stylesheet" href="style.css?v=gold-efficiency">
-  <script type="module" src="app.js?v=gold-efficiency"></script>
+  <link rel="stylesheet" href="style.css?v=trade-desk">
+  <script type="module" src="app.js?v=trade-desk"></script>
 </head>
 <body>
   <main>
@@ -17,6 +17,15 @@
       <article><span>目前聯盟</span><strong id="league">—</strong></article>
       <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong><small id="rate-source"></small></article>
       <article><span>GGG 小時成交均價 · 混沌石／神聖石</span><strong id="history">—</strong><small id="history-time"></small></article>
+    </section>
+    <section class="panel" id="candidates" aria-labelledby="candidate-heading">
+      <div class="section-head">
+        <div><h2 id="candidate-heading">優先查價</h2><p id="candidate-time" role="status">讀取行情快照…</p></div>
+      </div>
+      <div class="candidate-grid">
+        <article><h3>整批毛利最高</h3><p>以整批可賺的 C 排序。</p><ol id="gross-candidates"></ol></article>
+        <article><h3>每千金幣毛利最高</h3><label>金幣預算<input id="gold-budget" type="number" min="0" step="1" placeholder="不限"></label><ol id="gold-candidates"></ol></article>
+      </div>
     </section>
     <section class="panel market" aria-labelledby="market-heading">
       <div class="section-head">
@@ -47,7 +56,7 @@
           <dt>歷史毛利代表什麼？</dt>
           <dd>兩條路線中較高的整批毛利，折成 C，未扣費用。例如 1,771 C 買、13 D 賣，按 1 D = 156.2 C，毛利為 259.6 C。</dd>
           <dt>毛利／1k 金幣怎麼算？</dt>
-          <dd>用同一條路線的歷史毛利 ÷ 估算金幣 × 1,000。買入時按收到的物品數計費，賣出時按收到的 C 或 D 數計費。兩筆費用取整後相加，實際費用看弗斯特。</dd>
+          <dd>各路線分別用歷史毛利 ÷ 估算金幣 × 1,000，取效率最高的一條。買入時按收到的物品數計費，賣出時按收到的 C 或 D 數計費。兩筆費用取整後相加，實際費用看弗斯特。</dd>
           <dt>為什麼有些價差留白？</dt>
           <dd>可能缺任一交易對、成交件數未達門檻，或整批賣不到 1 顆通貨。每批件數留空時，會用能同時換到至少 1 C、1 D 的最小批量試算。</dd>
           <dt>「歷史」是哪個小時？</dt>
@@ -71,23 +80,22 @@
       <div class="pagination"><button id="prev" type="button">上一頁</button><span id="page"></span><button id="next" type="button">下一頁</button></div>
     </section>
     <section class="panel" id="calculator" aria-labelledby="calc-heading">
-      <div class="section-head"><div><h2 id="calc-heading">交易試算</h2><p id="selected">可直接填入遊戲內查到的買賣價。</p></div></div>
+      <div class="section-head"><div><h2 id="calc-heading">弗斯特實價試算</h2><p id="selected">可先從候選排行選品項。</p></div><a href="#candidates">回候選排行</a></div>
+      <p class="hint">填同一批件數的整數總價。沒有報價的欄位留空，會比較其餘可用的路線。</p>
       <form id="quotes" class="filters quotes">
-        <label>整批買入總價<input name="buy" type="number" min="1" step="1" placeholder="整數顆數"></label>
-        <label>買入幣別<select name="buyUnit"><option value="chaos">混沌石 (C)</option><option value="divine">神聖石 (D)</option></select></label>
-        <label>整批賣出總價<input name="sell" type="number" min="1" step="1" placeholder="整數顆數"></label>
-        <label>賣出幣別<select name="sellUnit"><option value="chaos">混沌石 (C)</option><option value="divine">神聖石 (D)</option></select></label>
         <label>整批物品件數<input name="quantity" type="number" min="1" step="1" value="1"></label>
-        <label>匯率覆寫 (C / D)<input name="rate" type="number" min="0" step="any" placeholder="使用參考匯率"></label>
-        <label>其他成本折合 (C)<input name="fee" type="number" min="0" step="any" value="0"></label>
-        <label>總金幣費用<input name="gold" type="number" min="0" step="1" placeholder="選填"></label>
+        <label>1 D 可換幾 C<input name="rate" type="number" min="0.000001" step="any" placeholder="使用參考匯率"></label>
+        <label>其他成本（折合 C）<input name="fee" type="number" min="0" step="any" value="0"></label>
+        <label>用 C 買要付幾 C<input name="buyChaos" type="number" min="1" step="1"></label>
+        <label>用 D 買要付幾 D<input name="buyDivine" type="number" min="1" step="1"></label>
+        <label>賣成 C 可收幾 C<input name="sellChaos" type="number" min="1" step="1"></label>
+        <label>賣成 D 可收幾 D<input name="sellDivine" type="number" min="1" step="1"></label>
+        <label>買入金幣費<input name="buyGold" type="number" min="0" step="1" placeholder="留空估算"></label>
+        <label>賣成 C 金幣費<input name="sellChaosGold" type="number" min="0" step="1" placeholder="留空估算"></label>
+        <label>賣成 D 金幣費<input name="sellDivineGold" type="number" min="0" step="1" placeholder="留空估算"></label>
       </form>
-      <div class="results" aria-live="polite">
-        <div><span>整批毛利</span><strong id="gross">—</strong><small id="gross-per-item"></small></div>
-        <div><span>淨利</span><strong id="net">—</strong></div>
-        <div><span>報酬率</span><strong id="roi">—</strong></div>
-        <div><span>毛利 / 1k 金幣</span><strong id="gold-yield">—</strong></div>
-      </div>
+      <p class="hint" id="quote-summary" role="status">至少填一種買入和一種賣出報價。</p>
+      <div class="quote-results" id="quote-results"></div>
     </section>
     <footer><a href="https://poedb.tw/tw/Currency_Exchange">流亡編年史品項清單</a><a href="https://repoe-fork.github.io/">RePoE 物品 ID</a><a href="https://poe.ninja/docs/api">poe.ninja 參考價</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG 成交資料</a><span>非官方粉絲工具。遊戲資料 © Grinding Gear Games。</span></footer>
   </main>
