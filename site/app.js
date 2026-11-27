@@ -306,14 +306,24 @@ function renderSources() {
   show();
 }
 
-async function refresh() {
+async function readMarketSnapshot(version = 'gold-efficiency') {
+  const response = await fetch(`./data/market.json?v=${version}`, {
+    cache: 'no-cache', signal: AbortSignal.timeout(10_000),
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const data = await response.json();
+  if (!data.sources || !Array.isArray(data.categories) || !Number.isFinite(Date.parse(data.fetchedAt))) {
+    throw new Error('Invalid market snapshot');
+  }
+  return data;
+}
+
+async function refresh(data) {
   const button = $('refresh');
   button.disabled = true;
   try {
-    const response = await fetch('./data/market.json?v=gold-efficiency', { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    if (!data.sources || !Array.isArray(data.categories)) throw new Error('Stale market snapshot');
+    data ??= await readMarketSnapshot();
+    if (snapshot && Date.parse(data.fetchedAt) < Date.parse(snapshot.fetchedAt)) return;
     snapshot = data;
     const picked = $('category').value;
     $('category').replaceChildren(option('all', '全部'), ...snapshot.categories.map((category) => option(category, category)));
@@ -343,31 +353,69 @@ const publicRefreshUrl = fetch('./data/refresh-api.json', { cache: 'no-cache' })
   .then((url) => /^https:\/\/[a-z0-9-]+\.vercel\.app\/api\/refresh$/.test(url) ? url : '')
   .catch(() => '');
 
+function showDispatchStatus(message, runId) {
+  const status = $('dispatch-status');
+  status.textContent = message;
+  if (!Number.isSafeInteger(runId)) return;
+  const link = document.createElement('a');
+  link.href = `https://github.com/denny1151/PDT_tool/actions/runs/${runId}`;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = '查看進度';
+  status.append(' ', link);
+}
+
+async function waitForPublishedSnapshot(runId, requestedAt) {
+  const deadline = Date.now() + 240_000;
+  let earliestSnapshot = Number.isSafeInteger(runId) ? undefined : requestedAt;
+  while (Date.now() < deadline) {
+    if (earliestSnapshot === undefined) {
+      const response = await fetch(`https://api.github.com/repos/denny1151/PDT_tool/actions/runs/${runId}`, {
+        cache: 'no-cache', signal: AbortSignal.timeout(8_000),
+      }).catch(() => null);
+      const run = response?.ok ? await response.json().catch(() => null) : null;
+      if (run?.status === 'completed') {
+        if (run.conclusion !== 'success') {
+          showDispatchStatus('抓價未完成，保留目前的行情。', runId);
+          return;
+        }
+        earliestSnapshot = Date.parse(run.created_at) || requestedAt;
+        showDispatchStatus('抓價完成，正在等待 Pages 提供新快照…', runId);
+      } else if ([403, 429].includes(response?.status)) {
+        earliestSnapshot = requestedAt;
+      }
+    }
+    if (earliestSnapshot !== undefined) {
+      const data = await readMarketSnapshot(Date.now()).catch(() => null);
+      if (data && Date.parse(data.fetchedAt) >= earliestSnapshot) {
+        await refresh(data);
+        showDispatchStatus('已載入最新行情。', runId);
+        return;
+      }
+    }
+    await new Promise((resolve) => setTimeout(resolve, 6_000));
+  }
+  showDispatchStatus('等待新快照逾時。發布後可重讀快照。', runId);
+}
+
 async function requestPublicRefresh(url) {
   const button = $('dispatch');
   const status = $('dispatch-status');
   button.disabled = true;
   status.hidden = false;
   status.textContent = '正在請求抓價…';
+  const requestedAt = Date.now();
   try {
     const response = await fetch(url, { method: 'POST', redirect: 'error' });
     const data = await response.json();
-    const messages = {
-      queued: '已提交抓價。完成後請按重讀快照。',
-      pending: '已有抓價正在執行。完成後請按重讀快照。',
-      cooldown: `抓價冷卻中，約 ${Math.ceil(data.retryAfter / 60)} 分鐘後可再請求。`,
-    };
-    const message = messages[data.status];
-    if (!message) throw new Error('Refresh unavailable');
-    status.textContent = message;
-    if (Number.isSafeInteger(data.runId)) {
-      const link = document.createElement('a');
-      link.href = `https://github.com/denny1151/PDT_tool/actions/runs/${data.runId}`;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = '查看進度';
-      status.append(' ', link);
+    if (data.status === 'cooldown') {
+      await refresh();
+      showDispatchStatus(`抓價冷卻中，約 ${Math.ceil(data.retryAfter / 60)} 分鐘後可再請求。`, data.runId);
+      return;
     }
+    if (!response.ok || !['queued', 'pending'].includes(data.status)) throw new Error('Refresh unavailable');
+    showDispatchStatus(data.status === 'queued' ? '已提交抓價，完成後會自動載入。' : '已有抓價正在執行，完成後會自動載入。', data.runId);
+    await waitForPublishedSnapshot(data.runId, requestedAt);
   } catch {
     status.textContent = '目前無法確認抓價請求。可先使用已發布的行情。';
   } finally {
@@ -383,6 +431,7 @@ async function dispatchMarket() {
   button.disabled = true;
   status.hidden = false;
   status.textContent = '正在觸發 GitHub Actions…';
+  const requestedAt = Date.now();
   try {
     const response = await fetch('https://api.github.com/repos/denny1151/PDT_tool/actions/workflows/pages.yml/dispatches', {
       method: 'POST',
@@ -402,14 +451,8 @@ async function dispatchMarket() {
     }
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const run = response.status === 204 ? null : await response.json().catch(() => null);
-    const link = document.createElement('a');
-    const actionsUrl = 'https://github.com/denny1151/PDT_tool/actions';
-    link.href = Number.isSafeInteger(run?.workflow_run_id)
-      ? `${actionsUrl}/runs/${run.workflow_run_id}` : `${actionsUrl}/workflows/pages.yml`;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = '查看進度';
-    status.replaceChildren('已提交抓價。部署完成後可重讀快照。', link);
+    showDispatchStatus('已提交抓價，完成後會自動載入。', run?.workflow_run_id);
+    await waitForPublishedSnapshot(run?.workflow_run_id, requestedAt);
   } catch (error) {
     status.textContent = `無法確認抓價是否已觸發（${error.message}）。請先查看 GitHub Actions。`;
   } finally {
@@ -456,7 +499,7 @@ $('market-sort').addEventListener('change', (event) => {
 });
 $('prev').addEventListener('click', () => { page -= 1; renderRows(); });
 $('next').addEventListener('click', () => { page += 1; renderRows(); });
-$('refresh').addEventListener('click', refresh);
+$('refresh').addEventListener('click', () => refresh());
 $('gold-budget').addEventListener('input', renderRows);
 form.addEventListener('input', calculate);
 form.addEventListener('submit', (event) => event.preventDefault());

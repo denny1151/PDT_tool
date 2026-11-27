@@ -13,7 +13,7 @@ PoE 1 當期聯盟的弗斯特通貨交換行情與整批交易試算。GitHub A
 
 ## 公開抓價（Vercel Hobby）
 
-網站部署在 GitHub Pages。按「重新抓價」會呼叫 Vercel 上的 Python API，再由 GitHub Actions 向 GGG 和 poe.ninja 抓價、發布共用快照。訪客不用登入或提供權杖。公開請求共用 10 分鐘冷卻。Actions 完成後按「重讀快照」載入新行情。
+網站部署在 GitHub Pages。按「重新抓價」會呼叫 Vercel 上的 Python API，再由 GitHub Actions 向 GGG 和 poe.ninja 抓價、發布共用快照。訪客不用登入或提供權杖。公開請求共用 10 分鐘冷卻。新快照發布後，頁面會自動載入。
 
 1. 在 Vercel 選免費 Hobby，匯入 `denny1151/PDT_tool`，Root Directory 選 `backend`，Framework Preset 選 FastAPI，部署不受 Vercel Authentication 保護的 Production 網址。
 2. 在 GitHub 建立細粒度權杖，Resource owner 選 `denny1151`，Repository access 只選 `PDT_tool`，權限選 Actions → Read and write。在 Vercel 設定 Production 機密環境變數 `PDT_GITHUB_TOKEN`，新增或更換後重新部署 Vercel。
