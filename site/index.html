@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PoE 當沖工作台</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div><span class="eyebrow">PATH OF EXILE 1</span><h1>PoE 當沖工作台</h1></div>
+      <a id="trade" href="https://www.pathofexile.com/trade/search" target="_blank" rel="noopener">開啟官方交易站</a>
+    </header>
+    <section class="summary" aria-label="市場概況">
+      <article><span>目前聯盟</span><strong id="league">—</strong></article>
+      <article><span>參考匯率 · Chaos / Div</span><strong id="rate">—</strong></article>
+      <article><span>GGG 上一筆小時成交量換算 · Chaos / Div</span><strong id="history">—</strong><small id="history-time"></small></article>
+    </section>
+    <section class="panel" aria-labelledby="market-heading">
+      <div class="section-head">
+        <div><h2 id="market-heading">市場掃描</h2><p id="status" role="status">讀取行情快照…</p></div>
+        <button type="button" id="refresh">更新快照</button>
+      </div>
+      <div class="filters">
+        <label>類別<select id="category"><option value="all">全部</option></select></label>
+        <label>品項搜尋<input id="search" type="search" placeholder="輸入物品名稱"></label>
+        <label>最低掛單數<input id="min-listings" type="number" min="0" step="1" value="0"></label>
+        <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
+      </div>
+      <p class="hint">通貨價差 = 交換市場估價 − 倉庫估價。買入上限依目標報酬率反推，未計其他成本。</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
+        <table>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考價 (C)</button></th><th scope="col">參考價 (D)</th><th scope="col">買入上限 (C)</th><th scope="col" data-sort="spread"><button type="button">通貨價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="pagination"><button id="prev" type="button">上一頁</button><span id="page"></span><button id="next" type="button">下一頁</button></div>
+    </section>
+    <section class="panel" id="calculator" aria-labelledby="calc-heading">
+      <div class="section-head"><div><h2 id="calc-heading">交易試算</h2><p id="selected">可直接填入遊戲內查到的買賣價。</p></div></div>
+      <form id="quotes" class="filters quotes">
+        <label>買入單價<input name="buy" type="number" min="0" step="any" placeholder="輸入價格"></label>
+        <label>買入幣別<select name="buyUnit"></select></label>
+        <label>賣出單價<input name="sell" type="number" min="0" step="any" placeholder="輸入價格"></label>
+        <label>賣出幣別<select name="sellUnit"></select></label>
+        <label>數量<input name="quantity" type="number" min="1" step="1" value="1"></label>
+        <label>匯率覆寫 (C / D)<input name="rate" type="number" min="0" step="any" placeholder="使用參考匯率"></label>
+        <label>其他成本 (C)<input name="fee" type="number" min="0" step="any" value="0"></label>
+        <label>總金幣費用<input name="gold" type="number" min="0" step="1" placeholder="選填"></label>
+      </form>
+      <div class="results" aria-live="polite">
+        <div><span>毛利</span><strong id="gross">—</strong></div>
+        <div><span>淨利</span><strong id="net">—</strong></div>
+        <div><span>報酬率</span><strong id="roi">—</strong></div>
+        <div><span>毛利 / 1k 金幣</span><strong id="gold-yield">—</strong></div>
+      </div>
+    </section>
+    <footer><a href="https://poe.ninja/docs/api">poe.ninja API</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG Currency Exchange</a></footer>
+  </main>
+</body>
+</html>
