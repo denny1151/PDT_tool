@@ -100,7 +100,7 @@ function renderRows() {
     [item.name, item.nameZh].some((name) => name?.toLowerCase().includes(query)))
     .map((item) => validBatch ? withQuotes(item, snapshot, automatic ? null : quantity, minimum, Number(batchInput.max)) : item);
 
-  renderCandidates(matches);
+  renderCandidates(matches, target);
   matches.sort((a, b) => {
     const left = a[sort];
     const right = b[sort];
@@ -128,8 +128,7 @@ function renderRows() {
     const reference = cell(row, format(item.chaos, ' C'), '單件參考價');
     detail(reference, format(item.divine ?? item.chaos / snapshot.divine, ' D'));
     const batch = cell(row, format(item.quantity, ' 件'), '試算批量');
-    const buyLimit = Math.floor(item.chaos * item.quantity / (1 + target));
-    if (buyLimit > 0) detail(batch, `上限 ${format(buyLimit, ' C')}`).className = 'buy-limit';
+    showBuyLimit(batch, item, target);
     if (item.minimumBatch && !(item.quantity >= item.minimumBatch)) {
       detail(batch, `兩方向至少 ${format(item.minimumBatch)} 件`);
     }
@@ -170,7 +169,12 @@ function routeLabel({ buyUnit, sellUnit }) {
   return `${unitLabel[buyUnit]} 買・${unitLabel[sellUnit]} 賣`;
 }
 
-function renderCandidates(items) {
+function showBuyLimit(parent, item, target) {
+  const limit = Math.floor(item.chaos * item.quantity / (1 + target));
+  if (limit > 0) detail(parent, `整批買入上限 ${format(limit, ' C')}`).className = 'buy-limit';
+}
+
+function renderCandidates(items, target) {
   const budget = $('gold-budget').valueAsNumber;
   const lists = [
     ['gross-candidates', 'gross', (item) => item.bestRoute],
@@ -200,6 +204,7 @@ function renderCandidates(items) {
       category.textContent = item.category;
       entry.append(button, category);
       detail(entry, `${format(item.quantity)} 件 · ${routeLabel(route)} · ${format(route.buy)} ${unitLabel[route.buyUnit]} 買 → ${format(route.sell)} ${unitLabel[route.sellUnit]} 賣`);
+      showBuyLimit(entry, item, target);
       const gold = route.goldCost ? ` · 約 ${format(route.goldCost)} 金幣` : '';
       const efficiency = Number.isFinite(route.goldEfficiency) ? ` · ${format(route.goldEfficiency, ' C')}／1k 金幣` : '';
       detail(entry, `歷史毛利 ${format(route.gross, ' C')}${gold}${efficiency}`).className = 'positive';

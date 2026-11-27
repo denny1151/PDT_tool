@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
   <link rel="stylesheet" href="style.css?v=candidate-types">
-  <script type="module" src="app.js?v=candidate-types"></script>
+  <script type="module" src="app.js?v=buy-limit"></script>
 </head>
 <body>
   <main>
@@ -21,6 +21,7 @@
     <details class="panel candidates-panel" id="candidates" open>
       <summary>優先查價</summary>
       <p class="hint" id="candidate-time" role="status">讀取行情快照…</p>
+      <p class="hint">整批買入上限按下方的目標報酬率和參考賣價估算，實際買價請核對弗斯特。</p>
       <div class="candidate-grid">
         <article><h3>整批毛利最高</h3><p>以整批可賺的 C 排序。</p><ol id="gross-candidates"></ol></article>
         <article><h3>每千金幣毛利最高</h3><label>金幣預算<input id="gold-budget" type="number" min="0" step="1" placeholder="不限"></label><ol id="gold-candidates"></ol></article>
