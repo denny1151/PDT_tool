@@ -69,7 +69,7 @@ th:first-child, td:first-child { text-align: left; padding-left: 1rem; }
 .market-table th:nth-child(4), .market-table th:nth-child(5) { width: 14%; }
 .market-table th:nth-child(8) { width: 13%; }
 .market-table th:nth-child(9) { width: 6%; }
-.market-table .buy-limit { color: var(--accent); }
+.market-table .buy-limit, .candidate-grid .buy-limit { color: var(--accent); }
 .market-action button { padding-inline: .45rem; white-space: nowrap; }
 td small { display: block; margin-top: .2rem; }
 tbody tr:hover { background: #222937; }
