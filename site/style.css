@@ -41,6 +41,8 @@ button:disabled { opacity: .48; cursor: default; }
 .market-guide dl { margin: .1rem .75rem .85rem; line-height: 1.6; }
 .market-guide dt { margin-top: .6rem; font-weight: 600; }
 .market-guide dd { margin: .15rem 0 0; color: var(--muted); }
+.candidates-panel > summary { cursor: pointer; padding: 1rem; font-size: 1.25rem; font-weight: 700; }
+.candidates-panel > summary::marker { color: var(--accent); }
 .candidate-grid, .quote-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: .8rem; padding: 0 1rem 1rem; }
 .candidate-grid article, .quote-results article { min-width: 0; padding: .8rem; border: 1px solid var(--line); border-radius: .45rem; overflow-wrap: anywhere; }
 .candidate-grid h3, .quote-results h3 { margin: 0 0 .4rem; font-size: 1rem; }

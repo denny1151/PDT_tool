@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
-  <link rel="stylesheet" href="style.css?v=trade-desk">
+  <link rel="stylesheet" href="style.css?v=fold-candidates">
   <script type="module" src="app.js?v=trade-desk"></script>
 </head>
 <body>
@@ -18,15 +18,14 @@
       <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong><small id="rate-source"></small></article>
       <article><span>GGG 小時成交均價 · 混沌石／神聖石</span><strong id="history">—</strong><small id="history-time"></small></article>
     </section>
-    <section class="panel" id="candidates" aria-labelledby="candidate-heading">
-      <div class="section-head">
-        <div><h2 id="candidate-heading">優先查價</h2><p id="candidate-time" role="status">讀取行情快照…</p></div>
-      </div>
+    <details class="panel candidates-panel" id="candidates" open>
+      <summary>優先查價</summary>
+      <p class="hint" id="candidate-time" role="status">讀取行情快照…</p>
       <div class="candidate-grid">
         <article><h3>整批毛利最高</h3><p>以整批可賺的 C 排序。</p><ol id="gross-candidates"></ol></article>
         <article><h3>每千金幣毛利最高</h3><label>金幣預算<input id="gold-budget" type="number" min="0" step="1" placeholder="不限"></label><ol id="gold-candidates"></ol></article>
       </div>
-    </section>
+    </details>
     <section class="panel market" aria-labelledby="market-heading">
       <div class="section-head">
         <div><h2 id="market-heading">弗斯特通貨交換</h2><p id="status" role="status">讀取行情快照…</p><p id="api-status"></p></div>
