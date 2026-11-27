@@ -156,10 +156,13 @@ for (const [type, label] of Object.entries(stashItems)) {
   }
 }
 
+const names = JSON.parse(await readFile(new URL('../site/data/names.zh-TW.json', import.meta.url), 'utf8'));
+const translated = (name) => Object.hasOwn(names, name) ? names[name] : undefined;
 const snapshot = {
   league, divine, history: history && { hour: history.hour, rate: history.rate },
-  categories, items, unavailable, fetchedAt: new Date().toISOString(),
-  currency: [...currency.values()].sort((a, b) => a.name.localeCompare(b.name)),
+  categories, unavailable, fetchedAt: new Date().toISOString(),
+  items: items.map((item) => ({ ...item, nameZh: translated(item.name), variantZh: translated(item.variant) })),
+  currency: [...currency.values()].map((item) => ({ ...item, nameZh: translated(item.name) })),
 };
 const output = join(dataDir, 'market.json');
 await writeFile(`${output}.tmp`, JSON.stringify(snapshot));
