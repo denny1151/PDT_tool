@@ -338,6 +338,43 @@ async function refresh() {
     renderRows();
   }
 }
+const publicRefreshUrl = fetch('./data/refresh-api.json', { cache: 'no-cache' })
+  .then(async (response) => response.ok ? (await response.json()).url : '')
+  .then((url) => /^https:\/\/[a-z0-9-]+\.vercel\.app\/api\/refresh$/.test(url) ? url : '')
+  .catch(() => '');
+
+async function requestPublicRefresh(url) {
+  const button = $('dispatch');
+  const status = $('dispatch-status');
+  button.disabled = true;
+  status.hidden = false;
+  status.textContent = '正在請求抓價…';
+  try {
+    const response = await fetch(url, { method: 'POST', redirect: 'error' });
+    const data = await response.json();
+    const messages = {
+      queued: '已提交抓價。完成後請按重讀快照。',
+      pending: '已有抓價正在執行。完成後請按重讀快照。',
+      cooldown: `抓價冷卻中，約 ${Math.ceil(data.retryAfter / 60)} 分鐘後可再請求。`,
+    };
+    const message = messages[data.status];
+    if (!message) throw new Error('Refresh unavailable');
+    status.textContent = message;
+    if (Number.isSafeInteger(data.runId)) {
+      const link = document.createElement('a');
+      link.href = `https://github.com/denny1151/PDT_tool/actions/runs/${data.runId}`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = '查看進度';
+      status.append(' ', link);
+    }
+  } catch {
+    status.textContent = '目前無法確認抓價請求。可先使用已發布的行情。';
+  } finally {
+    button.disabled = false;
+  }
+}
+
 let dispatchToken = '';
 
 async function dispatchMarket() {
@@ -380,8 +417,12 @@ async function dispatchMarket() {
   }
 }
 
-$('dispatch').addEventListener('click', () => {
-  if (dispatchToken) dispatchMarket();
+$('dispatch').addEventListener('click', async () => {
+  $('dispatch').disabled = true;
+  const url = await publicRefreshUrl;
+  $('dispatch').disabled = false;
+  if (url) requestPublicRefresh(url);
+  else if (dispatchToken) dispatchMarket();
   else $('dispatch-dialog').showModal();
 });
 $('dispatch-cancel').addEventListener('click', () => $('dispatch-dialog').close());

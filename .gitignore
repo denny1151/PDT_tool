@@ -1,2 +1,5 @@
 .cache/
 site/data/market.json
+site/data/refresh-api.json
+backend/.vercel/
+backend/__pycache__/

@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      public-refresh:
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -31,13 +36,41 @@ jobs:
           path: .cache
           key: poe-market-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: poe-market-
+      - id: public-cooldown
+        if: inputs.public-refresh
+        shell: bash
+        run: |
+          now=$(date +%s)
+          last=$(cat .cache/public-refresh-at 2>/dev/null || true)
+          if [[ "$last" =~ ^[0-9]+$ ]] && (( now - last < 600 )); then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "A public refresh already ran within 10 minutes." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - run: node scripts/refresh-market.mjs
+        if: steps.public-cooldown.outputs.skip != 'true'
+      - if: inputs.public-refresh && steps.public-cooldown.outputs.skip != 'true'
+        run: date +%s > .cache/public-refresh-at
       - uses: actions/cache/save@v4
+        if: steps.public-cooldown.outputs.skip != 'true'
         with:
           path: .cache
           key: poe-market-${{ github.run_id }}-${{ github.run_attempt }}
+      - if: steps.public-cooldown.outputs.skip != 'true'
+        env:
+          PDT_REFRESH_API_URL: ${{ vars.PDT_REFRESH_API_URL }}
+        run: |
+          node --input-type=module <<'JS'
+          import { writeFileSync } from 'node:fs';
+          const url = process.env.PDT_REFRESH_API_URL || '';
+          if (url && !/^https:\/\/[a-z0-9-]+\.vercel\.app\/api\/refresh$/.test(url)) {
+            throw new Error('PDT_REFRESH_API_URL must be the Vercel production /api/refresh URL');
+          }
+          writeFileSync('site/data/refresh-api.json', JSON.stringify({ url }));
+          JS
       - uses: actions/upload-pages-artifact@v4
+        if: steps.public-cooldown.outputs.skip != 'true'
         with:
           path: site
       - uses: actions/deploy-pages@v4
+        if: steps.public-cooldown.outputs.skip != 'true'
         id: deployment

@@ -11,7 +11,16 @@ PoE 1 當期聯盟的弗斯特通貨交換行情與整批交易試算。GitHub A
 
 本機使用 Node.js 22 或更新版。先執行 `node scripts/refresh-market.mjs`，再執行 `npx --yes serve site`，開啟終端機顯示的網址。
 
-按「重新抓價」手動觸發 Actions。首次需提供只授權 `PDT_tool` 的細粒度 GitHub 權杖，設定 Actions 讀寫權限。權杖只放在目前頁面記憶體。也可到 GitHub Actions 選 `Run workflow`。完成部署後按「重讀快照」載入最新資料。
+## 公開抓價（Vercel Hobby）
+
+網站部署在 GitHub Pages。按「重新抓價」會呼叫 Vercel 上的 Python API，再由 GitHub Actions 向 GGG 和 poe.ninja 抓價、發布共用快照。訪客不用登入或提供權杖。公開請求共用 10 分鐘冷卻。Actions 完成後按「重讀快照」載入新行情。
+
+1. 在 Vercel 選免費 Hobby，匯入 `denny1151/PDT_tool`，Root Directory 選 `backend`，Framework Preset 選 FastAPI，部署不受 Vercel Authentication 保護的 Production 網址。
+2. 在 GitHub 建立細粒度權杖，Resource owner 選 `denny1151`，Repository access 只選 `PDT_tool`，權限選 Actions → Read and write。在 Vercel 設定 Production 機密環境變數 `PDT_GITHUB_TOKEN`，新增或更換後重新部署 Vercel。
+3. 在 GitHub 儲存庫 Settings → Secrets and variables → Actions → Variables 建立 `PDT_REFRESH_API_URL`，填入 Vercel Production 網址加上 `/api/refresh`，例如 `https://pdt-tool.vercel.app/api/refresh`。
+4. 在 GitHub Actions 手動執行 `Update market and publish Pages`，把 API 網址發布到 Pages。
+
+尚未設定 `PDT_REFRESH_API_URL` 時，網頁的「重新抓價」仍使用管理者的 GitHub 權杖。管理者也可直接在 GitHub Actions 手動執行 `Update market and publish Pages`。
 
 弗斯特品項、分類和繁中名稱使用[流亡編年史通貨交換清單](https://poedb.tw/tw/Currency_Exchange)。用 [RePoE](https://repoe-fork.github.io/) 的遊戲物品 ID 對照 GGG 成交資料。搜尋支援繁中與英文。遊戲資料著作權屬 Grinding Gear Games。
 
