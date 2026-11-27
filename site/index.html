@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js?v=cross-trade"></script>
+  <script type="module" src="app.js?v=whole-orbs"></script>
 </head>
 <body>
   <main>
@@ -28,11 +28,12 @@
         <label>品項搜尋<input id="search" type="search" placeholder="輸入中文或英文名稱"></label>
         <label>最低掛單數<input id="min-listings" type="number" min="0" step="1" value="0"></label>
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
+        <label>每批交易件數<input id="batch-size" type="number" min="1" step="1" max="100000" value="1"></label>
       </div>
-      <p class="hint">跨幣價差用同一小時的兩組 GGG 成交均價，再用參考匯率換成 C 比較。缺任一交易對顯示「—」。估計毛利未扣費用，試算可改填目前掛單價。</p>
+      <p class="hint">跨幣試算按整批估算。成交均價乘上件數後，買入預算向上取整，賣出收入向下取整；缺交易對或整批賣不到 1 顆時顯示「—」。毛利未扣費用。</p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
         <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考賣價 (C)</button></th><th scope="col">參考賣價 (D)</th><th scope="col" title="參考賣價 ÷（1＋目標報酬率）">目標買入上限 (C)</th><th scope="col">混沌石買・神聖石賣</th><th scope="col">神聖石買・混沌石賣</th><th scope="col" data-sort="spread"><button type="button">跨幣價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">混沌石買・神聖石賣</th><th scope="col">神聖石買・混沌石賣</th><th scope="col" data-sort="spread"><button type="button">整批價差 (折合 C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>
@@ -41,17 +42,17 @@
     <section class="panel" id="calculator" aria-labelledby="calc-heading">
       <div class="section-head"><div><h2 id="calc-heading">交易試算</h2><p id="selected">可直接填入遊戲內查到的買賣價。</p></div></div>
       <form id="quotes" class="filters quotes">
-        <label>買入單價<input name="buy" type="number" min="0" step="any" placeholder="輸入價格"></label>
+        <label>整批買入總價<input name="buy" type="number" min="1" step="1" placeholder="整數顆數"></label>
         <label>買入幣別<select name="buyUnit"></select></label>
-        <label>賣出單價<input name="sell" type="number" min="0" step="any" placeholder="輸入價格"></label>
+        <label>整批賣出總價<input name="sell" type="number" min="1" step="1" placeholder="整數顆數"></label>
         <label>賣出幣別<select name="sellUnit"></select></label>
-        <label>數量<input name="quantity" type="number" min="1" step="1" value="1"></label>
+        <label>整批物品件數<input name="quantity" type="number" min="1" step="1" value="1"></label>
         <label>匯率覆寫 (C / D)<input name="rate" type="number" min="0" step="any" placeholder="使用參考匯率"></label>
-        <label>其他成本 (C)<input name="fee" type="number" min="0" step="any" value="0"></label>
+        <label>其他成本折合 (C)<input name="fee" type="number" min="0" step="any" value="0"></label>
         <label>總金幣費用<input name="gold" type="number" min="0" step="1" placeholder="選填"></label>
       </form>
       <div class="results" aria-live="polite">
-        <div><span>毛利</span><strong id="gross">—</strong></div>
+        <div><span>整批毛利</span><strong id="gross">—</strong><small id="gross-per-item"></small></div>
         <div><span>淨利</span><strong id="net">—</strong></div>
         <div><span>報酬率</span><strong id="roi">—</strong></div>
         <div><span>毛利 / 1k 金幣</span><strong id="gold-yield">—</strong></div>

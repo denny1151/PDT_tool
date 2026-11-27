@@ -29,14 +29,26 @@ function cell(row, value) {
   return td;
 }
 
-function withQuotes(item, divineRate) {
+function batchRoute(quantity, buyPrice, sellPrice, buyRate, sellRate, buyUnit, sellUnit) {
+  const buyTotal = buyPrice * quantity;
+  const sellTotal = sellPrice * quantity;
+  // Avoid rounding a floating-point approximation of an integer twice.
+  const tolerance = (total) => Number.EPSILON * Math.max(1, total) * 4;
+  const buy = Math.ceil(buyTotal - tolerance(buyTotal));
+  const sell = Math.floor(sellTotal + tolerance(sellTotal));
+  if (!Number.isSafeInteger(buy) || !Number.isSafeInteger(sell) || buy < 1 || sell < 1) return null;
+  const cost = buy * buyRate;
+  const gross = sell * sellRate - cost;
+  return { buy, sell, buyUnit, sellUnit, gross, roi: gross / cost * 100 };
+}
+
+function withQuotes(item, divineRate, quantity) {
   const { chaosPerItem: chaos, divinePerItem: divine } = item;
-  if (!(chaos > 0 && divine > 0 && divineRate > 0)) return { ...item, spread: null };
-  const divineInChaos = divine * divineRate;
-  const gross = divineInChaos - chaos;
-  const chaosRoute = { buy: chaos, sell: divine, buyUnit: 'chaos', sellUnit: 'divine', gross, roi: gross / chaos * 100 };
-  const divineRoute = { buy: divine, sell: chaos, buyUnit: 'divine', sellUnit: 'chaos', gross: -gross, roi: -gross / divineInChaos * 100 };
-  return { ...item, chaosRoute, divineRoute, spread: Math.abs(gross) };
+  if (!(chaos > 0 && divine > 0 && divineRate > 0)) return item;
+  const chaosRoute = batchRoute(quantity, chaos, divine, 1, divineRate, 'chaos', 'divine');
+  const divineRoute = batchRoute(quantity, divine, chaos, divineRate, 1, 'divine', 'chaos');
+  const bestRoute = (chaosRoute?.gross ?? -Infinity) >= (divineRoute?.gross ?? -Infinity) ? chaosRoute : divineRoute;
+  return { ...item, chaosRoute, divineRoute, bestRoute, spread: bestRoute?.gross };
 }
 
 function quoteCell(row, route, buyUnit, sellUnit) {
@@ -53,11 +65,14 @@ function renderRows() {
   const category = $('category').value;
   const minimum = Math.max(0, $('min-listings').valueAsNumber || 0);
   const target = Math.max(0, $('target').valueAsNumber || 0) / 100;
+  const quantity = $('batch-size').valueAsNumber;
+  const validBatch = Number.isSafeInteger(quantity) && quantity >= 1 && $('batch-size').validity.valid;
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
     [item.name, item.nameZh, item.variant, item.variantZh]
       .some((name) => name?.toLowerCase().includes(query)) &&
-    (!minimum || item.listings >= minimum));
+    (!minimum || item.listings >= minimum))
+    .map((item) => validBatch ? withQuotes(item, snapshot.divine, quantity) : item);
 
   matches.sort((a, b) => {
     const left = a[sort];
@@ -87,7 +102,7 @@ function renderRows() {
     cell(row, snapshot.categories[item.category]);
     cell(row, format(item.chaos));
     cell(row, format(item.divine ?? item.chaos / snapshot.divine));
-    cell(row, format(item.chaos / (1 + target)));
+    cell(row, format(validBatch ? Math.floor(item.chaos * quantity / (1 + target)) : NaN));
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
     cell(row, format(item.spread)).className = tone(item.spread);
@@ -97,7 +112,7 @@ function renderRows() {
     button.type = 'button';
     button.textContent = '試算';
     button.setAttribute('aria-label', `試算 ${item.nameZh ?? item.name}`);
-    button.addEventListener('click', () => selectItem(item));
+    button.addEventListener('click', () => selectItem(item, validBatch ? quantity : 1));
     row.insertCell().append(button);
   }
   if (!matches.length) {
@@ -108,15 +123,15 @@ function renderRows() {
   $('next').disabled = page + 1 >= pages;
 }
 
-function selectItem(item) {
-  const route = item.chaosRoute?.gross >= 0 ? item.chaosRoute : item.divineRoute;
-  const note = route ? '已帶入成交均價，可換成實際掛單價' : `參考賣出價 ${format(item.chaos, ' C')}`;
+function selectItem(item, quantity) {
+  const route = item.bestRoute;
+  const note = route ? '已帶入整批估算，可改填掛單總價' : `每件參考賣價 ${format(item.chaos, ' C')}`;
   $('selected').textContent = [item.nameZh ?? item.name, item.variantZh ?? item.variant, note].filter(Boolean).join(' · ');
   controls.buy.value = route?.buy ?? '';
   controls.buyUnit.value = route?.buyUnit ?? 'chaos';
-  controls.sell.value = route?.sell ?? item.chaos;
+  controls.sell.value = route?.sell ?? '';
   controls.sellUnit.value = route?.sellUnit ?? 'chaos';
-  controls.quantity.value = 1;
+  controls.quantity.value = quantity;
   controls.fee.value = 0;
   controls.gold.value = '';
   calculate();
@@ -137,14 +152,16 @@ function calculate() {
     if (unit === 'divine') return rate;
     return snapshot?.currency.find((currency) => currency.id === unit)?.chaos;
   };
-  const buy = controls.buy.valueAsNumber * valueInChaos(controls.buyUnit.value);
-  const sell = controls.sell.valueAsNumber * valueInChaos(controls.sellUnit.value);
+  const buyTotal = controls.buy.valueAsNumber;
+  const sellTotal = controls.sell.valueAsNumber;
+  const buy = buyTotal * valueInChaos(controls.buyUnit.value);
+  const sell = sellTotal * valueInChaos(controls.sellUnit.value);
   const quantity = controls.quantity.valueAsNumber;
   const fee = controls.fee.value === '' ? 0 : controls.fee.valueAsNumber;
   const gold = controls.gold.valueAsNumber;
-  const valid = form.checkValidity() && buy > 0 && sell >= 0 && Number.isInteger(quantity) && quantity > 0;
-  const gross = valid ? (sell - buy) * quantity : NaN;
-  const cost = buy * quantity + fee;
+  const valid = form.checkValidity() && Number.isSafeInteger(buyTotal) && Number.isSafeInteger(sellTotal) && buy > 0 && sell > 0 && Number.isSafeInteger(quantity) && quantity > 0;
+  const gross = valid ? sell - buy : NaN;
+  const cost = buy + fee;
   const net = gross - fee;
   const outputs = [
     ['gross', gross, ' C'], ['net', net, ' C'], ['roi', net / cost * 100, '%'],
@@ -154,6 +171,7 @@ function calculate() {
     $(id).textContent = format(value, unit);
     $(id).className = tone(value);
   }
+  $('gross-per-item').textContent = valid ? `每件 ${format(gross / quantity, ' C')}` : '';
 }
 
 function setUnits() {
@@ -174,7 +192,7 @@ async function refresh() {
     const response = await fetch('./data/market.json?v=cross-trade', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    snapshot = { ...data, items: data.items.map((item) => withQuotes(item, data.divine)) };
+    snapshot = data;
     const picked = $('category').value;
     $('category').replaceChildren(option('all', '全部'), ...Object.entries(snapshot.categories)
       .map(([id, label]) => option(id, label)));
@@ -196,7 +214,7 @@ async function refresh() {
   }
 }
 
-for (const field of ['category', 'search', 'min-listings', 'target']) {
+for (const field of ['category', 'search', 'min-listings', 'target', 'batch-size']) {
   $(field).addEventListener('input', () => { page = 0; renderRows(); });
 }
 for (const heading of headings) {
