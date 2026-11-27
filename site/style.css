@@ -28,6 +28,13 @@ a { color: var(--accent); }
 .panel { margin-top: 1rem; overflow: hidden; }
 .section-head { display: flex; justify-content: space-between; gap: .75rem; align-items: start; padding: 1rem 1rem .75rem; }
 .section-head p { margin-top: .35rem; }
+.market-controls { display: flex; flex-wrap: wrap; gap: .5rem; }
+.market-controls button { white-space: nowrap; }
+#dispatch-dialog { background: #171c25; color: inherit; border: 1px solid var(--line); border-radius: .75rem; width: min(26rem, calc(100% - 2rem)); padding: 1rem; }
+#dispatch-dialog::backdrop { background: #000a; }
+#dispatch-dialog form { display: grid; gap: .75rem; margin-block: .75rem; }
+#dispatch-dialog input { display: block; width: 100%; margin-top: .25rem; }
+#dispatch-dialog a, #dispatch-status a { color: var(--accent); }
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: .75rem; padding: 0 1rem 1rem; }
 label { display: grid; gap: .4rem; }
 button, input, select { font: inherit; color: inherit; border: 1px solid var(--line); border-radius: .35rem; background: #11151e; padding: .5rem .65rem; min-width: 0; }

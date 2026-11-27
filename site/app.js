@@ -338,6 +338,62 @@ async function refresh() {
     renderRows();
   }
 }
+let dispatchToken = '';
+
+async function dispatchMarket() {
+  const button = $('dispatch');
+  const status = $('dispatch-status');
+  button.disabled = true;
+  status.hidden = false;
+  status.textContent = '正在觸發 GitHub Actions…';
+  try {
+    const response = await fetch('https://api.github.com/repos/denny1151/PDT_tool/actions/workflows/pages.yml/dispatches', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${dispatchToken}`,
+        'Content-Type': 'application/json',
+        'X-GitHub-Api-Version': '2026-03-10',
+      },
+      body: JSON.stringify({ ref: 'main' }),
+      redirect: 'error',
+    });
+    if ([401, 403, 404].includes(response.status)) {
+      dispatchToken = '';
+      status.textContent = `GitHub 拒絕觸發（HTTP ${response.status}）。請確認權杖有效，並有 PDT_tool 的 Actions 讀寫權限。`;
+      return;
+    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const run = response.status === 204 ? null : await response.json().catch(() => null);
+    const link = document.createElement('a');
+    const actionsUrl = 'https://github.com/denny1151/PDT_tool/actions';
+    link.href = Number.isSafeInteger(run?.workflow_run_id)
+      ? `${actionsUrl}/runs/${run.workflow_run_id}` : `${actionsUrl}/workflows/pages.yml`;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = '查看進度';
+    status.replaceChildren('已提交抓價。部署完成後可重讀快照。', link);
+  } catch (error) {
+    status.textContent = `無法確認抓價是否已觸發（${error.message}）。請先查看 GitHub Actions。`;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+$('dispatch').addEventListener('click', () => {
+  if (dispatchToken) dispatchMarket();
+  else $('dispatch-dialog').showModal();
+});
+$('dispatch-cancel').addEventListener('click', () => $('dispatch-dialog').close());
+$('dispatch-dialog').addEventListener('close', () => $('dispatch-form').reset());
+$('dispatch-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  dispatchToken = $('dispatch-token').value.trim();
+  $('dispatch-form').reset();
+  $('dispatch-dialog').close();
+  dispatchMarket();
+});
+
 
 for (const field of ['category', 'search', 'target', 'batch-size', 'min-volume']) {
   $(field).addEventListener('input', () => { page = 0; renderRows(); });

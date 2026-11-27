@@ -1,5 +1,5 @@
 
-PoE 1 當期聯盟的弗斯特通貨交換行情與整批交易試算。GitHub Actions 排程設在每小時的第 17、47 分，也可在 Actions 手動更新。頁面讀取 GitHub Pages 上的快照。
+PoE 1 當期聯盟的弗斯特通貨交換行情與整批交易試算。GitHub Actions 抓取行情並發布快照，頁面從 GitHub Pages 讀取。
 
 - 跨幣價差比較「Chaos 買、Div 賣」與「Div 買、Chaos 賣」。兩邊價格都取自同一小時的 GGG 直接交易對成交均價。任一交易對缺資料、成交件數低於門檻（預設 5）或低於整批件數時，價差留白。
 - 毛利為賣價減買價，兩側按 poe.ninja 參考匯率統一以 Chaos 計價。報酬率為毛利除以該路線的買入成本，按較高的毛利排序。成交摘要未區分買賣掛單，試算時可改填目前掛單價。
@@ -10,6 +10,8 @@ PoE 1 當期聯盟的弗斯特通貨交換行情與整批交易試算。GitHub A
 - 試算淨利扣除輸入的額外 Chaos 成本。每千金幣毛利使用輸入的總金幣費用。
 
 本機使用 Node.js 22 或更新版。先執行 `node scripts/refresh-market.mjs`，再執行 `npx --yes serve site`，開啟終端機顯示的網址。
+
+按「重新抓價」手動觸發 Actions。首次需提供只授權 `PDT_tool` 的細粒度 GitHub 權杖，設定 Actions 讀寫權限。權杖只放在目前頁面記憶體。也可到 GitHub Actions 選 `Run workflow`。完成部署後按「重讀快照」載入最新資料。
 
 弗斯特品項、分類和繁中名稱使用[流亡編年史通貨交換清單](https://poedb.tw/tw/Currency_Exchange)。用 [RePoE](https://repoe-fork.github.io/) 的遊戲物品 ID 對照 GGG 成交資料。搜尋支援繁中與英文。遊戲資料著作權屬 Grinding Gear Games。
 

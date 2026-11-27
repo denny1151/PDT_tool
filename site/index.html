@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
-  <link rel="stylesheet" href="style.css?v=buy-limit-yellow">
-  <script type="module" src="app.js?v=buy-limit"></script>
+  <link rel="stylesheet" href="style.css?v=manual-refresh">
+  <script type="module" src="app.js?v=manual-refresh"></script>
 </head>
 <body>
   <main>
@@ -29,9 +29,26 @@
     </details>
     <section class="panel market" aria-labelledby="market-heading">
       <div class="section-head">
-        <div><h2 id="market-heading">弗斯特通貨交換</h2><p id="status" role="status">讀取行情快照…</p><p id="api-status"></p></div>
-        <button type="button" id="refresh">重讀快照</button>
+        <div><h2 id="market-heading">弗斯特通貨交換</h2><p id="status" role="status">讀取行情快照…</p><p id="api-status"></p>
+          <p id="dispatch-status" role="status" hidden></p>
+        </div>
+        <div class="market-controls">
+          <button type="button" id="refresh">重讀快照</button>
+          <button type="button" id="dispatch" aria-haspopup="dialog">重新抓價</button>
+        </div>
       </div>
+      <dialog id="dispatch-dialog" aria-labelledby="dispatch-heading">
+        <h3 id="dispatch-heading">授權 GitHub 抓價</h3>
+        <p class="hint">建立限 PDT_tool 使用的細粒度權杖，選 Actions 讀寫權限。權杖只保留到分頁關閉或重整。</p>
+        <form id="dispatch-form">
+          <label>GitHub 權杖<input id="dispatch-token" type="password" autocomplete="off" required pattern="github_pat_.+" autofocus></label>
+          <div class="market-controls">
+            <button type="submit">授權並抓價</button>
+            <button type="button" id="dispatch-cancel">取消</button>
+          </div>
+        </form>
+        <p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">建立權杖</a> · <a href="https://github.com/denny1151/PDT_tool/actions/workflows/pages.yml" target="_blank" rel="noopener">開啟 GitHub Actions</a></p>
+      </dialog>
       <div class="filters">
         <label>類別<select id="category"><option value="all">全部</option></select></label>
         <label>品項搜尋<input id="search" type="search" placeholder="輸入中文或英文名稱"></label>
