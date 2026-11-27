@@ -24,10 +24,19 @@ function option(value, label) {
   return new Option(label, value);
 }
 
-function cell(row, value) {
+function cell(row, value, label) {
   const td = row.insertCell();
+  td.setAttribute('role', 'cell');
   td.textContent = value;
+  if (label) td.dataset.label = label;
   return td;
+}
+
+function detail(td, value) {
+  const small = document.createElement('small');
+  small.textContent = value;
+  td.append(small);
+  return small;
 }
 
 function batchRoute(quantity, buyPrice, sellPrice, buyRate, sellRate, buyUnit, sellUnit) {
@@ -59,12 +68,9 @@ function withQuotes(item, divineRate, requestedQuantity, minimumVolume, maxQuant
 }
 
 function quoteCell(row, route, buyUnit, sellUnit) {
-  const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '');
+  const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '', `${buyUnit} 買・${sellUnit} 賣`);
   if (!route) return;
-  const profit = document.createElement('small');
-  profit.textContent = `歷史試算 ${format(route.gross, ' C')} · ${format(route.roi, '%')}`;
-  profit.className = tone(route.gross);
-  td.append(profit);
+  detail(td, `歷史試算 ${format(route.gross, ' C')} · ${format(route.roi, '%')}`).className = tone(route.gross);
 }
 
 function renderRows() {
@@ -94,39 +100,34 @@ function renderRows() {
     heading.removeAttribute('aria-sort');
     if (heading.dataset.sort === sort) heading.setAttribute('aria-sort', ascending ? 'ascending' : 'descending');
   }
+  $('market-sort').value = `${sort}:${ascending ? 'asc' : 'desc'}`;
 
   const pages = Math.ceil(matches.length / pageSize);
   page = Math.max(0, Math.min(page, pages - 1));
   $('rows').replaceChildren();
   for (const item of matches.slice(page * pageSize, (page + 1) * pageSize)) {
     const row = $('rows').insertRow();
+    row.setAttribute('role', 'row');
     const name = cell(row, item.nameZh ?? item.name);
+    name.className = 'market-item';
     if (item.nameZh) name.title = item.name;
-    const group = cell(row, item.category);
-    if (item.subcategory) {
-      const subgroup = document.createElement('small');
-      subgroup.textContent = item.subcategory;
-      group.append(subgroup);
-    }
-    cell(row, format(item.chaos));
-    cell(row, format(item.divine ?? item.chaos / snapshot.divine));
-    const batch = cell(row, format(item.quantity));
-    if (item.minimumBatch && !(item.quantity >= item.minimumBatch)) {
-      const note = document.createElement('small');
-      note.textContent = `兩方向至少 ${format(item.minimumBatch)} 件`;
-      batch.append(note);
-    }
+    detail(name, [item.category, item.subcategory].filter(Boolean).join('／'));
+    const reference = cell(row, format(item.chaos, ' C'), '單件參考價');
+    detail(reference, format(item.divine ?? item.chaos / snapshot.divine, ' D'));
+    const batch = cell(row, format(item.quantity, ' 件'), '試算批量');
     const buyLimit = Math.floor(item.chaos * item.quantity / (1 + target));
-    cell(row, format(buyLimit > 0 ? buyLimit : NaN));
+    if (buyLimit > 0) detail(batch, `上限 ${format(buyLimit, ' C')}`).className = 'buy-limit';
+    if (item.minimumBatch && !(item.quantity >= item.minimumBatch)) {
+      detail(batch, `兩方向至少 ${format(item.minimumBatch)} 件`);
+    }
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
-    cell(row, Number.isFinite(item.spread) ? format(item.spread) : '').className = tone(item.spread);
+    cell(row, Number.isFinite(item.spread) ? format(item.spread, ' C') : '', '歷史價差').className = tone(item.spread);
     const hasVolumes = item.chaosVolume > 0 || item.divineVolume > 0;
-    const volumes = cell(row, hasVolumes ? `${format(item.chaosVolume)} / ${format(item.divineVolume)}` : '');
+    const volumes = cell(row, format(item.volume, ' C'), '交易額與成交量');
+    if (hasVolumes) detail(volumes, `GGG ${format(item.chaosVolume)} / ${format(item.divineVolume)} 件（C / D）`);
     if (item.requiredVolume) {
-      const note = document.createElement('small');
-      note.textContent = `未達 ${format(item.requiredVolume)} 件`;
-      volumes.append(note);
+      detail(volumes, `未達 ${format(item.requiredVolume)} 件`);
     }
     cell(row, format(item.volume));
     const button = document.createElement('button');
@@ -134,10 +135,14 @@ function renderRows() {
     button.textContent = '試算';
     button.setAttribute('aria-label', `試算 ${item.nameZh ?? item.name}`);
     button.addEventListener('click', () => selectItem(item, item.quantity ?? 1));
-    row.insertCell().append(button);
+    const action = cell(row, '');
+    action.className = 'market-action';
+    action.append(button);
   }
   if (!matches.length) {
-    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 12;
+    const empty = cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。');
+    empty.colSpan = 8;
+    empty.className = 'market-empty';
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
   $('prev').disabled = page === 0;
@@ -256,6 +261,13 @@ for (const heading of headings) {
     renderRows();
   });
 }
+$('market-sort').addEventListener('change', (event) => {
+  const [field, direction] = event.currentTarget.value.split(':');
+  sort = field;
+  ascending = direction === 'asc';
+  page = 0;
+  renderRows();
+});
 $('prev').addEventListener('click', () => { page -= 1; renderRows(); });
 $('next').addEventListener('click', () => { page += 1; renderRows(); });
 $('refresh').addEventListener('click', refresh);

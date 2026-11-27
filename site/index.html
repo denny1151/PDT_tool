@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js?v=cd-only"></script>
+  <link rel="stylesheet" href="style.css?v=market-layout">
+  <script type="module" src="app.js?v=market-layout"></script>
 </head>
 <body>
   <main>
@@ -18,7 +18,7 @@
       <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong><small id="rate-source"></small></article>
       <article><span>GGG 小時成交均價 · 混沌石／神聖石</span><strong id="history">—</strong><small id="history-time"></small></article>
     </section>
-    <section class="panel" aria-labelledby="market-heading">
+    <section class="panel market" aria-labelledby="market-heading">
       <div class="section-head">
         <div><h2 id="market-heading">弗斯特通貨交換</h2><p id="status" role="status">讀取行情快照…</p><p id="api-status"></p></div>
         <button type="button" id="refresh">重讀快照</button>
@@ -29,14 +29,26 @@
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
         <label>每批交易件數<input id="batch-size" type="number" min="1" step="1" max="100000" placeholder="留空自動"></label>
         <label>最低每組成交件數<input id="min-volume" type="number" min="1" step="1" value="5"></label>
+        <label class="market-sort">排序<select id="market-sort">
+          <option value="spread:desc">價差：高到低</option><option value="spread:asc">價差：低到高</option>
+          <option value="chaos:desc">參考價：高到低</option><option value="chaos:asc">參考價：低到高</option>
+          <option value="volume:desc">交易額：高到低</option><option value="volume:asc">交易額：低到高</option>
+        </select></label>
       </div>
       <p class="hint">留空時，每項自動用能同時換到至少 1 C、1 D 的最小批量。試算用同一小時的 GGG 成交均價，並按每批價差排序；實際買賣以弗斯特掛單為準。</p>
-      <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
-        <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col">試算件數</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">C 買・D 賣（歷史）</th><th scope="col">D 買・C 賣（歷史）</th><th scope="col" data-sort="spread"><button type="button">歷史價差 (折合 C)</button></th><th scope="col">GGG 成交件數 (C / D)</th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
-      </div>
+      <table class="market-table" role="table" aria-label="弗斯特行情表">
+        <thead><tr>
+          <th scope="col">品項</th>
+          <th scope="col" data-sort="chaos"><button type="button">單件參考價</button></th>
+          <th scope="col">試算批量</th>
+          <th scope="col">C 買・D 賣</th>
+          <th scope="col">D 買・C 賣</th>
+          <th scope="col" data-sort="spread"><button type="button">歷史價差</button></th>
+          <th scope="col" data-sort="volume"><button type="button">交易額與成交量</button></th>
+          <th scope="col">試算</th>
+        </tr></thead>
+        <tbody id="rows" role="rowgroup"></tbody>
+      </table>
       <div class="pagination"><button id="prev" type="button">上一頁</button><span id="page"></span><button id="next" type="button">下一頁</button></div>
     </section>
     <section class="panel" id="calculator" aria-labelledby="calc-heading">
