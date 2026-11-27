@@ -8,3 +8,7 @@ PoE 1 當期聯盟行情、通貨換算、傳奇與技能石估價，以及手�
 - 試算淨利扣除輸入的額外 Chaos 成本。每千金幣毛利使用輸入的總金幣費用。
 
 本機使用 Node.js 22 或更新版。先執行 `node scripts/refresh-market.mjs`，再執行 `npx --yes serve site`，開啟終端機顯示的網址。
+
+繁中名稱取自 [PobTools-zh](https://github.com/Hsiung-Shao/PobTools-zh/blob/main/NOTICE.md) 的 PoE 1 `zh-rTW` 詞庫。缺漏的部分品項用[流亡編年史](https://poedb.tw/tw/)的繁中品項頁補齊。遊戲資料著作權屬 Grinding Gear Games。搜尋接受英文與繁中，未收錄的名稱保留英文。
+
+詞庫更新後，先更新行情，再執行 `node scripts/export-item-names.mjs "<PoB 引擎>/Data/poe1/zh-rTW" site/data/market.json` 重建繁中名稱表。

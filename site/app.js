@@ -8,7 +8,12 @@ const pageSize = 30;
 const headings = [...document.querySelectorAll('[data-sort]')];
 const form = $('quotes');
 const controls = form.elements;
+const itemNames = fetch('./data/names.zh-TW.json').then((response) => {
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
+}).catch(() => ({}));
 let snapshot;
+let names = {};
 let sort = 'spread';
 let ascending = false;
 let page = 0;
@@ -21,6 +26,10 @@ function format(value, unit = '') {
 
 function option(value, label) {
   return new Option(label, value);
+}
+
+function localName(name) {
+  return Object.hasOwn(names, name) ? names[name] : name;
 }
 
 function cell(row, value) {
@@ -67,7 +76,8 @@ function renderRows() {
   const target = Math.max(0, $('target').valueAsNumber || 0) / 100;
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
-    `${item.name} ${item.variant ?? ''}`.toLowerCase().includes(query) &&
+    [item.name, localName(item.name), item.variant, localName(item.variant)]
+      .some((name) => name?.toLowerCase().includes(query)) &&
     (!minimum || item.listings >= minimum));
 
   matches.sort((a, b) => {
@@ -88,10 +98,11 @@ function renderRows() {
   $('rows').replaceChildren();
   for (const item of matches.slice(page * pageSize, (page + 1) * pageSize)) {
     const row = $('rows').insertRow();
-    const name = cell(row, item.name);
+    const name = cell(row, localName(item.name));
+    if (name.textContent !== item.name) name.title = item.name;
     if (item.variant) {
       const variant = document.createElement('small');
-      variant.textContent = item.variant;
+      variant.textContent = localName(item.variant);
       name.append(variant);
     }
     cell(row, snapshot.categories[item.category]);
@@ -106,7 +117,7 @@ function renderRows() {
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = '試算';
-    button.setAttribute('aria-label', `試算 ${item.name}`);
+    button.setAttribute('aria-label', `試算 ${localName(item.name)}`);
     button.addEventListener('click', () => selectItem(item));
     row.insertCell().append(button);
   }
@@ -119,7 +130,7 @@ function renderRows() {
 }
 
 function selectItem(item) {
-  $('selected').textContent = [item.name, item.variant, `參考賣出價 ${format(item.chaos, ' C')}`].filter(Boolean).join(' · ');
+  $('selected').textContent = [localName(item.name), localName(item.variant), `參考賣出價 ${format(item.chaos, ' C')}`].filter(Boolean).join(' · ');
   controls.buy.value = '';
   controls.buyUnit.value = 'chaos';
   controls.sell.value = item.chaos;
@@ -165,11 +176,12 @@ function calculate() {
 }
 
 function setUnits() {
-  const extra = (snapshot?.currency ?? []).filter(({ id }) => id !== 'chaos' && id !== 'divine');
+  const extra = (snapshot?.currency ?? []).filter(({ id }) => id !== 'chaos' && id !== 'divine')
+    .sort((a, b) => localName(a.name).localeCompare(localName(b.name), 'zh-TW'));
   for (const select of [controls.buyUnit, controls.sellUnit]) {
     const previous = select.value;
-    select.replaceChildren(option('chaos', 'Chaos (C)'), option('divine', 'Divine (D)'),
-      ...extra.map(({ id, name }) => option(id, name)));
+    select.replaceChildren(option('chaos', '混沌石 (C)'), option('divine', '神聖石 (D)'),
+      ...extra.map(({ id, name }) => option(id, localName(name))));
     select.value = [...select.options].some(({ value }) => value === previous) ? previous : 'chaos';
   }
 }
@@ -181,6 +193,7 @@ async function refresh() {
     const response = await fetch('./data/market.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
+    names = await itemNames;
     snapshot = { ...data, items: data.items.map((item) => withQuotes(item, data.divine)) };
     const picked = $('category').value;
     $('category').replaceChildren(option('all', '全部'), ...Object.entries(snapshot.categories)

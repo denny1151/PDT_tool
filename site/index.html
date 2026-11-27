@@ -15,8 +15,8 @@
     </header>
     <section class="summary" aria-label="市場概況">
       <article><span>目前聯盟</span><strong id="league">—</strong></article>
-      <article><span>參考匯率 · Chaos / Div</span><strong id="rate">—</strong></article>
-      <article><span>GGG 上一筆小時成交量換算 · Chaos / Div</span><strong id="history">—</strong><small id="history-time"></small></article>
+      <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong></article>
+      <article><span>GGG 小時成交均價 · 混沌石／神聖石</span><strong id="history">—</strong><small id="history-time"></small></article>
     </section>
     <section class="panel" aria-labelledby="market-heading">
       <div class="section-head">
@@ -25,14 +25,14 @@
       </div>
       <div class="filters">
         <label>類別<select id="category"><option value="all">全部</option></select></label>
-        <label>品項搜尋<input id="search" type="search" placeholder="輸入物品名稱"></label>
+        <label>品項搜尋<input id="search" type="search" placeholder="輸入中文或英文名稱"></label>
         <label>最低掛單數<input id="min-listings" type="number" min="0" step="1" value="0"></label>
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
       </div>
       <p class="hint">通貨成本優先採 GGG 小時成交均價；無直接行情時用倉庫估價。毛利＝參考賣價 − 買入成本，報酬率以買入成本計，未扣費用。價差按兩種付款方式中較高的每件毛利排序。</p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
         <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考賣價 (C)</button></th><th scope="col">參考賣價 (D)</th><th scope="col">買入上限 (C)</th><th scope="col">Chaos 買入</th><th scope="col">Div 買入</th><th scope="col" data-sort="spread"><button type="button">最佳價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考賣價 (C)</button></th><th scope="col">參考賣價 (D)</th><th scope="col">買入上限 (C)</th><th scope="col">混沌石買入</th><th scope="col">神聖石買入</th><th scope="col" data-sort="spread"><button type="button">最佳價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>
@@ -57,7 +57,7 @@
         <div><span>毛利 / 1k 金幣</span><strong id="gold-yield">—</strong></div>
       </div>
     </section>
-    <footer><a href="https://poe.ninja/docs/api">poe.ninja API</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG Currency Exchange</a></footer>
+    <footer><a href="https://poe.ninja/docs/api">poe.ninja API</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG Currency Exchange</a><a href="https://github.com/Hsiung-Shao/PobTools-zh/blob/main/NOTICE.md">PobTools-zh 繁中詞庫</a><a href="https://poedb.tw/tw/">流亡編年史</a><span>非官方粉絲工具。遊戲資料 © Grinding Gear Games。</span></footer>
   </main>
 </body>
 </html>
