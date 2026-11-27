@@ -171,7 +171,6 @@ function calculate() {
   const valueInChaos = (unit) => {
     if (unit === 'chaos') return 1;
     if (unit === 'divine') return rate;
-    return snapshot?.currency.find((currency) => currency.id === unit)?.chaos;
   };
   const buyTotal = controls.buy.valueAsNumber;
   const sellTotal = controls.sell.valueAsNumber;
@@ -193,17 +192,6 @@ function calculate() {
     $(id).className = tone(value);
   }
   $('gross-per-item').textContent = valid ? `每件 ${format(gross / quantity, ' C')}` : '';
-}
-
-function setUnits() {
-  const extra = (snapshot?.currency ?? []).filter(({ id }) => id !== 'chaos' && id !== 'divine')
-    .sort((a, b) => (a.nameZh ?? a.name).localeCompare(b.nameZh ?? b.name, 'zh-TW'));
-  for (const select of [controls.buyUnit, controls.sellUnit]) {
-    const previous = select.value;
-    select.replaceChildren(option('chaos', '混沌石 (C)'), option('divine', '神聖石 (D)'),
-      ...extra.map(({ id, name, nameZh }) => option(id, nameZh ?? name)));
-    select.value = [...select.options].some(({ value }) => value === previous) ? previous : 'chaos';
-  }
 }
 
 function renderSources() {
@@ -248,7 +236,6 @@ async function refresh() {
     $('history-time').textContent = snapshot.history ? `${timestamp.format(snapshot.history.hour * 1000)} 台灣時間` : '';
     $('status').textContent = `抓取時間 ${timestamp.format(new Date(snapshot.fetchedAt))} 台灣時間${snapshot.leagueCached ? ' · 沿用上次聯盟' : ''}`;
     renderSources();
-    setUnits();
     calculate();
   } catch {
     $('status').textContent = snapshot ? '更新失敗，保留上一份快照。' : '目前無行情快照，仍可手動試算。';
@@ -274,6 +261,5 @@ $('next').addEventListener('click', () => { page += 1; renderRows(); });
 $('refresh').addEventListener('click', refresh);
 form.addEventListener('input', calculate);
 form.addEventListener('submit', (event) => event.preventDefault());
-setUnits();
 renderRows();
 refresh();
