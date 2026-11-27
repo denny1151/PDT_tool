@@ -36,6 +36,11 @@ button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent);
 button:disabled { opacity: .48; cursor: default; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .hint { padding: 0 1rem .85rem; }
+.market-guide { margin: 0 1rem .85rem; border: 1px solid var(--line); border-radius: .4rem; }
+.market-guide summary { cursor: pointer; padding: .55rem .75rem; color: var(--accent); }
+.market-guide dl { margin: .1rem .75rem .85rem; line-height: 1.6; }
+.market-guide dt { margin-top: .6rem; font-weight: 600; }
+.market-guide dd { margin: .15rem 0 0; color: var(--muted); }
 .market-sort { display: none; }
 .market-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th, td { text-align: right; border-top: 1px solid var(--line); padding: .65rem .7rem; overflow-wrap: anywhere; }
