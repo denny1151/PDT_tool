@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js?v=trade-volume"></script>
+  <script type="module" src="app.js?v=auto-batch"></script>
 </head>
 <body>
   <main>
@@ -27,13 +27,13 @@
         <label>類別<select id="category"><option value="all">全部</option></select></label>
         <label>品項搜尋<input id="search" type="search" placeholder="輸入中文或英文名稱"></label>
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
-        <label>每批交易件數<input id="batch-size" type="number" min="1" step="1" max="100000" value="1"></label>
+        <label>每批交易件數<input id="batch-size" type="number" min="1" step="1" max="100000" placeholder="留空自動"></label>
         <label>最低每組成交件數<input id="min-volume" type="number" min="1" step="1" value="5"></label>
       </div>
-      <p class="hint">參考價來自 poe.ninja。試算採同一小時的 GGG 歷史均價，兩組交易對的成交件數都須達門檻及整批件數。實際買賣請填弗斯特目前的掛單總價。</p>
+      <p class="hint">留空時，每項自動用能同時換到至少 1 C、1 D 的最小批量。試算用同一小時的 GGG 成交均價，並按每批價差排序；實際買賣以弗斯特掛單為準。</p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
         <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">C 買・D 賣（歷史）</th><th scope="col">D 買・C 賣（歷史）</th><th scope="col" data-sort="spread"><button type="button">歷史價差 (折合 C)</button></th><th scope="col">GGG 成交件數 (C / D)</th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col">試算件數</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">C 買・D 賣（歷史）</th><th scope="col">D 買・C 賣（歷史）</th><th scope="col" data-sort="spread"><button type="button">歷史價差 (折合 C)</button></th><th scope="col">GGG 成交件數 (C / D)</th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>

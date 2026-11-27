@@ -43,14 +43,19 @@ function batchRoute(quantity, buyPrice, sellPrice, buyRate, sellRate, buyUnit, s
   return { buy, sell, buyUnit, sellUnit, gross, roi: gross / cost * 100 };
 }
 
-function withQuotes(item, divineRate, quantity, minimum) {
+function withQuotes(item, divineRate, requestedQuantity, minimumVolume, maxQuantity) {
   const { chaosPerItem: chaos, divinePerItem: divine } = item;
-  if (!(chaos > 0 && divine > 0 && divineRate > 0)) return item;
-  if (!(item.chaosVolume >= minimum && item.divineVolume >= minimum)) return { ...item, thinVolume: true };
+  if (!(chaos > 0 && divine > 0 && divineRate > 0)) return { ...item, quantity: requestedQuantity ?? 1 };
+  const minimumBatch = Math.ceil(1 / Math.min(chaos, divine));
+  const quantity = requestedQuantity ?? minimumBatch;
+  if (quantity > maxQuantity) return { ...item, minimumBatch };
+  const minimum = Math.max(quantity, minimumVolume);
+  const batch = { ...item, quantity, minimumBatch };
+  if (!(item.chaosVolume >= minimum && item.divineVolume >= minimum)) return { ...batch, requiredVolume: minimum };
   const chaosRoute = batchRoute(quantity, chaos, divine, 1, divineRate, 'chaos', 'divine');
   const divineRoute = batchRoute(quantity, divine, chaos, divineRate, 1, 'divine', 'chaos');
   const bestRoute = (chaosRoute?.gross ?? -Infinity) >= (divineRoute?.gross ?? -Infinity) ? chaosRoute : divineRoute;
-  return { ...item, chaosRoute, divineRoute, bestRoute, spread: bestRoute?.gross };
+  return { ...batch, chaosRoute, divineRoute, bestRoute, spread: bestRoute?.gross };
 }
 
 function quoteCell(row, route, buyUnit, sellUnit) {
@@ -66,14 +71,16 @@ function renderRows() {
   const query = $('search').value.trim().toLowerCase();
   const category = $('category').value;
   const target = Math.max(0, $('target').valueAsNumber || 0) / 100;
-  const quantity = $('batch-size').valueAsNumber;
+  const batchInput = $('batch-size');
+  const quantity = batchInput.valueAsNumber;
+  const automatic = batchInput.value === '' && !batchInput.validity.badInput;
   const inputMinimum = $('min-volume').valueAsNumber;
-  const minimum = Math.max(quantity, Number.isSafeInteger(inputMinimum) && inputMinimum >= 1 ? inputMinimum : 5);
-  const validBatch = Number.isSafeInteger(quantity) && quantity >= 1 && $('batch-size').validity.valid;
+  const minimum = Number.isSafeInteger(inputMinimum) && inputMinimum >= 1 ? inputMinimum : 5;
+  const validBatch = automatic || (Number.isSafeInteger(quantity) && batchInput.validity.valid);
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
     [item.name, item.nameZh].some((name) => name?.toLowerCase().includes(query)))
-    .map((item) => validBatch ? withQuotes(item, snapshot.divine, quantity, minimum) : item);
+    .map((item) => validBatch ? withQuotes(item, snapshot.divine, automatic ? null : quantity, minimum, Number(batchInput.max)) : item);
 
   matches.sort((a, b) => {
     const left = a[sort];
@@ -103,15 +110,22 @@ function renderRows() {
     }
     cell(row, format(item.chaos));
     cell(row, format(item.divine ?? item.chaos / snapshot.divine));
-    cell(row, format(validBatch && item.chaos > 0 ? Math.floor(item.chaos * quantity / (1 + target)) : NaN));
+    const batch = cell(row, format(item.quantity));
+    if (item.minimumBatch && !(item.quantity >= item.minimumBatch)) {
+      const note = document.createElement('small');
+      note.textContent = `兩方向至少 ${format(item.minimumBatch)} 件`;
+      batch.append(note);
+    }
+    const buyLimit = Math.floor(item.chaos * item.quantity / (1 + target));
+    cell(row, format(buyLimit > 0 ? buyLimit : NaN));
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
     cell(row, Number.isFinite(item.spread) ? format(item.spread) : '').className = tone(item.spread);
     const hasVolumes = item.chaosVolume > 0 || item.divineVolume > 0;
     const volumes = cell(row, hasVolumes ? `${format(item.chaosVolume)} / ${format(item.divineVolume)}` : '');
-    if (item.thinVolume) {
+    if (item.requiredVolume) {
       const note = document.createElement('small');
-      note.textContent = `未達 ${format(minimum)} 件`;
+      note.textContent = `未達 ${format(item.requiredVolume)} 件`;
       volumes.append(note);
     }
     cell(row, format(item.volume));
@@ -119,11 +133,11 @@ function renderRows() {
     button.type = 'button';
     button.textContent = '試算';
     button.setAttribute('aria-label', `試算 ${item.nameZh ?? item.name}`);
-    button.addEventListener('click', () => selectItem(item, validBatch ? quantity : 1));
+    button.addEventListener('click', () => selectItem(item, item.quantity ?? 1));
     row.insertCell().append(button);
   }
   if (!matches.length) {
-    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 11;
+    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 12;
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
   $('prev').disabled = page === 0;
