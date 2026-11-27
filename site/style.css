@@ -47,7 +47,7 @@ th[aria-sort="ascending"] button::after { content: ' ▴'; }
 th:nth-child(-n+2), td:nth-child(-n+2) { text-align: left; }
 td:nth-child(5) { color: var(--accent); }
 td:first-child, th:first-child { padding-left: 1rem; }
-td small { display: block; }
+td small { display: block; margin-top: .2rem; }
 tbody tr:hover { background: #222937; }
 .pagination { display: flex; flex-wrap: wrap; justify-content: end; align-items: center; gap: .75rem; padding: .85rem 1rem; border-top: 1px solid var(--line); }
 .results { grid-template-columns: repeat(4, 1fr); padding: .9rem 1rem 1rem; border-top: 1px solid var(--line); }

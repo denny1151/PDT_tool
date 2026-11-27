@@ -51,13 +51,34 @@ async function exchangeHistory(league) {
   for (const hoursAgo of [1, 2]) {
     const hour = currentHour - hoursAgo * 3600;
     const { markets } = await getJson(`${cdn}/${hour}`);
-    const market = markets.find(({ league: name, market_pair: pair }) =>
-      name === league && pair.includes(chaosId) && pair.includes(divineId));
-    const chaos = market?.volume_traded[chaosId];
-    const divine = market?.volume_traded[divineId];
-    if (positive(chaos) && positive(divine)) return { hour, rate: chaos / divine };
+    const idsByName = new Map();
+    const prices = new Map();
+    for (const { league: name, market_pair: pair, volume_traded: volume } of markets) {
+      if (name !== league) continue;
+      for (const id of pair) trackId(idsByName, basename(id), id);
+      for (const [index, item] of pair.entries()) {
+        const payment = pair[1 - index];
+        if (payment !== chaosId && payment !== divineId) continue;
+        if (!positive(volume[item]) || !positive(volume[payment])) continue;
+        const quote = prices.get(item) ?? {};
+        quote[payment === chaosId ? 'chaos' : 'divine'] = volume[payment] / volume[item];
+        prices.set(item, quote);
+      }
+    }
+    const rate = prices.get(divineId)?.chaos;
+    if (positive(rate)) return { hour, rate, idsByName, prices };
   }
   return null;
+}
+
+function basename(path) {
+  return path?.split(/[/?]/).filter(Boolean).at(-1)?.replace(/\.png$/i, '').toLowerCase();
+}
+
+function trackId(index, key, id) {
+  if (!key) return;
+  if (!index.has(key)) index.set(key, new Set());
+  index.get(key).add(id);
 }
 
 async function optional(label, request, unavailable) {
@@ -90,11 +111,14 @@ for (const type of ['Currency', 'Fragment']) {
 }
 
 const items = [];
+const currencyItems = [];
+const idsByIcon = new Map();
 const currency = new Map();
 for (const [type, label] of Object.entries(exchange)) {
   const data = type === 'Currency' ? basis : await optional(label, () => overview('exchange/current', league.id, type), unavailable);
   if (!data) continue;
   const metadata = new Map((data.items ?? []).map((item) => [item.id, item]));
+  for (const item of metadata.values()) trackId(idsByIcon, basename(item.image), item.id);
   const chaosInPrimary = data.core.primary === 'chaos' ? 1 :
     data.lines.find(({ id }) => id === 'chaos')?.primaryValue ?? 1 / data.core.rates?.chaos;
   const conversion = positive(chaosInPrimary) ? 1 / chaosInPrimary :
@@ -104,13 +128,20 @@ for (const [type, label] of Object.entries(exchange)) {
     if (!info || !positive(line.primaryValue) || !positive(conversion)) continue;
     const price = line.primaryValue * conversion;
     const stashPrice = stashCurrency.get(info.detailsId);
-    items.push({
-      category: type, name: info.name, chaos: price,
-      volume: positive(line.volumePrimaryValue) ? line.volumePrimaryValue * conversion : null,
-      spread: stashPrice == null ? null : price - stashPrice,
+    currencyItems.push({
+      icon: basename(info.image), currencyId: line.id, category: type, name: info.name, chaos: price,
+      volume: positive(line.volumePrimaryValue) ? line.volumePrimaryValue * conversion : null, stashPrice,
     });
     if (!currency.has(line.id)) currency.set(line.id, { id: line.id, name: info.name, chaos: price });
   }
+}
+
+for (const { icon, ...item } of currencyItems) {
+  const ids = history?.idsByName.get(icon);
+  // Shared artwork cannot identify the base item on its own.
+  const id = ids?.size === 1 && idsByIcon.get(icon)?.size === 1 ? [...ids][0] : null;
+  const buy = history?.prices.get(id);
+  items.push({ ...item, buyChaos: buy?.chaos, buyDivine: buy?.divine });
 }
 
 for (const [type, label] of Object.entries(stashItems)) {
@@ -126,7 +157,8 @@ for (const [type, label] of Object.entries(stashItems)) {
 }
 
 const snapshot = {
-  league, divine, history, categories, items, unavailable, fetchedAt: new Date().toISOString(),
+  league, divine, history: history && { hour: history.hour, rate: history.rate },
+  categories, items, unavailable, fetchedAt: new Date().toISOString(),
   currency: [...currency.values()].sort((a, b) => a.name.localeCompare(b.name)),
 };
 const output = join(dataDir, 'market.json');

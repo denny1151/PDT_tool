@@ -1,5 +1,6 @@
 const $ = (id) => document.getElementById(id);
 const decimal = new Intl.NumberFormat('zh-TW', { maximumFractionDigits: 4 });
+const smallDecimal = new Intl.NumberFormat('zh-TW', { maximumSignificantDigits: 4 });
 const timestamp = new Intl.DateTimeFormat('zh-TW', {
   dateStyle: 'short', timeStyle: 'short', timeZone: 'Asia/Taipei',
 });
@@ -8,12 +9,14 @@ const headings = [...document.querySelectorAll('[data-sort]')];
 const form = $('quotes');
 const controls = form.elements;
 let snapshot;
-let sort = 'volume';
+let sort = 'spread';
 let ascending = false;
 let page = 0;
 
 function format(value, unit = '') {
-  return Number.isFinite(value) ? `${decimal.format(value)}${unit}` : '—';
+  if (!Number.isFinite(value)) return '—';
+  const formatter = value !== 0 && Math.abs(value) < 0.01 ? smallDecimal : decimal;
+  return `${formatter.format(value)}${unit}`;
 }
 
 function option(value, label) {
@@ -24,6 +27,37 @@ function cell(row, value) {
   const td = row.insertCell();
   td.textContent = value;
   return td;
+}
+
+function buyQuote(item, unit, divineRate) {
+  if (item.currencyId === unit) return null;
+  const exchangeRate = unit === 'divine' ? divineRate : 1;
+  const direct = unit === 'divine' ? item.buyDivine : item.buyChaos;
+  const stash = item.stashPrice ?? (item.spread == null ? null : item.chaos - item.spread);
+  const cost = direct ?? (stash > 0 ? stash / exchangeRate : null);
+  const costInChaos = cost * exchangeRate;
+  if (!Number.isFinite(costInChaos) || costInChaos <= 0) return null;
+  const gross = item.chaos - costInChaos;
+  return { cost, gross, roi: gross / costInChaos * 100, direct: direct != null };
+}
+
+function withQuotes(item, divineRate) {
+  const chaosQuote = buyQuote(item, 'chaos', divineRate);
+  const divineQuote = buyQuote(item, 'divine', divineRate);
+  const quotes = [chaosQuote, divineQuote].filter(Boolean);
+  const spread = quotes.length ? Math.max(...quotes.map(({ gross }) => gross)) : null;
+  return { ...item, chaosQuote, divineQuote, spread };
+}
+
+function quoteCell(row, quote, unit) {
+  const td = cell(row, quote ? format(quote.cost, ` ${unit}`) : '—');
+  if (!quote) return;
+  const profit = document.createElement('small');
+  profit.textContent = `毛利 ${format(quote.gross, ' C')} · 報酬率 ${format(quote.roi, '%')}`;
+  profit.className = tone(quote.gross);
+  const source = document.createElement('small');
+  source.textContent = quote.direct ? 'GGG 小時均價' : unit === 'D' ? '倉庫估價換算' : '倉庫估價';
+  td.append(profit, source);
 }
 
 function renderRows() {
@@ -64,6 +98,8 @@ function renderRows() {
     cell(row, format(item.chaos));
     cell(row, format(item.divine ?? item.chaos / snapshot.divine));
     cell(row, format(item.chaos / (1 + target)));
+    quoteCell(row, item.chaosQuote, 'C');
+    quoteCell(row, item.divineQuote, 'D');
     cell(row, format(item.spread)).className = tone(item.spread);
     cell(row, format(item.listings));
     cell(row, format(item.volume));
@@ -75,7 +111,7 @@ function renderRows() {
     row.insertCell().append(button);
   }
   if (!matches.length) {
-    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 9;
+    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 11;
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
   $('prev').disabled = page === 0;
@@ -144,7 +180,8 @@ async function refresh() {
   try {
     const response = await fetch('./data/market.json', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    snapshot = await response.json();
+    const data = await response.json();
+    snapshot = { ...data, items: data.items.map((item) => withQuotes(item, data.divine)) };
     const picked = $('category').value;
     $('category').replaceChildren(option('all', '全部'), ...Object.entries(snapshot.categories)
       .map(([id, label]) => option(id, label)));
