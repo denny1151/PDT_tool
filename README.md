@@ -1,4 +1,3 @@
-# PoE 當沖工作台
 
 PoE 1 當期聯盟行情、通貨換算、傳奇與技能石估價，以及手動交易試算。GitHub Actions 於每小時的第 17、47 分更新快照，可在 Actions 手動更新。頁面讀取 GitHub Pages 上的快照。
 
