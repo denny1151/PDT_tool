@@ -52,6 +52,7 @@ button:disabled { opacity: .48; cursor: default; }
 .candidate-grid li { padding: .5rem 0; }
 .candidate-grid li + li { border-top: 1px solid var(--line); }
 .candidate-grid li button { margin: .2rem 0; text-align: left; }
+.candidate-category { display: inline-block; margin-inline-start: .5rem; color: var(--muted); font-size: .875rem; }
 .candidate-grid li small, .quote-results small { display: block; margin-top: .25rem; }
 .market-sort { display: none; }
 .market-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-variant-numeric: tabular-nums; }

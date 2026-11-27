@@ -195,7 +195,10 @@ function renderCandidates(items) {
       button.type = 'button';
       button.textContent = item.nameZh ?? item.name;
       button.addEventListener('click', () => selectItem(item, item.quantity));
-      entry.append(button);
+      const category = document.createElement('span');
+      category.className = 'candidate-category';
+      category.textContent = item.category;
+      entry.append(button, category);
       detail(entry, `${format(item.quantity)} 件 · ${routeLabel(route)} · ${format(route.buy)} ${unitLabel[route.buyUnit]} 買 → ${format(route.sell)} ${unitLabel[route.sellUnit]} 賣`);
       const gold = route.goldCost ? ` · 約 ${format(route.goldCost)} 金幣` : '';
       const efficiency = Number.isFinite(route.goldEfficiency) ? ` · ${format(route.goldEfficiency, ' C')}／1k 金幣` : '';

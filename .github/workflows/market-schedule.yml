@@ -1,0 +1,15 @@
+name: Refresh market on schedule
+
+on:
+  schedule:
+    - cron: '27 * * * *'
+    - cron: '57 * * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  refresh:
+    uses: ./.github/workflows/pages.yml
