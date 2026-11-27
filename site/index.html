@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js?v=zh-tw"></script>
+  <script type="module" src="app.js?v=cross-trade"></script>
 </head>
 <body>
   <main>
@@ -29,10 +29,10 @@
         <label>最低掛單數<input id="min-listings" type="number" min="0" step="1" value="0"></label>
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
       </div>
-      <p class="hint">目標買入上限＝參考賣價 ÷（1＋目標報酬率）。混沌石與神聖石欄顯示每件估計成本及毛利，優先採 GGG 小時成交均價，缺資料時採倉庫估價。毛利與報酬率未扣費用。</p>
+      <p class="hint">跨幣價差用同一小時的兩組 GGG 成交均價，再用參考匯率換成 C 比較。缺任一交易對顯示「—」。估計毛利未扣費用，試算可改填目前掛單價。</p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
         <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考賣價 (C)</button></th><th scope="col">參考賣價 (D)</th><th scope="col">目標買入上限 (C)</th><th scope="col">混沌石估計成本</th><th scope="col">神聖石估計成本</th><th scope="col" data-sort="spread"><button type="button">最佳價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">參考賣價 (C)</button></th><th scope="col">參考賣價 (D)</th><th scope="col" title="參考賣價 ÷（1＋目標報酬率）">目標買入上限 (C)</th><th scope="col">混沌石買・神聖石賣</th><th scope="col">神聖石買・混沌石賣</th><th scope="col" data-sort="spread"><button type="button">跨幣價差 (C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>

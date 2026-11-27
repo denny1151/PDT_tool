@@ -8,6 +8,8 @@ const cacheDir = '.cache';
 const dataDir = join('site', 'data');
 const chaosId = 'Metadata/Items/Currency/CurrencyRerollRare';
 const divineId = 'Metadata/Items/Currency/CurrencyModValues';
+// The Fracturing Orb icon and GGG market ID use different filenames.
+const knownMarketIds = new Map([['fracturing-orb', 'Metadata/Items/Currency/CurrencyFractureRare']]);
 const exchange = {
   Currency: '通貨', Fragment: '碎片', Runegraft: '符文嫁接', AllflameEmber: '餘燼',
   Tattoo: '紋身', Omen: '預兆', DjinnCoin: '精靈硬幣', Ducat: '杜卡特',
@@ -102,13 +104,6 @@ if (!positive(chaos) || !positive(divine)) throw new Error('No Chaos/Divine refe
 
 const unavailable = [];
 const history = await optional('GGG 小時成交', () => exchangeHistory(league.id), unavailable);
-const stashCurrency = new Map();
-for (const type of ['Currency', 'Fragment']) {
-  const data = await optional(`倉庫${exchange[type]}`, () => overview('stash/current/currency', league.id, type), unavailable);
-  for (const line of data?.lines ?? []) {
-    if (positive(line.chaosEquivalent)) stashCurrency.set(line.detailsId, line.chaosEquivalent);
-  }
-}
 
 const items = [];
 const currencyItems = [];
@@ -127,10 +122,9 @@ for (const [type, label] of Object.entries(exchange)) {
     const info = metadata.get(line.id);
     if (!info || !positive(line.primaryValue) || !positive(conversion)) continue;
     const price = line.primaryValue * conversion;
-    const stashPrice = stashCurrency.get(info.detailsId);
     currencyItems.push({
       icon: basename(info.image), currencyId: line.id, category: type, name: info.name, chaos: price,
-      volume: positive(line.volumePrimaryValue) ? line.volumePrimaryValue * conversion : null, stashPrice,
+      volume: positive(line.volumePrimaryValue) ? line.volumePrimaryValue * conversion : null,
     });
     if (!currency.has(line.id)) currency.set(line.id, { id: line.id, name: info.name, chaos: price });
   }
@@ -139,9 +133,10 @@ for (const [type, label] of Object.entries(exchange)) {
 for (const { icon, ...item } of currencyItems) {
   const ids = history?.idsByName.get(icon);
   // Shared artwork cannot identify the base item on its own.
-  const id = ids?.size === 1 && idsByIcon.get(icon)?.size === 1 ? [...ids][0] : null;
-  const buy = history?.prices.get(id);
-  items.push({ ...item, buyChaos: buy?.chaos, buyDivine: buy?.divine });
+  const id = knownMarketIds.get(item.currencyId) ??
+    (ids?.size === 1 && idsByIcon.get(icon)?.size === 1 ? [...ids][0] : null);
+  const pair = history?.prices.get(id);
+  items.push({ ...item, chaosPerItem: pair?.chaos, divinePerItem: pair?.divine });
 }
 
 for (const [type, label] of Object.entries(stashItems)) {

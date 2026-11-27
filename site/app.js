@@ -29,35 +29,23 @@ function cell(row, value) {
   return td;
 }
 
-function buyQuote(item, unit, divineRate) {
-  if (item.currencyId === unit) return null;
-  const exchangeRate = unit === 'divine' ? divineRate : 1;
-  const direct = unit === 'divine' ? item.buyDivine : item.buyChaos;
-  const stash = item.stashPrice ?? (item.spread == null ? null : item.chaos - item.spread);
-  const cost = direct ?? (stash > 0 ? stash / exchangeRate : null);
-  const costInChaos = cost * exchangeRate;
-  if (!Number.isFinite(costInChaos) || costInChaos <= 0) return null;
-  const gross = item.chaos - costInChaos;
-  return { cost, gross, roi: gross / costInChaos * 100, direct: direct != null };
-}
-
 function withQuotes(item, divineRate) {
-  const chaosQuote = buyQuote(item, 'chaos', divineRate);
-  const divineQuote = buyQuote(item, 'divine', divineRate);
-  const quotes = [chaosQuote, divineQuote].filter(Boolean);
-  const spread = quotes.length ? Math.max(...quotes.map(({ gross }) => gross)) : null;
-  return { ...item, chaosQuote, divineQuote, spread };
+  const { chaosPerItem: chaos, divinePerItem: divine } = item;
+  if (!(chaos > 0 && divine > 0 && divineRate > 0)) return { ...item, spread: null };
+  const divineInChaos = divine * divineRate;
+  const gross = divineInChaos - chaos;
+  const chaosRoute = { buy: chaos, sell: divine, buyUnit: 'chaos', sellUnit: 'divine', gross, roi: gross / chaos * 100 };
+  const divineRoute = { buy: divine, sell: chaos, buyUnit: 'divine', sellUnit: 'chaos', gross: -gross, roi: -gross / divineInChaos * 100 };
+  return { ...item, chaosRoute, divineRoute, spread: Math.abs(gross) };
 }
 
-function quoteCell(row, quote, unit) {
-  const td = cell(row, quote ? format(quote.cost, ` ${unit}`) : '—');
-  if (!quote) return;
+function quoteCell(row, route, buyUnit, sellUnit) {
+  const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '—');
+  if (!route) return;
   const profit = document.createElement('small');
-  profit.textContent = `毛利 ${format(quote.gross, ' C')} · 報酬率 ${format(quote.roi, '%')}`;
-  profit.className = tone(quote.gross);
-  const source = document.createElement('small');
-  source.textContent = quote.direct ? 'GGG 小時均價' : unit === 'D' ? '倉庫估價換算' : '倉庫估價';
-  td.append(profit, source);
+  profit.textContent = `估計毛利 ${format(route.gross, ' C')} · 報酬率 ${format(route.roi, '%')}`;
+  profit.className = tone(route.gross);
+  td.append(profit);
 }
 
 function renderRows() {
@@ -100,8 +88,8 @@ function renderRows() {
     cell(row, format(item.chaos));
     cell(row, format(item.divine ?? item.chaos / snapshot.divine));
     cell(row, format(item.chaos / (1 + target)));
-    quoteCell(row, item.chaosQuote, 'C');
-    quoteCell(row, item.divineQuote, 'D');
+    quoteCell(row, item.chaosRoute, 'C', 'D');
+    quoteCell(row, item.divineRoute, 'D', 'C');
     cell(row, format(item.spread)).className = tone(item.spread);
     cell(row, format(item.listings));
     cell(row, format(item.volume));
@@ -121,11 +109,13 @@ function renderRows() {
 }
 
 function selectItem(item) {
-  $('selected').textContent = [item.nameZh ?? item.name, item.variantZh ?? item.variant, `參考賣出價 ${format(item.chaos, ' C')}`].filter(Boolean).join(' · ');
-  controls.buy.value = '';
-  controls.buyUnit.value = 'chaos';
-  controls.sell.value = item.chaos;
-  controls.sellUnit.value = 'chaos';
+  const route = item.chaosRoute?.gross >= 0 ? item.chaosRoute : item.divineRoute;
+  const note = route ? '已帶入成交均價，可換成實際掛單價' : `參考賣出價 ${format(item.chaos, ' C')}`;
+  $('selected').textContent = [item.nameZh ?? item.name, item.variantZh ?? item.variant, note].filter(Boolean).join(' · ');
+  controls.buy.value = route?.buy ?? '';
+  controls.buyUnit.value = route?.buyUnit ?? 'chaos';
+  controls.sell.value = route?.sell ?? item.chaos;
+  controls.sellUnit.value = route?.sellUnit ?? 'chaos';
   controls.quantity.value = 1;
   controls.fee.value = 0;
   controls.gold.value = '';
@@ -181,7 +171,7 @@ async function refresh() {
   const button = $('refresh');
   button.disabled = true;
   try {
-    const response = await fetch('./data/market.json?v=zh-tw', { cache: 'no-cache' });
+    const response = await fetch('./data/market.json?v=cross-trade', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     snapshot = { ...data, items: data.items.map((item) => withQuotes(item, data.divine)) };
