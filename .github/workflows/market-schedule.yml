@@ -1,9 +1,10 @@
 name: Refresh market on schedule
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '27 * * * *'
-    - cron: '57 * * * *'
+    - cron: '17 * * * *'
+    - cron: '47 * * * *'
 
 permissions:
   contents: read
