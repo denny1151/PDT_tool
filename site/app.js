@@ -52,7 +52,14 @@ function batchRoute(quantity, buyPrice, sellPrice, buyRate, sellRate, buyUnit, s
   return { buy, sell, buyUnit, sellUnit, gross, roi: gross / cost * 100 };
 }
 
-function withQuotes(item, divineRate, requestedQuantity, minimumVolume, maxQuantity) {
+function estimateGold(route, quantity, itemRate, goldRates) {
+  const saleRate = goldRates?.[route?.sellUnit];
+  if (!route || !(itemRate > 0 && saleRate > 0)) return route;
+  const goldCost = Math.ceil(quantity * itemRate) + Math.ceil(route.sell * saleRate);
+  return { ...route, goldCost, goldEfficiency: route.gross * 1000 / goldCost };
+}
+
+function withQuotes(item, { divine: divineRate, goldRates }, requestedQuantity, minimumVolume, maxQuantity) {
   const { chaosPerItem: chaos, divinePerItem: divine } = item;
   if (!(chaos > 0 && divine > 0 && divineRate > 0)) return { ...item, quantity: requestedQuantity ?? 1 };
   const minimumBatch = Math.ceil(1 / Math.min(chaos, divine));
@@ -61,10 +68,12 @@ function withQuotes(item, divineRate, requestedQuantity, minimumVolume, maxQuant
   const minimum = Math.max(quantity, minimumVolume);
   const batch = { ...item, quantity, minimumBatch };
   if (!(item.chaosVolume >= minimum && item.divineVolume >= minimum)) return { ...batch, requiredVolume: minimum };
-  const chaosRoute = batchRoute(quantity, chaos, divine, 1, divineRate, 'chaos', 'divine');
-  const divineRoute = batchRoute(quantity, divine, chaos, divineRate, 1, 'divine', 'chaos');
+  const chaosRoute = estimateGold(batchRoute(quantity, chaos, divine, 1, divineRate, 'chaos', 'divine'),
+    quantity, item.goldPerItem, goldRates);
+  const divineRoute = estimateGold(batchRoute(quantity, divine, chaos, divineRate, 1, 'divine', 'chaos'),
+    quantity, item.goldPerItem, goldRates);
   const bestRoute = (chaosRoute?.gross ?? -Infinity) >= (divineRoute?.gross ?? -Infinity) ? chaosRoute : divineRoute;
-  return { ...batch, chaosRoute, divineRoute, bestRoute, spread: bestRoute?.gross };
+  return { ...batch, chaosRoute, divineRoute, bestRoute, spread: bestRoute?.gross, goldEfficiency: bestRoute?.goldEfficiency };
 }
 
 function quoteCell(row, route, buyUnit, sellUnit) {
@@ -86,7 +95,7 @@ function renderRows() {
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
     [item.name, item.nameZh].some((name) => name?.toLowerCase().includes(query)))
-    .map((item) => validBatch ? withQuotes(item, snapshot.divine, automatic ? null : quantity, minimum, Number(batchInput.max)) : item);
+    .map((item) => validBatch ? withQuotes(item, snapshot, automatic ? null : quantity, minimum, Number(batchInput.max)) : item);
 
   matches.sort((a, b) => {
     const left = a[sort];
@@ -122,14 +131,18 @@ function renderRows() {
     }
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
-    cell(row, Number.isFinite(item.spread) ? format(item.spread, ' C') : '', '歷史價差').className = tone(item.spread);
+    cell(row, Number.isFinite(item.spread) ? format(item.spread, ' C') : '', '歷史毛利').className = tone(item.spread);
+    const gold = cell(row, Number.isFinite(item.goldEfficiency) ? format(item.goldEfficiency, ' C') : '', '毛利／1k 金幣');
+    gold.className = tone(item.goldEfficiency);
+    if (item.bestRoute?.goldCost) {
+      detail(gold, `約 ${format(item.bestRoute.goldCost)} 金幣`);
+    }
     const hasVolumes = item.chaosVolume > 0 || item.divineVolume > 0;
     const volumes = cell(row, format(item.volume, ' C'), '交易額與成交量');
     if (hasVolumes) detail(volumes, `GGG ${format(item.chaosVolume)} / ${format(item.divineVolume)} 件（C / D）`);
     if (item.requiredVolume) {
       detail(volumes, `未達 ${format(item.requiredVolume)} 件`);
     }
-    cell(row, format(item.volume));
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = '試算';
@@ -141,7 +154,7 @@ function renderRows() {
   }
   if (!matches.length) {
     const empty = cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。');
-    empty.colSpan = 8;
+    empty.colSpan = 9;
     empty.className = 'market-empty';
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
@@ -225,7 +238,7 @@ async function refresh() {
   const button = $('refresh');
   button.disabled = true;
   try {
-    const response = await fetch('./data/market.json?v=trade-volume', { cache: 'no-cache' });
+    const response = await fetch('./data/market.json?v=gold-efficiency', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (!data.sources || !Array.isArray(data.categories)) throw new Error('Stale market snapshot');

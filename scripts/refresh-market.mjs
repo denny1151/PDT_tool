@@ -142,6 +142,10 @@ const snapshot = {
   league, leagueCached: !!league && !currentLeague?.id, divine, fxSource: positive(ninjaRate) ? 'poe.ninja' : divine ? 'GGG' : undefined,
   history: history && { hour: history.hour, rate: history.rate }, sources, fetchedAt: new Date().toISOString(),
   categories: [...new Set(items.map((item) => item.category))], items,
+  goldRates: {
+    chaos: catalog.find(({ marketId }) => marketId === chaosId)?.goldPerItem,
+    divine: catalog.find(({ marketId }) => marketId === divineId)?.goldPerItem,
+  },
   currency: items.filter((item) => item.currencyId && positive(item.chaos))
     .map(({ currencyId: id, name, nameZh, chaos: value }) => ({ id, name, nameZh, chaos: value })),
 };

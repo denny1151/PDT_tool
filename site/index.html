@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
-  <link rel="stylesheet" href="style.css?v=market-guide">
-  <script type="module" src="app.js?v=market-layout"></script>
+  <link rel="stylesheet" href="style.css?v=gold-efficiency">
+  <script type="module" src="app.js?v=gold-efficiency"></script>
 </head>
 <body>
   <main>
@@ -33,6 +33,7 @@
           <option value="spread:desc">價差：高到低</option><option value="spread:asc">價差：低到高</option>
           <option value="chaos:desc">參考價：高到低</option><option value="chaos:asc">參考價：低到高</option>
           <option value="volume:desc">交易額：高到低</option><option value="volume:asc">交易額：低到高</option>
+          <option value="goldEfficiency:desc">每千金幣毛利：高到低</option><option value="goldEfficiency:asc">每千金幣毛利：低到高</option>
         </select></label>
       </div>
       <p class="hint">先按歷史價差找品項，再用弗斯特目前同一批量的買賣總價試算。</p>
@@ -43,8 +44,10 @@
           <dd>400 C 是 poe.ninja 單件估價，用來算買入上限。300 C 來自 GGG 的歷史成交均價。兩者的交易對和時間可能不同。能否用 300 C 買到，要看弗斯特當前掛單。</dd>
           <dt>C 買・D 賣、D 買・C 賣怎麼算？</dt>
           <dd>各自用 GGG 的成交總額除以成交件數，再乘上試算件數。買入向上取整，賣出向下取整。C 買・D 賣是「收到的 D × 匯率 − 花掉的 C」，反向則是「收到的 C − 花掉的 D × 匯率」。只有 D/C 匯率會影響換算，該物品的單件參考價不影響這兩欄。</dd>
-          <dt>歷史價差代表什麼？</dt>
+          <dt>歷史毛利代表什麼？</dt>
           <dd>兩條路線中較高的整批毛利，折成 C，未扣費用。例如 1,771 C 買、13 D 賣，按 1 D = 156.2 C，毛利為 259.6 C。</dd>
+          <dt>毛利／1k 金幣怎麼算？</dt>
+          <dd>用同一條路線的歷史毛利 ÷ 估算金幣 × 1,000。買入時按收到的物品數計費，賣出時按收到的 C 或 D 數計費。兩筆費用取整後相加，實際費用看弗斯特。</dd>
           <dt>為什麼有些價差留白？</dt>
           <dd>可能缺任一交易對、成交件數未達門檻，或整批賣不到 1 顆通貨。每批件數留空時，會用能同時換到至少 1 C、1 D 的最小批量試算。</dd>
           <dt>「歷史」是哪個小時？</dt>
@@ -58,7 +61,8 @@
           <th scope="col">試算批量</th>
           <th scope="col">C 買・D 賣</th>
           <th scope="col">D 買・C 賣</th>
-          <th scope="col" data-sort="spread"><button type="button">歷史價差</button></th>
+          <th scope="col" data-sort="spread"><button type="button">歷史毛利</button></th>
+          <th scope="col" data-sort="goldEfficiency"><button type="button">毛利／1k 金幣</button></th>
           <th scope="col" data-sort="volume"><button type="button">交易額與成交量</button></th>
           <th scope="col">試算</th>
         </tr></thead>

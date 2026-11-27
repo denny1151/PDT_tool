@@ -50,11 +50,12 @@ th[aria-sort] button { color: var(--accent); }
 th[aria-sort="descending"] button::after { content: ' ▾'; }
 th[aria-sort="ascending"] button::after { content: ' ▴'; }
 th:first-child, td:first-child { text-align: left; padding-left: 1rem; }
-.market-table th:nth-child(1) { width: 16%; }
-.market-table th:nth-child(2), .market-table th:nth-child(6) { width: 10%; }
-.market-table th:nth-child(3) { width: 12%; }
-.market-table th:nth-child(4), .market-table th:nth-child(5), .market-table th:nth-child(7) { width: 15%; }
-.market-table th:nth-child(8) { width: 7%; }
+.market-table th:nth-child(1) { width: 15%; }
+.market-table th:nth-child(2), .market-table th:nth-child(6) { width: 9%; }
+.market-table th:nth-child(3), .market-table th:nth-child(7) { width: 10%; }
+.market-table th:nth-child(4), .market-table th:nth-child(5) { width: 14%; }
+.market-table th:nth-child(8) { width: 13%; }
+.market-table th:nth-child(9) { width: 6%; }
 .market-table .buy-limit { color: var(--accent); }
 .market-action button { padding-inline: .45rem; white-space: nowrap; }
 td small { display: block; margin-top: .2rem; }

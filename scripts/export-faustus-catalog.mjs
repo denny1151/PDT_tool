@@ -17,11 +17,11 @@ function readCatalog(html, title) {
   const catalogHtml = html.slice(start);
   const imageBySlug = new Map([...catalogHtml.matchAll(/<a[^>]*href="([^"]+)"[^>]*>\s*<img[^>]*\balt="([^"]*)"/g)]
     .map(([, href, alt]) => [decode(href), decode(alt)]));
-  const block = /<h5>([^<]+)<\/h5>|<div class="currency-exchange-subtitle">([^<]+)<\/div>|<div class="flex-grow-1 ms-2 d-flex justify-content-between align-items-center">\s*<a class="([^"]+)"[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>\s*<span>[\d/,]+<\/span>/g;
+  const block = /<h5>([^<]+)<\/h5>|<div class="currency-exchange-subtitle">([^<]+)<\/div>|<div class="flex-grow-1 ms-2 d-flex justify-content-between align-items-center">\s*<a class="([^"]+)"[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>\s*<span>([\d/,]+)<\/span>/g;
   const items = new Map();
   let category;
   let subcategory;
-  for (const [, main, sub, classes, href, name] of catalogHtml.matchAll(block)) {
+  for (const [, main, sub, classes, href, name, gold] of catalogHtml.matchAll(block)) {
     if (main) {
       category = decode(main);
       subcategory = undefined;
@@ -29,7 +29,10 @@ function readCatalog(html, title) {
       subcategory = decode(sub);
     } else if (category) {
       const slug = decode(href);
-      items.set(slug, { category, subcategory, image: imageBySlug.get(slug), itemClass: classes.split(' ').at(-1), name: decode(name) });
+      const [numerator, denominator = 1] = gold.replaceAll(',', '').split('/').map(Number);
+      const goldPerItem = numerator / denominator;
+      items.set(slug, { category, subcategory, image: imageBySlug.get(slug), itemClass: classes.split(' ').at(-1), name: decode(name),
+        goldPerItem: Number.isFinite(goldPerItem) && goldPerItem > 0 ? goldPerItem : undefined });
     }
   }
   if (items.size < 500) throw new Error(`Unexpected PoEDB catalog size: ${items.size}`);
@@ -57,6 +60,7 @@ for (const [slug, item] of localized) {
   items.push({
     name: name ?? item.name, nameZh: item.name, category: item.category,
     subcategory: item.subcategory === item.category ? undefined : item.subcategory,
+    goldPerItem: item.goldPerItem,
     marketId: matches.length === 1 ? matches[0].id : undefined,
     alternativeIds: matches.length > 1 ? matches.map(({ id }) => id) : undefined,
   });
