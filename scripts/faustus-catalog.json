@@ -1,0 +1,6922 @@
+[
+  {
+    "name": "Rogue's Marker",
+    "nameZh": "盜賊之印",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Heist/HeistCoin"
+  },
+  {
+    "name": "Scroll of Wisdom",
+    "nameZh": "知識卷軸",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyIdentification"
+  },
+  {
+    "name": "Portal Scroll",
+    "nameZh": "傳送卷軸",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyPortal"
+  },
+  {
+    "name": "Orb of Transmutation",
+    "nameZh": "蛻變石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeToMagic"
+  },
+  {
+    "name": "Orb of Augmentation",
+    "nameZh": "增幅石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToMagic"
+  },
+  {
+    "name": "Orb of Chance",
+    "nameZh": "機會石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeRandomly"
+  },
+  {
+    "name": "Orb of Alteration",
+    "nameZh": "改造石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollMagic"
+  },
+  {
+    "name": "Chromatic Orb",
+    "nameZh": "幻色石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollSocketColours"
+  },
+  {
+    "name": "Jeweller's Orb",
+    "nameZh": "工匠石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollSocketNumbers"
+  },
+  {
+    "name": "Orb of Fusing",
+    "nameZh": "鏈結石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollSocketLinks"
+  },
+  {
+    "name": "Orb of Alchemy",
+    "nameZh": "點金石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeToRare"
+  },
+  {
+    "name": "Chaos Orb",
+    "nameZh": "混沌石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollRare"
+  },
+  {
+    "name": "Orb of Scouring",
+    "nameZh": "重鑄石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyConvertToNormal"
+  },
+  {
+    "name": "Orb of Regret",
+    "nameZh": "後悔石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyPassiveRefund"
+  },
+  {
+    "name": "Vaal Orb",
+    "nameZh": "瓦爾寶珠",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyCorrupt"
+  },
+  {
+    "name": "Orb of Binding",
+    "nameZh": "束縛石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeToRareAndSetSockets"
+  },
+  {
+    "name": "Instilling Orb",
+    "nameZh": "滴注石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyInstillingOrb"
+  },
+  {
+    "name": "Orb of Unmaking",
+    "nameZh": "撤銷石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAtlasPassiveRefund"
+  },
+  {
+    "name": "Blessed Orb",
+    "nameZh": "祝福石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollImplicit"
+  },
+  {
+    "name": "Enkindling Orb",
+    "nameZh": "點燃石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEnkindlingOrb"
+  },
+  {
+    "name": "Regal Orb",
+    "nameZh": "富豪石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeMagicToRare"
+  },
+  {
+    "name": "Divine Vessel",
+    "nameZh": "眾神聖器",
+    "category": "通貨",
+    "marketId": "Metadata/Items/MapFragments/CurrencyFragmentPantheonFlask"
+  },
+  {
+    "name": "Exalted Orb",
+    "nameZh": "崇高石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToRare"
+  },
+  {
+    "name": "Ancient Orb",
+    "nameZh": "古變石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollUnique"
+  },
+  {
+    "name": "Stacked Deck",
+    "nameZh": "豐裕牌組",
+    "category": "通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDeck"
+  },
+  {
+    "name": "Valdo's Puzzle Box",
+    "nameZh": "瓦爾多的謎盒",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyValdoPuzzleBox"
+  },
+  {
+    "name": "Divine Orb",
+    "nameZh": "神聖石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyModValues"
+  },
+  {
+    "name": "Orb of Annulment",
+    "nameZh": "無效石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRemoveMod"
+  },
+  {
+    "name": "Voidborn Reliquary Key",
+    "nameZh": "虛誕遺鑰",
+    "category": "通貨",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/VoidbornVaultKey",
+      "Metadata/Items/MapFragments/TencentVoidbornVaultKey"
+    ]
+  },
+  {
+    "name": "Reflecting Mist",
+    "nameZh": "映像迷霧",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/ReflectiveMist"
+  },
+  {
+    "name": "Tempering Orb",
+    "nameZh": "淬鍊石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHeistWeaponEnchant"
+  },
+  {
+    "name": "Tailoring Orb",
+    "nameZh": "裁縫石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHeistArmourEnchant"
+  },
+  {
+    "name": "Fracturing Orb",
+    "nameZh": "破裂石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyFractureRare"
+  },
+  {
+    "name": "Veiled Chaos Orb",
+    "nameZh": "隱匿混沌石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollRareVeiledChaos"
+  },
+  {
+    "name": "Veiled Exalted Orb",
+    "nameZh": "隱匿崇高石",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollRareVeiled"
+  },
+  {
+    "name": "Eternal Orb",
+    "nameZh": "永恆寶珠",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyImprintOrb"
+  },
+  {
+    "name": "Sacred Orb",
+    "nameZh": "聖玉",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollDefences"
+  },
+  {
+    "name": "Hinekora's Lock",
+    "nameZh": "悉妮蔻拉的髮絲",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHinekorasLock"
+  },
+  {
+    "name": "Mirror of Kalandra",
+    "nameZh": "卡蘭德的魔鏡",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyDuplicate"
+  },
+  {
+    "name": "Primordial Exalted Orb",
+    "nameZh": "Primordial Exalted Orb",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyStackedExalt"
+  },
+  {
+    "name": "Merrick's Ducat",
+    "nameZh": "莫里克的達克特",
+    "category": "通貨",
+    "marketId": "Metadata/Items/Deepwater/DeepwaterAbyssCurrency"
+  },
+  {
+    "name": "Eldritch Chaos Orb",
+    "nameZh": "異能混沌石",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchRerollRare"
+  },
+  {
+    "name": "Eldritch Exalted Orb",
+    "nameZh": "異能崇高石",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchAddModToRare"
+  },
+  {
+    "name": "Eldritch Orb of Annulment",
+    "nameZh": "異能無效石",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchRemoveMod"
+  },
+  {
+    "name": "Lesser Eldritch Ember",
+    "nameZh": "低階異能灰燼",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchEmber1"
+  },
+  {
+    "name": "Lesser Eldritch Ichor",
+    "nameZh": "低階異能靈液",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchIchor1"
+  },
+  {
+    "name": "Greater Eldritch Ember",
+    "nameZh": "高階異能灰燼",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchEmber2"
+  },
+  {
+    "name": "Greater Eldritch Ichor",
+    "nameZh": "高階異能靈液",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchIchor2"
+  },
+  {
+    "name": "Grand Eldritch Ember",
+    "nameZh": "宏偉異能灰燼",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchEmber3"
+  },
+  {
+    "name": "Grand Eldritch Ichor",
+    "nameZh": "宏偉異能靈液",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchIchor3"
+  },
+  {
+    "name": "Exceptional Eldritch Ember",
+    "nameZh": "卓越異能灰燼",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchEmber4"
+  },
+  {
+    "name": "Exceptional Eldritch Ichor",
+    "nameZh": "卓越異能靈液",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyEldritchIchor4"
+  },
+  {
+    "name": "Orb of Conflict",
+    "nameZh": "衝突寶珠",
+    "category": "通貨",
+    "subcategory": "異能通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyConflictOrb"
+  },
+  {
+    "name": "Transmutation Shard",
+    "nameZh": "蛻變石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeToMagicShard"
+  },
+  {
+    "name": "Alteration Shard",
+    "nameZh": "改造石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollMagicShard"
+  },
+  {
+    "name": "Alchemy Shard",
+    "nameZh": "點金石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeToRareShard"
+  },
+  {
+    "name": "Chaos Shard",
+    "nameZh": "混沌石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyRerollRareShard"
+  },
+  {
+    "name": "Regal Shard",
+    "nameZh": "富豪石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeMagicToRareShard"
+  },
+  {
+    "name": "Exalted Shard",
+    "nameZh": "崇高石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToRareShard"
+  },
+  {
+    "name": "Annulment Shard",
+    "nameZh": "無效石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyRemoveModShard"
+  },
+  {
+    "name": "Fracturing Shard",
+    "nameZh": "破裂石碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyFractureRareShard"
+  },
+  {
+    "name": "Mirror Shard",
+    "nameZh": "魔鏡碎片",
+    "category": "通貨",
+    "subcategory": "通貨碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyDuplicateShard"
+  },
+  {
+    "name": "Armourer's Scrap",
+    "nameZh": "護甲片",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyArmourQuality"
+  },
+  {
+    "name": "Blacksmith's Whetstone",
+    "nameZh": "磨刀石",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyWeaponQuality"
+  },
+  {
+    "name": "Glassblower's Bauble",
+    "nameZh": "玻璃彈珠",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyFlaskQuality"
+  },
+  {
+    "name": "Gemcutter's Prism",
+    "nameZh": "寶石匠的稜鏡",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyGemQuality"
+  },
+  {
+    "name": "Maven's Chisel of Procurement",
+    "nameZh": "釋界之採購鑿",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMapQualityRarity"
+  },
+  {
+    "name": "Maven's Chisel of Proliferation",
+    "nameZh": "釋界之增值鑿",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMapQualityPackSize"
+  },
+  {
+    "name": "Maven's Chisel of Avarice",
+    "nameZh": "釋界之貪婪鑿",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMapQualityCurrency"
+  },
+  {
+    "name": "Maven's Chisel of Divination",
+    "nameZh": "釋界之占卜鑿",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMapQualityDivinationCards"
+  },
+  {
+    "name": "Maven's Chisel of Threads",
+    "nameZh": "釋界之綢帶鑿",
+    "category": "通貨",
+    "subcategory": "品質通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMapQualityScarabs"
+  },
+  {
+    "name": "Shaper's Exalted Orb",
+    "nameZh": "塑界者的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToRareShaper"
+  },
+  {
+    "name": "Elder's Exalted Orb",
+    "nameZh": "尊師的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToRareElder"
+  },
+  {
+    "name": "Originator's Exalted Orb",
+    "nameZh": "Originator's Exalted Orb",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddModToRareOriginator"
+  },
+  {
+    "name": "Crusader's Exalted Orb",
+    "nameZh": "聖戰士的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/AtlasExiles/AddModToRareCrusader"
+  },
+  {
+    "name": "Redeemer's Exalted Orb",
+    "nameZh": "救贖者的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/AtlasExiles/AddModToRareRedeemer"
+  },
+  {
+    "name": "Hunter's Exalted Orb",
+    "nameZh": "狩獵者的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/AtlasExiles/AddModToRareHunter"
+  },
+  {
+    "name": "Warlord's Exalted Orb",
+    "nameZh": "總督軍的崇高石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/AtlasExiles/AddModToRareWarlord"
+  },
+  {
+    "name": "Awakener's Orb",
+    "nameZh": "喚醒者之玉",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/AtlasExiles/ApplyInfluence"
+  },
+  {
+    "name": "Orb of Dominance",
+    "nameZh": "支配之玉",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyUpgradeInfluenceMod"
+  },
+  {
+    "name": "Orb of Remembrance",
+    "nameZh": "回想石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyAddZanaInfluence"
+  },
+  {
+    "name": "Orb of Unravelling",
+    "nameZh": "拆解石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyRemoveZanaInfluence"
+  },
+  {
+    "name": "Orb of Intention",
+    "nameZh": "意志石",
+    "category": "通貨",
+    "subcategory": "勢力通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyMoreZanaInfluencedItems"
+  },
+  {
+    "name": "Tainted Chromatic Orb",
+    "nameZh": "玷污的幻色石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketColours"
+  },
+  {
+    "name": "Tainted Jeweller's Orb",
+    "nameZh": "玷污的工匠石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketNumbers"
+  },
+  {
+    "name": "Tainted Armourer's Scrap",
+    "nameZh": "玷污的護甲片",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeArmourQuality"
+  },
+  {
+    "name": "Tainted Blacksmith's Whetstone",
+    "nameZh": "玷污的磨刀石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeWeaponQuality"
+  },
+  {
+    "name": "Tainted Orb of Fusing",
+    "nameZh": "玷污的鏈結石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeRerollSocketLinks"
+  },
+  {
+    "name": "Tainted Mythic Orb",
+    "nameZh": "玷污的神話石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeUpgradeToUnique"
+  },
+  {
+    "name": "Tainted Chaos Orb",
+    "nameZh": "玷污的混沌石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeRerollRare"
+  },
+  {
+    "name": "Tainted Exalted Orb",
+    "nameZh": "玷污的崇高石",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeAddModToRare"
+  },
+  {
+    "name": "Tainted Divine Teardrop",
+    "nameZh": "玷污的神聖淚珠",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeUpgradeModTier"
+  },
+  {
+    "name": "Volatile Vaal Orb",
+    "nameZh": "易變瓦爾寶珠",
+    "category": "通貨",
+    "subcategory": "玷汙的通貨",
+    "marketId": "Metadata/Items/Currency/CurrencyHellscapeModValues"
+  },
+  {
+    "name": "Lightless Astrolabe",
+    "nameZh": "無光星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeAbyss"
+  },
+  {
+    "name": "Grasping Astrolabe",
+    "nameZh": "執掌星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeBreach"
+  },
+  {
+    "name": "Nameless Astrolabe",
+    "nameZh": "無名星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeRitual"
+  },
+  {
+    "name": "Fungal Astrolabe",
+    "nameZh": "菌群星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeBlight"
+  },
+  {
+    "name": "Chaotic Astrolabe",
+    "nameZh": "混沌星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeUltimatum"
+  },
+  {
+    "name": "Timeless Astrolabe",
+    "nameZh": "永恆星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeLegion"
+  },
+  {
+    "name": "Runic Astrolabe",
+    "nameZh": "符文星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeExpedition"
+  },
+  {
+    "name": "Immortal Astrolabe",
+    "nameZh": "永生星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeBetrayal"
+  },
+  {
+    "name": "Feral Astrolabe",
+    "nameZh": "野性星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeBestiary"
+  },
+  {
+    "name": "Royal Astrolabe",
+    "nameZh": "皇家星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/AstrolabeIncursion"
+  },
+  {
+    "name": "Cryptic Astrolabe",
+    "nameZh": "晦澀星盤",
+    "category": "通貨",
+    "subcategory": "星盤",
+    "marketId": "Metadata/Items/Currency/StackedAstrolabe"
+  },
+  {
+    "name": "Memory of Trauma",
+    "nameZh": "創傷之記憶",
+    "category": "通貨",
+    "subcategory": "記憶",
+    "marketId": "Metadata/Items/Currency/FearMemoryThread"
+  },
+  {
+    "name": "Memory of Reverence",
+    "nameZh": "敬畏之記憶",
+    "category": "通貨",
+    "subcategory": "記憶",
+    "marketId": "Metadata/Items/Currency/BenevolenceMemoryThread"
+  },
+  {
+    "name": "Memory of Loneliness",
+    "nameZh": "孤獨之記憶",
+    "category": "通貨",
+    "subcategory": "記憶",
+    "marketId": "Metadata/Items/Currency/IgnoranceMemoryThread"
+  },
+  {
+    "name": "Foulborn Orb of Augmentation",
+    "nameZh": "穢生增幅石",
+    "category": "通貨",
+    "subcategory": "裂痕聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyMutatedAddModToMagic"
+  },
+  {
+    "name": "Foulborn Regal Orb",
+    "nameZh": "穢生富豪石",
+    "category": "通貨",
+    "subcategory": "裂痕聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyMutatedUpgradeMagicToRare"
+  },
+  {
+    "name": "Foulborn Exalted Orb",
+    "nameZh": "穢生崇高石",
+    "category": "通貨",
+    "subcategory": "裂痕聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyMutatedAddModToRare"
+  },
+  {
+    "name": "Flesh of Xesht",
+    "nameZh": "烈許之血肉",
+    "category": "通貨",
+    "subcategory": "裂痕聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyBreachUpgradeUniqueGeneral"
+  },
+  {
+    "name": "Silver Coin",
+    "nameZh": "銀幣",
+    "category": "通貨",
+    "subcategory": "祖靈",
+    "marketId": "Metadata/Items/Currency/CurrencyAncestralSilverCoin"
+  },
+  {
+    "name": "Allflame Ember of Kulemak",
+    "nameZh": "不滅之火骷髏馬克餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/BetrayalAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of Resplendence",
+    "nameZh": "不滅之火輝煌餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/ResplendenceAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of Propagation",
+    "nameZh": "不滅之火傳播餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/PropagationAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of Flesh",
+    "nameZh": "不滅之火血肉餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/MeatSackAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Wildwood",
+    "nameZh": "不滅之火荒林餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/WildwoodAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Ethereal",
+    "nameZh": "不滅之火虛靈餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/CleansedAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Gilded",
+    "nameZh": "不滅之火鍍金餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/GoldAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of Toads",
+    "nameZh": "不滅之火蟾蜍餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/ToadAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Cloister",
+    "nameZh": "不滅之火迴廊餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/CloisterAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Multitude",
+    "nameZh": "不滅之火增生餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/AtlasAllflamePack"
+  },
+  {
+    "name": "Allflame Ember of the Divine",
+    "nameZh": "不滅之火命運餘燼",
+    "category": "通貨",
+    "subcategory": "不滅之火餘燼",
+    "marketId": "Metadata/Items/MapFragments/PantheonAllflamePack"
+  },
+  {
+    "name": "Soul Core of Intellect",
+    "nameZh": "智慧之靈魂核心",
+    "category": "通貨",
+    "subcategory": "靈魂核心",
+    "marketId": "Metadata/Items/Currency/CurrencyWishSupportGemBlue"
+  },
+  {
+    "name": "Soul Core of Might",
+    "nameZh": "力量之靈魂核心",
+    "category": "通貨",
+    "subcategory": "靈魂核心",
+    "marketId": "Metadata/Items/Currency/CurrencyWishSupportGemRed"
+  },
+  {
+    "name": "Soul Core of Finesse",
+    "nameZh": "技藝之靈魂核心",
+    "category": "通貨",
+    "subcategory": "靈魂核心",
+    "marketId": "Metadata/Items/Currency/CurrencyWishSupportGemGreen"
+  },
+  {
+    "name": "Soul Core of Instability",
+    "nameZh": "易變之靈魂核心",
+    "category": "通貨",
+    "subcategory": "靈魂核心",
+    "marketId": "Metadata/Items/Currency/CurrencyWishSupportGem"
+  },
+  {
+    "name": "Whispering Essence of Hatred",
+    "nameZh": "憎恨之低語精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred1"
+  },
+  {
+    "name": "Muttering Essence of Hatred",
+    "nameZh": "憎恨之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred2"
+  },
+  {
+    "name": "Weeping Essence of Hatred",
+    "nameZh": "憎恨之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred3"
+  },
+  {
+    "name": "Wailing Essence of Hatred",
+    "nameZh": "憎恨之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred4"
+  },
+  {
+    "name": "Screaming Essence of Hatred",
+    "nameZh": "憎恨之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred5"
+  },
+  {
+    "name": "Shrieking Essence of Hatred",
+    "nameZh": "憎恨之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred6"
+  },
+  {
+    "name": "Deafening Essence of Hatred",
+    "nameZh": "憎恨之破空精髓",
+    "category": "精髓",
+    "subcategory": "憎恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHatred7"
+  },
+  {
+    "name": "Whispering Essence of Woe",
+    "nameZh": "悲痛之低語精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe1"
+  },
+  {
+    "name": "Muttering Essence of Woe",
+    "nameZh": "悲痛之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe2"
+  },
+  {
+    "name": "Weeping Essence of Woe",
+    "nameZh": "悲痛之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe3"
+  },
+  {
+    "name": "Wailing Essence of Woe",
+    "nameZh": "悲痛之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe4"
+  },
+  {
+    "name": "Screaming Essence of Woe",
+    "nameZh": "悲痛之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe5"
+  },
+  {
+    "name": "Shrieking Essence of Woe",
+    "nameZh": "悲痛之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe6"
+  },
+  {
+    "name": "Deafening Essence of Woe",
+    "nameZh": "悲痛之破空精髓",
+    "category": "精髓",
+    "subcategory": "災禍精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWoe7"
+  },
+  {
+    "name": "Whispering Essence of Greed",
+    "nameZh": "貪婪之低語精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed1"
+  },
+  {
+    "name": "Muttering Essence of Greed",
+    "nameZh": "貪婪之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed2"
+  },
+  {
+    "name": "Weeping Essence of Greed",
+    "nameZh": "貪婪之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed3"
+  },
+  {
+    "name": "Wailing Essence of Greed",
+    "nameZh": "貪婪之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed4"
+  },
+  {
+    "name": "Screaming Essence of Greed",
+    "nameZh": "貪婪之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed5"
+  },
+  {
+    "name": "Shrieking Essence of Greed",
+    "nameZh": "貪婪之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed6"
+  },
+  {
+    "name": "Deafening Essence of Greed",
+    "nameZh": "貪婪之破空精髓",
+    "category": "精髓",
+    "subcategory": "貪婪精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceGreed7"
+  },
+  {
+    "name": "Whispering Essence of Contempt",
+    "nameZh": "輕視之低語精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt1"
+  },
+  {
+    "name": "Muttering Essence of Contempt",
+    "nameZh": "輕視之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt2"
+  },
+  {
+    "name": "Weeping Essence of Contempt",
+    "nameZh": "輕視之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt3"
+  },
+  {
+    "name": "Wailing Essence of Contempt",
+    "nameZh": "輕視之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt4"
+  },
+  {
+    "name": "Screaming Essence of Contempt",
+    "nameZh": "輕視之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt5"
+  },
+  {
+    "name": "Shrieking Essence of Contempt",
+    "nameZh": "輕視之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt6"
+  },
+  {
+    "name": "Deafening Essence of Contempt",
+    "nameZh": "輕視之破空精髓",
+    "category": "精髓",
+    "subcategory": "輕蔑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceContempt7"
+  },
+  {
+    "name": "Muttering Essence of Sorrow",
+    "nameZh": "哀惜之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow1"
+  },
+  {
+    "name": "Weeping Essence of Sorrow",
+    "nameZh": "哀惜之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow2"
+  },
+  {
+    "name": "Wailing Essence of Sorrow",
+    "nameZh": "哀惜之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow3"
+  },
+  {
+    "name": "Screaming Essence of Sorrow",
+    "nameZh": "哀惜之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow4"
+  },
+  {
+    "name": "Shrieking Essence of Sorrow",
+    "nameZh": "哀惜之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow5"
+  },
+  {
+    "name": "Deafening Essence of Sorrow",
+    "nameZh": "哀惜之破空精髓",
+    "category": "精髓",
+    "subcategory": "憂傷精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSorrow6"
+  },
+  {
+    "name": "Muttering Essence of Anger",
+    "nameZh": "憤怒之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger1"
+  },
+  {
+    "name": "Weeping Essence of Anger",
+    "nameZh": "憤怒之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger2"
+  },
+  {
+    "name": "Wailing Essence of Anger",
+    "nameZh": "憤怒之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger3"
+  },
+  {
+    "name": "Screaming Essence of Anger",
+    "nameZh": "憤怒之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger4"
+  },
+  {
+    "name": "Shrieking Essence of Anger",
+    "nameZh": "憤怒之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger5"
+  },
+  {
+    "name": "Deafening Essence of Anger",
+    "nameZh": "憤怒之破空精髓",
+    "category": "精髓",
+    "subcategory": "憤怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnger6"
+  },
+  {
+    "name": "Muttering Essence of Torment",
+    "nameZh": "折磨之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment1"
+  },
+  {
+    "name": "Weeping Essence of Torment",
+    "nameZh": "折磨之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment2"
+  },
+  {
+    "name": "Wailing Essence of Torment",
+    "nameZh": "折磨之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment3"
+  },
+  {
+    "name": "Screaming Essence of Torment",
+    "nameZh": "折磨之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment4"
+  },
+  {
+    "name": "Shrieking Essence of Torment",
+    "nameZh": "折磨之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment5"
+  },
+  {
+    "name": "Deafening Essence of Torment",
+    "nameZh": "折磨之破空精髓",
+    "category": "精髓",
+    "subcategory": "苦難精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceTorment6"
+  },
+  {
+    "name": "Muttering Essence of Fear",
+    "nameZh": "恐懼之呢喃精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear1"
+  },
+  {
+    "name": "Weeping Essence of Fear",
+    "nameZh": "恐懼之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear2"
+  },
+  {
+    "name": "Wailing Essence of Fear",
+    "nameZh": "恐懼之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear3"
+  },
+  {
+    "name": "Screaming Essence of Fear",
+    "nameZh": "恐懼之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear4"
+  },
+  {
+    "name": "Shrieking Essence of Fear",
+    "nameZh": "恐懼之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear5"
+  },
+  {
+    "name": "Deafening Essence of Fear",
+    "nameZh": "恐懼之破空精髓",
+    "category": "精髓",
+    "subcategory": "恐懼精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFear6"
+  },
+  {
+    "name": "Weeping Essence of Suffering",
+    "nameZh": "苦難之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "痛苦精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSuffering1"
+  },
+  {
+    "name": "Wailing Essence of Suffering",
+    "nameZh": "苦難之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "痛苦精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSuffering2"
+  },
+  {
+    "name": "Screaming Essence of Suffering",
+    "nameZh": "苦難之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "痛苦精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSuffering3"
+  },
+  {
+    "name": "Shrieking Essence of Suffering",
+    "nameZh": "苦難之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "痛苦精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSuffering4"
+  },
+  {
+    "name": "Deafening Essence of Suffering",
+    "nameZh": "苦難之破空精髓",
+    "category": "精髓",
+    "subcategory": "痛苦精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSuffering5"
+  },
+  {
+    "name": "Weeping Essence of Rage",
+    "nameZh": "肆虐之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "盛怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceRage1"
+  },
+  {
+    "name": "Wailing Essence of Rage",
+    "nameZh": "肆虐之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "盛怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceRage2"
+  },
+  {
+    "name": "Screaming Essence of Rage",
+    "nameZh": "肆虐之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "盛怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceRage3"
+  },
+  {
+    "name": "Shrieking Essence of Rage",
+    "nameZh": "肆虐之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "盛怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceRage4"
+  },
+  {
+    "name": "Deafening Essence of Rage",
+    "nameZh": "肆虐之破空精髓",
+    "category": "精髓",
+    "subcategory": "盛怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceRage5"
+  },
+  {
+    "name": "Weeping Essence of Wrath",
+    "nameZh": "雷霆之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "狂怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWrath1"
+  },
+  {
+    "name": "Wailing Essence of Wrath",
+    "nameZh": "雷霆之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "狂怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWrath2"
+  },
+  {
+    "name": "Screaming Essence of Wrath",
+    "nameZh": "雷霆之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "狂怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWrath3"
+  },
+  {
+    "name": "Shrieking Essence of Wrath",
+    "nameZh": "雷霆之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "狂怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWrath4"
+  },
+  {
+    "name": "Deafening Essence of Wrath",
+    "nameZh": "雷霆之破空精髓",
+    "category": "精髓",
+    "subcategory": "狂怒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceWrath5"
+  },
+  {
+    "name": "Weeping Essence of Doubt",
+    "nameZh": "疑惑之啼泣精髓",
+    "category": "精髓",
+    "subcategory": "疑惑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDoubt1"
+  },
+  {
+    "name": "Wailing Essence of Doubt",
+    "nameZh": "疑惑之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "疑惑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDoubt2"
+  },
+  {
+    "name": "Screaming Essence of Doubt",
+    "nameZh": "疑惑之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "疑惑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDoubt3"
+  },
+  {
+    "name": "Shrieking Essence of Doubt",
+    "nameZh": "疑惑之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "疑惑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDoubt4"
+  },
+  {
+    "name": "Deafening Essence of Doubt",
+    "nameZh": "疑惑之破空精髓",
+    "category": "精髓",
+    "subcategory": "疑惑精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDoubt5"
+  },
+  {
+    "name": "Wailing Essence of Anguish",
+    "nameZh": "煎熬之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "悲痛精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnguish1"
+  },
+  {
+    "name": "Screaming Essence of Anguish",
+    "nameZh": "煎熬之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "悲痛精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnguish2"
+  },
+  {
+    "name": "Shrieking Essence of Anguish",
+    "nameZh": "煎熬之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "悲痛精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnguish3"
+  },
+  {
+    "name": "Deafening Essence of Anguish",
+    "nameZh": "煎熬之破空精髓",
+    "category": "精髓",
+    "subcategory": "悲痛精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceAnguish4"
+  },
+  {
+    "name": "Wailing Essence of Loathing",
+    "nameZh": "厭惡之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "厭惡精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceLoathing1"
+  },
+  {
+    "name": "Screaming Essence of Loathing",
+    "nameZh": "厭惡之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "厭惡精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceLoathing2"
+  },
+  {
+    "name": "Shrieking Essence of Loathing",
+    "nameZh": "厭惡之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "厭惡精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceLoathing3"
+  },
+  {
+    "name": "Deafening Essence of Loathing",
+    "nameZh": "厭惡之破空精髓",
+    "category": "精髓",
+    "subcategory": "厭惡精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceLoathing4"
+  },
+  {
+    "name": "Wailing Essence of Spite",
+    "nameZh": "刻毒之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "怨恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSpite1"
+  },
+  {
+    "name": "Screaming Essence of Spite",
+    "nameZh": "刻毒之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "怨恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSpite2"
+  },
+  {
+    "name": "Shrieking Essence of Spite",
+    "nameZh": "刻毒之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "怨恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSpite3"
+  },
+  {
+    "name": "Deafening Essence of Spite",
+    "nameZh": "刻毒之破空精髓",
+    "category": "精髓",
+    "subcategory": "怨恨精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceSpite4"
+  },
+  {
+    "name": "Wailing Essence of Zeal",
+    "nameZh": "熱情之哀嚎精髓",
+    "category": "精髓",
+    "subcategory": "狂熱精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceZeal1"
+  },
+  {
+    "name": "Screaming Essence of Zeal",
+    "nameZh": "熱情之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "狂熱精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceZeal2"
+  },
+  {
+    "name": "Shrieking Essence of Zeal",
+    "nameZh": "熱情之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "狂熱精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceZeal3"
+  },
+  {
+    "name": "Deafening Essence of Zeal",
+    "nameZh": "熱情之破空精髓",
+    "category": "精髓",
+    "subcategory": "狂熱精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceZeal4"
+  },
+  {
+    "name": "Screaming Essence of Misery",
+    "nameZh": "悽慘之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "悲慘精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceMisery1"
+  },
+  {
+    "name": "Shrieking Essence of Misery",
+    "nameZh": "悽慘之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "悲慘精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceMisery2"
+  },
+  {
+    "name": "Deafening Essence of Misery",
+    "nameZh": "悽慘之破空精髓",
+    "category": "精髓",
+    "subcategory": "悲慘精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceMisery3"
+  },
+  {
+    "name": "Screaming Essence of Dread",
+    "nameZh": "忌憚之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "恐慌精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDread1"
+  },
+  {
+    "name": "Shrieking Essence of Dread",
+    "nameZh": "忌憚之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "恐慌精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDread2"
+  },
+  {
+    "name": "Deafening Essence of Dread",
+    "nameZh": "忌憚之破空精髓",
+    "category": "精髓",
+    "subcategory": "恐慌精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDread3"
+  },
+  {
+    "name": "Screaming Essence of Scorn",
+    "nameZh": "傲視之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "蔑視精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceScorn1"
+  },
+  {
+    "name": "Shrieking Essence of Scorn",
+    "nameZh": "傲視之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "蔑視精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceScorn2"
+  },
+  {
+    "name": "Deafening Essence of Scorn",
+    "nameZh": "傲視之破空精髓",
+    "category": "精髓",
+    "subcategory": "蔑視精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceScorn3"
+  },
+  {
+    "name": "Screaming Essence of Envy",
+    "nameZh": "忌妒之咆哮精髓",
+    "category": "精髓",
+    "subcategory": "忌妒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceEnvy1"
+  },
+  {
+    "name": "Shrieking Essence of Envy",
+    "nameZh": "忌妒之尖嘯精髓",
+    "category": "精髓",
+    "subcategory": "忌妒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceEnvy2"
+  },
+  {
+    "name": "Deafening Essence of Envy",
+    "nameZh": "忌妒之破空精髓",
+    "category": "精髓",
+    "subcategory": "忌妒精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceEnvy3"
+  },
+  {
+    "name": "Essence of Hysteria",
+    "nameZh": "浮誇精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHysteria1"
+  },
+  {
+    "name": "Essence of Insanity",
+    "nameZh": "錯亂精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceInsanity1"
+  },
+  {
+    "name": "Essence of Horror",
+    "nameZh": "極恐精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceHorror1"
+  },
+  {
+    "name": "Essence of Delirium",
+    "nameZh": "譫妄精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceDelirium1"
+  },
+  {
+    "name": "Essence of Desolation",
+    "nameZh": "荒蕪精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceFaridun1"
+  },
+  {
+    "name": "Essence of Trickery",
+    "nameZh": "欺瞞精髓",
+    "category": "精髓",
+    "subcategory": "特殊精髓",
+    "marketId": "Metadata/Items/Currency/CurrencyEssenceUber1"
+  },
+  {
+    "name": "Primitive Chaotic Resonator",
+    "nameZh": "原始混沌鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyReroll1"
+  },
+  {
+    "name": "Potent Chaotic Resonator",
+    "nameZh": "增幅混沌鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyReroll2"
+  },
+  {
+    "name": "Powerful Chaotic Resonator",
+    "nameZh": "強力混沌鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyReroll3"
+  },
+  {
+    "name": "Prime Chaotic Resonator",
+    "nameZh": "終極混沌鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyReroll4"
+  },
+  {
+    "name": "Primitive Alchemical Resonator",
+    "nameZh": "原始煉金鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyUpgrade1"
+  },
+  {
+    "name": "Potent Alchemical Resonator",
+    "nameZh": "增幅煉金鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyUpgrade2"
+  },
+  {
+    "name": "Powerful Alchemical Resonator",
+    "nameZh": "強力煉金鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyUpgrade3"
+  },
+  {
+    "name": "Prime Alchemical Resonator",
+    "nameZh": "終極煉金鑄新儀",
+    "category": "掘獄聯盟",
+    "subcategory": "鑄新儀",
+    "marketId": "Metadata/Items/Delve/DelveStackableSocketableCurrencyUpgrade4"
+  },
+  {
+    "name": "Scorched Fossil",
+    "nameZh": "暴炎化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingFire"
+  },
+  {
+    "name": "Frigid Fossil",
+    "nameZh": "寒風化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingCold"
+  },
+  {
+    "name": "Metallic Fossil",
+    "nameZh": "金鋼化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingLightning"
+  },
+  {
+    "name": "Jagged Fossil",
+    "nameZh": "鋸齒化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingPhysical"
+  },
+  {
+    "name": "Aberrant Fossil",
+    "nameZh": "特異化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingChaos"
+  },
+  {
+    "name": "Pristine Fossil",
+    "nameZh": "原始化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingLife"
+  },
+  {
+    "name": "Dense Fossil",
+    "nameZh": "稠密化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingDefences"
+  },
+  {
+    "name": "Corroded Fossil",
+    "nameZh": "斑駁化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingBleedPoison"
+  },
+  {
+    "name": "Prismatic Fossil",
+    "nameZh": "三相化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingElemental"
+  },
+  {
+    "name": "Aetheric Fossil",
+    "nameZh": "神幻化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingCasterMods"
+  },
+  {
+    "name": "Serrated Fossil",
+    "nameZh": "利齒化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingAttackMods"
+  },
+  {
+    "name": "Bound Fossil",
+    "nameZh": "畛域化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingMinionsAuras"
+  },
+  {
+    "name": "Opulent Fossil",
+    "nameZh": "華麗化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingQuality"
+  },
+  {
+    "name": "Deft Fossil",
+    "nameZh": "靈巧化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingEnchant"
+  },
+  {
+    "name": "Lucent Fossil",
+    "nameZh": "明透化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingMana"
+  },
+  {
+    "name": "Shuddering Fossil",
+    "nameZh": "顫慄化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingSpeed"
+  },
+  {
+    "name": "Fundamental Fossil",
+    "nameZh": "根本化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingSockets"
+  },
+  {
+    "name": "Sanctified Fossil",
+    "nameZh": "神聖化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingLuckyModRolls"
+  },
+  {
+    "name": "Gilded Fossil",
+    "nameZh": "鑲金化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingSellPrice"
+  },
+  {
+    "name": "Faceted Fossil",
+    "nameZh": "雕琢化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingGemLevel"
+  },
+  {
+    "name": "Bloodstained Fossil",
+    "nameZh": "血漬化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingVaal"
+  },
+  {
+    "name": "Hollow Fossil",
+    "nameZh": "鏤空化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingAbyss"
+  },
+  {
+    "name": "Fractured Fossil",
+    "nameZh": "破裂化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingMirror"
+  },
+  {
+    "name": "Glyphic Fossil",
+    "nameZh": "雕紋化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingCorruptEssence"
+  },
+  {
+    "name": "Tangled Fossil",
+    "nameZh": "紊亂化石",
+    "category": "掘獄聯盟",
+    "subcategory": "化石",
+    "marketId": "Metadata/Items/Currency/CurrencyDelveCraftingRandom"
+  },
+  {
+    "name": "Expedition Thread",
+    "nameZh": "探險綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadExpedition"
+  },
+  {
+    "name": "Abyss Thread",
+    "nameZh": "深淵綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadAbyss"
+  },
+  {
+    "name": "Breach Thread",
+    "nameZh": "裂痕綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadBreach"
+  },
+  {
+    "name": "Ritual Thread",
+    "nameZh": "祭祀綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadRitual"
+  },
+  {
+    "name": "Ultimatum Thread",
+    "nameZh": "通牒綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadUltimatum"
+  },
+  {
+    "name": "Legion Thread",
+    "nameZh": "戰亂綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadLegion"
+  },
+  {
+    "name": "Blight Thread",
+    "nameZh": "凋落綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadBlight"
+  },
+  {
+    "name": "Bestiary Thread",
+    "nameZh": "獸獵綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadBestiary"
+  },
+  {
+    "name": "Betrayal Thread",
+    "nameZh": "反叛綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadBetrayal"
+  },
+  {
+    "name": "Incursion Thread",
+    "nameZh": "穿越綢帶",
+    "category": "綢帶",
+    "marketId": "Metadata/Items/Threads/ThreadIncursion"
+  },
+  {
+    "name": "A Dab of Ink",
+    "nameZh": "代伯之墨",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardADabOfInk"
+  },
+  {
+    "name": "Akil's Prophecy",
+    "nameZh": "阿基爾的預言",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAkilsProphecy"
+  },
+  {
+    "name": "Alivia's Grace",
+    "nameZh": "奧薇莉亞的恩典",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAliviasGrace"
+  },
+  {
+    "name": "Anarchy's Price",
+    "nameZh": "混亂代價",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAnarchysPrice"
+  },
+  {
+    "name": "A Note in the Wind",
+    "nameZh": "隨風飄記",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardANoteInTheWind"
+  },
+  {
+    "name": "Assassin's Favour",
+    "nameZh": "刺客恩惠",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAssassinsFavour"
+  },
+  {
+    "name": "Assassin's Gift",
+    "nameZh": "刺客的餽贈",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAssassinsGift"
+  },
+  {
+    "name": "Astral Protection",
+    "nameZh": "星際保護",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAstralProtection"
+  },
+  {
+    "name": "Atziri's Arsenal",
+    "nameZh": "阿茲里的武庫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAtzirisArsenal"
+  },
+  {
+    "name": "Audacity",
+    "nameZh": "膽識",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAudacity"
+  },
+  {
+    "name": "Beauty Through Death",
+    "nameZh": "夕陽紅顏",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBeautyThroughDeath"
+  },
+  {
+    "name": "Bowyer's Dream",
+    "nameZh": "弓匠的夢想",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBowyersDream"
+  },
+  {
+    "name": "Broken Truce",
+    "nameZh": "打破休戰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrokenTruce"
+  },
+  {
+    "name": "Cursed Words",
+    "nameZh": "髒話",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCursedWords"
+  },
+  {
+    "name": "Dark Dreams",
+    "nameZh": "漆黑夢魘",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDarkDreams"
+  },
+  {
+    "name": "Dark Temptation",
+    "nameZh": "暗黑的誘惑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDarkTemptation"
+  },
+  {
+    "name": "Death",
+    "nameZh": "死亡",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDeath"
+  },
+  {
+    "name": "Desperate Crusade",
+    "nameZh": "絕望遠征",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDesperateCrusade"
+  },
+  {
+    "name": "Destined to Crumble",
+    "nameZh": "殞落的命運",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDestinedToCrumble"
+  },
+  {
+    "name": "Draped in Dreams",
+    "nameZh": "披夢",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDrapedInDreams"
+  },
+  {
+    "name": "Duality",
+    "nameZh": "雙重性",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDuality"
+  },
+  {
+    "name": "Echoes of Love",
+    "nameZh": "愛我請舉手",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEchoesOfLove"
+  },
+  {
+    "name": "Emperor of Purity",
+    "nameZh": "純潔帝王",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEmperorOfPurity"
+  },
+  {
+    "name": "Endless Night",
+    "nameZh": "無盡的夜晚",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEndlessNight"
+  },
+  {
+    "name": "Energy Sword",
+    "nameZh": "能量之劍",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEnergySword"
+  },
+  {
+    "name": "Etched in Blood",
+    "nameZh": "腐爛於血",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEtchedInBlood"
+  },
+  {
+    "name": "Forbidden Power",
+    "nameZh": "禁忌之力",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardForbiddenPower"
+  },
+  {
+    "name": "From Bone to Ashes",
+    "nameZh": "骨頭燒到灰燼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFromBoneToAshes"
+  },
+  {
+    "name": "Further Invention",
+    "nameZh": "進步發明",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFurtherInvention"
+  },
+  {
+    "name": "Gift of Asenath",
+    "nameZh": "安賽娜絲贈禮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGiftOfAsenath"
+  },
+  {
+    "name": "Humility",
+    "nameZh": "謙遜",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHumility"
+  },
+  {
+    "name": "Hunter's Resolve",
+    "nameZh": "獵者之願",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHuntersResolve"
+  },
+  {
+    "name": "Immortal Resolve",
+    "nameZh": "不朽決心",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardImmortalResolve"
+  },
+  {
+    "name": "Imperial Legacy",
+    "nameZh": "不朽聖物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardImperialLegacy"
+  },
+  {
+    "name": "Judging Voices",
+    "nameZh": "審判之聲",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardJudgingVoices"
+  },
+  {
+    "name": "Keeper's Corruption",
+    "nameZh": "守護者的腐敗",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardKeepersCorruption"
+  },
+  {
+    "name": "Last Stand",
+    "nameZh": "最後一博",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLastStand"
+  },
+  {
+    "name": "Lethean Temptation",
+    "nameZh": "絕境誘惑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLetheanTemptation"
+  },
+  {
+    "name": "Light and Truth",
+    "nameZh": "光與諦",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLightAndTruth"
+  },
+  {
+    "name": "Lucky Bastion",
+    "nameZh": "幸運壁壘",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLuckyBastion"
+  },
+  {
+    "name": "Merciless Armament",
+    "nameZh": "無情軍械",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMercilessArmament"
+  },
+  {
+    "name": "Might is Right",
+    "nameZh": "正氣",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMightIsRight"
+  },
+  {
+    "name": "Misery in Darkness",
+    "nameZh": "黑暗中的苦難",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMiseryInDarkness"
+  },
+  {
+    "name": "Mitts",
+    "nameZh": "手套",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMitts"
+  },
+  {
+    "name": "Nook's Crown",
+    "nameZh": "邊緣之冠",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardNooksCrown"
+  },
+  {
+    "name": "Poisoned Faith",
+    "nameZh": "有毒信仰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPoisonedFaith"
+  },
+  {
+    "name": "Pride Before the Fall",
+    "nameZh": "驕者必敗",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPrideBeforeTheFall"
+  },
+  {
+    "name": "Pride of the First Ones",
+    "nameZh": "初始者的驕傲",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPrideOfTheFirstOnes"
+  },
+  {
+    "name": "Prometheus' Armoury",
+    "nameZh": "普羅米修斯的裝甲庫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPrometheusArmoury"
+  },
+  {
+    "name": "Rats",
+    "nameZh": "鼠輩",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRats"
+  },
+  {
+    "name": "Rebirth",
+    "nameZh": "重生",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRebirth"
+  },
+  {
+    "name": "Reckless Ambition",
+    "nameZh": "魯莽的野心",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRecklessAmbition"
+  },
+  {
+    "name": "Sambodhi's Wisdom",
+    "nameZh": "菩提的智慧",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSambodhisWisdom"
+  },
+  {
+    "name": "The Adventuring Spirit",
+    "nameZh": "冒險之靈",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAdventuringSpirit"
+  },
+  {
+    "name": "The Archmage's Right Hand",
+    "nameZh": "魔法師的右手",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheArchmagesRightHand"
+  },
+  {
+    "name": "The Army of Blood",
+    "nameZh": "血滴子",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheArmyOfBlood"
+  },
+  {
+    "name": "The Astromancer",
+    "nameZh": "天文巫師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAstromancer"
+  },
+  {
+    "name": "The Avenger",
+    "nameZh": "復仇者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAvenger"
+  },
+  {
+    "name": "The Battle Born",
+    "nameZh": "戰火鍛造",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBattleBorn"
+  },
+  {
+    "name": "The Bear Woman",
+    "nameZh": "熊腰雌背",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBearWoman"
+  },
+  {
+    "name": "The Beast",
+    "nameZh": "巨獸",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBeast"
+  },
+  {
+    "name": "The Betrayal",
+    "nameZh": "背叛",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBetrayal"
+  },
+  {
+    "name": "The Blazing Fire",
+    "nameZh": "熊熊大火",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBlazingFire"
+  },
+  {
+    "name": "The Body",
+    "nameZh": "血肉之軀",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBody"
+  },
+  {
+    "name": "The Brawny Battle Mage",
+    "nameZh": "頑強的戰鬥法",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBrawnyBattleMage"
+  },
+  {
+    "name": "The Carrion Crow",
+    "nameZh": "食腐掠鴉",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCarrionCrow"
+  },
+  {
+    "name": "The Catch",
+    "nameZh": "垂釣",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCatch"
+  },
+  {
+    "name": "The Celestial Justicar",
+    "nameZh": "天堂執法官",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCelestialJusticar"
+  },
+  {
+    "name": "The Chains that Bind",
+    "nameZh": "束縛之鍊",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheChainsThatBind"
+  },
+  {
+    "name": "The Chosen",
+    "nameZh": "天選之人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheChosen"
+  },
+  {
+    "name": "The Coming Storm",
+    "nameZh": "風暴將至",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheComingStorm"
+  },
+  {
+    "name": "The Conduit",
+    "nameZh": "雷針",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheConduit"
+  },
+  {
+    "name": "The Dapper Prodigy",
+    "nameZh": "極致不凡",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDapperProdigy"
+  },
+  {
+    "name": "The Darkest Dream",
+    "nameZh": "惡夢",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDarkestDream"
+  },
+  {
+    "name": "The Dark Mage",
+    "nameZh": "黑暗術者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDarkMage"
+  },
+  {
+    "name": "The Deep Ones",
+    "nameZh": "無盡之淵",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDeepOnes"
+  },
+  {
+    "name": "The Demoness",
+    "nameZh": "魅魔",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDemoness"
+  },
+  {
+    "name": "The Endless Darkness",
+    "nameZh": "無盡黯黑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEndlessDarkness"
+  },
+  {
+    "name": "The Enforcer",
+    "nameZh": "執行者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEnforcer"
+  },
+  {
+    "name": "The Enthusiasts",
+    "nameZh": "熱心民眾",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEnthusiasts"
+  },
+  {
+    "name": "The Escape",
+    "nameZh": "逃脫大師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEscape"
+  },
+  {
+    "name": "The Ethereal",
+    "nameZh": "空靈",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEthereal"
+  },
+  {
+    "name": "The Fathomless Depths",
+    "nameZh": "無底深淵",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFathomlessDepths"
+  },
+  {
+    "name": "The Fletcher",
+    "nameZh": "製箭者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFletcher"
+  },
+  {
+    "name": "The Flora's Gift",
+    "nameZh": "芙蘿拉的贈禮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFlorasGift"
+  },
+  {
+    "name": "The Formless Sea",
+    "nameZh": "莫測之海",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFormlessSea"
+  },
+  {
+    "name": "The Fox in the Brambles",
+    "nameZh": "荊棘中的狐狸",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFoxInTheBrambles"
+  },
+  {
+    "name": "The Gentleman",
+    "nameZh": "紳士之風",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGentleman"
+  },
+  {
+    "name": "The Gladiator",
+    "nameZh": "鬥士",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGladiator"
+  },
+  {
+    "name": "The Golden Era",
+    "nameZh": "黃金年代",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGoldenEra"
+  },
+  {
+    "name": "The Greatest Intentions",
+    "nameZh": "雄偉動機",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGreatestIntentions"
+  },
+  {
+    "name": "The Harvester",
+    "nameZh": "收割者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHarvester"
+  },
+  {
+    "name": "The Hermit",
+    "nameZh": "隱士",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHermit"
+  },
+  {
+    "name": "The Hive of Knowledge",
+    "nameZh": "蜂巢知識",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHiveOfKnowledge"
+  },
+  {
+    "name": "The Incantation",
+    "nameZh": "咒語",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheIncantation"
+  },
+  {
+    "name": "The Inoculated",
+    "nameZh": "移花接木",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheInoculated"
+  },
+  {
+    "name": "The Insatiable",
+    "nameZh": "貪婪",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheInsatiable"
+  },
+  {
+    "name": "The Jester",
+    "nameZh": "小丑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheJester"
+  },
+  {
+    "name": "The Jeweller's Boon",
+    "nameZh": "珠寶商的施捨",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheJewellersBoon"
+  },
+  {
+    "name": "The Journalist",
+    "nameZh": "記者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheJournalist"
+  },
+  {
+    "name": "The King's Blade",
+    "nameZh": "王者之刃",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheKingsBlade"
+  },
+  {
+    "name": "The King's Heart",
+    "nameZh": "王者之心",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheKingsHeart"
+  },
+  {
+    "name": "The Last One Standing",
+    "nameZh": "屹立不敗之人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLastOneStanding"
+  },
+  {
+    "name": "The Last Supper",
+    "nameZh": "最後晚宴",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLastSupper"
+  },
+  {
+    "name": "The Lich",
+    "nameZh": "巫妖",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLich"
+  },
+  {
+    "name": "The Long Watch",
+    "nameZh": "守望特工",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLongWatch"
+  },
+  {
+    "name": "The Lord of Celebration",
+    "nameZh": "慶典之王",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLordOfCelebration"
+  },
+  {
+    "name": "The Lunaris Priestess",
+    "nameZh": "月影女祭司",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLunarisPriestess"
+  },
+  {
+    "name": "The Mercenary",
+    "nameZh": "傭兵",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMercenary"
+  },
+  {
+    "name": "The Oath",
+    "nameZh": "誓言",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOath"
+  },
+  {
+    "name": "The Offering",
+    "nameZh": "奉獻",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOffering"
+  },
+  {
+    "name": "The Old Man",
+    "nameZh": "老人與海",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOldMan"
+  },
+  {
+    "name": "The Pack Leader",
+    "nameZh": "群聚之首",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePackLeader"
+  },
+  {
+    "name": "The Pact",
+    "nameZh": "協約",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePact"
+  },
+  {
+    "name": "The Poet",
+    "nameZh": "詩人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePoet"
+  },
+  {
+    "name": "The Porcupine",
+    "nameZh": "刺蝟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePorcupine"
+  },
+  {
+    "name": "The Price of Loyalty",
+    "nameZh": "忠誠代價",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePriceOfLoyalty"
+  },
+  {
+    "name": "The Queen",
+    "nameZh": "女王",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheQueen"
+  },
+  {
+    "name": "The Rabid Rhoa",
+    "nameZh": "瘋狂恐喙",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRabidRhoa"
+  },
+  {
+    "name": "The Road to Power",
+    "nameZh": "力量之道",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRoadToPower"
+  },
+  {
+    "name": "The Sacrifice",
+    "nameZh": "犧牲",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSacrifice"
+  },
+  {
+    "name": "The Scarred Meadow",
+    "nameZh": "創痕之原",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheScarredMeadow"
+  },
+  {
+    "name": "The Scavenger",
+    "nameZh": "清道夫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheScavenger"
+  },
+  {
+    "name": "The Shepherd's Sandals",
+    "nameZh": "牧羊人的草鞋",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheShepherdsSandals"
+  },
+  {
+    "name": "The Shieldbearer",
+    "nameZh": "持盾者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheShieldbearer"
+  },
+  {
+    "name": "The Siren",
+    "nameZh": "海妖",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSiren"
+  },
+  {
+    "name": "The Soul",
+    "nameZh": "靈魂",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSoul"
+  },
+  {
+    "name": "The Spoiled Prince",
+    "nameZh": "驕縱皇子",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSpoiledPrince"
+  },
+  {
+    "name": "The Stormcaller",
+    "nameZh": "風暴呼喚者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheStormcaller"
+  },
+  {
+    "name": "The Sun",
+    "nameZh": "烈日",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSun"
+  },
+  {
+    "name": "The Throne",
+    "nameZh": "王座",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheThrone"
+  },
+  {
+    "name": "The Tower",
+    "nameZh": "塔峰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTower"
+  },
+  {
+    "name": "The Traitor",
+    "nameZh": "背叛者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTraitor"
+  },
+  {
+    "name": "The Twins",
+    "nameZh": "孿生",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTwins"
+  },
+  {
+    "name": "The Tyrant",
+    "nameZh": "暴君",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTyrant"
+  },
+  {
+    "name": "The Undisputed",
+    "nameZh": "不許你胡說",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheUndisputed"
+  },
+  {
+    "name": "The Vast",
+    "nameZh": "平壤",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheVast"
+  },
+  {
+    "name": "The Visionary",
+    "nameZh": "空想家",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheVisionary"
+  },
+  {
+    "name": "The Warlord",
+    "nameZh": "大軍閥",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWarlord"
+  },
+  {
+    "name": "The Watcher",
+    "nameZh": "凝視者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWatcher"
+  },
+  {
+    "name": "The Web",
+    "nameZh": "蛛網",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWeb"
+  },
+  {
+    "name": "The Wedding Gift",
+    "nameZh": "結婚禮物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWeddingGift"
+  },
+  {
+    "name": "The White Knight",
+    "nameZh": "白騎士",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWhiteKnight"
+  },
+  {
+    "name": "The Whiteout",
+    "nameZh": "白化",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWhiteout"
+  },
+  {
+    "name": "The Wind",
+    "nameZh": "風",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWind"
+  },
+  {
+    "name": "The Wolf's Shadow",
+    "nameZh": "狼的影子",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWolfsShadow"
+  },
+  {
+    "name": "The Wolven King's Bite",
+    "nameZh": "狼咬",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWolvenKingsBite"
+  },
+  {
+    "name": "The Wolverine",
+    "nameZh": "狼獾",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWolverine"
+  },
+  {
+    "name": "The World Eater",
+    "nameZh": "噬世士",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWorldEater"
+  },
+  {
+    "name": "Thunderous Skies",
+    "nameZh": "怒雷之空",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThunderousSkies"
+  },
+  {
+    "name": "Toxic Tidings",
+    "nameZh": "毒浪洶湧",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardToxicTidings"
+  },
+  {
+    "name": "Tranquillity",
+    "nameZh": "寧靜",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTranquillity"
+  },
+  {
+    "name": "Unchained",
+    "nameZh": "未連鎖",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardUnchained"
+  },
+  {
+    "name": "Vanity",
+    "nameZh": "虛榮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardVanity"
+  },
+  {
+    "name": "Vile Power",
+    "nameZh": "汙穢之力",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardVilePower"
+  },
+  {
+    "name": "Who Asked",
+    "nameZh": "是誰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵武器或護甲",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardWhoAsked"
+  },
+  {
+    "name": "A Familiar Call",
+    "nameZh": "似曾相識",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAFamiliarCall"
+  },
+  {
+    "name": "A Modest Request",
+    "nameZh": "謙卑請求",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAModestRequest"
+  },
+  {
+    "name": "A Mother's Parting Gift",
+    "nameZh": "母親的禮物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAMothersPartingGift"
+  },
+  {
+    "name": "Apocalypse",
+    "nameZh": "天啟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardApocalypse"
+  },
+  {
+    "name": "A Stone Perfected",
+    "nameZh": "完石",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAStonePerfected"
+  },
+  {
+    "name": "Azyran's Reward",
+    "nameZh": "艾斯尤倫的報酬",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAzyransReward"
+  },
+  {
+    "name": "Bijoux",
+    "nameZh": "珠寶",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBijoux"
+  },
+  {
+    "name": "Blind Venture",
+    "nameZh": "盲途",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBlindVenture"
+  },
+  {
+    "name": "Broken Promises",
+    "nameZh": "不守信",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrokenPromises"
+  },
+  {
+    "name": "Brotherhood in Exile",
+    "nameZh": "流亡兄弟會",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrotherhoodInExile"
+  },
+  {
+    "name": "Burning Blood",
+    "nameZh": "燃燒之血",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBurningBlood"
+  },
+  {
+    "name": "Call to the First Ones",
+    "nameZh": "呼喚初始者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCallToTheFirstOnes"
+  },
+  {
+    "name": "Choking Guilt",
+    "nameZh": "窒息內疚",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardChokingGuilt"
+  },
+  {
+    "name": "Deadly Joy",
+    "nameZh": "致命喜悅",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDeadlyJoy"
+  },
+  {
+    "name": "Divine Justice",
+    "nameZh": "神判",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDivineJustice"
+  },
+  {
+    "name": "Dying Light",
+    "nameZh": "垂死之光",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDyingLight"
+  },
+  {
+    "name": "Father's Love",
+    "nameZh": "父愛",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFathersLove"
+  },
+  {
+    "name": "Fire Of Unknown Origin",
+    "nameZh": "神秘之火的起源",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFireOfUnknownOrigin"
+  },
+  {
+    "name": "Friendship",
+    "nameZh": "友誼小船",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFriendship"
+  },
+  {
+    "name": "Glimmer of Hope",
+    "nameZh": "希望微光",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGlimmerOfHope"
+  },
+  {
+    "name": "Heterochromia",
+    "nameZh": "陰陽眼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHeterochromia"
+  },
+  {
+    "name": "Hope",
+    "nameZh": "希望",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHope"
+  },
+  {
+    "name": "Hubris",
+    "nameZh": "狂妄",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHubris"
+  },
+  {
+    "name": "Hunter's Reward",
+    "nameZh": "獵人的獎賞",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHuntersReward"
+  },
+  {
+    "name": "Lachrymal Necrosis",
+    "nameZh": "鐵骨心腸",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLachrymalNecrosis"
+  },
+  {
+    "name": "Lantador's Lost Love",
+    "nameZh": "蘭塔朵迷惘之愛",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLantadorsLostLove"
+  },
+  {
+    "name": "Lonely Warrior",
+    "nameZh": "孤軍奮戰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLonelyWarrior"
+  },
+  {
+    "name": "Love Through Ice",
+    "nameZh": "冰冷愛戀",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLoveThroughIce"
+  },
+  {
+    "name": "Luminous Trove",
+    "nameZh": "輝煌寶藏",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLuminousTrove"
+  },
+  {
+    "name": "Lysah's Respite",
+    "nameZh": "莉莎之息",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLysahsRespite"
+  },
+  {
+    "name": "Mawr Blaidd",
+    "nameZh": "茂爾．佈雷德",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMawrBlaidd"
+  },
+  {
+    "name": "One Last Score",
+    "nameZh": "最後一票",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardOneLastScore"
+  },
+  {
+    "name": "Peaceful Moments",
+    "nameZh": "平靜時刻",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPeacefulMoments"
+  },
+  {
+    "name": "Perfection",
+    "nameZh": "完美無瑕",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPerfection"
+  },
+  {
+    "name": "Prosperity",
+    "nameZh": "興盛",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardProsperity"
+  },
+  {
+    "name": "Reflection of the Heart",
+    "nameZh": "心之倒影",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheReflectionoftheHeart"
+  },
+  {
+    "name": "Rebirth and Renewal",
+    "nameZh": "重生與復興",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRebirthAndRenewal"
+  },
+  {
+    "name": "Remembrance",
+    "nameZh": "我懷念的",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRemembrance"
+  },
+  {
+    "name": "Shard of Fate",
+    "nameZh": "命運之晶",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardShardOfFate"
+  },
+  {
+    "name": "Silence and Frost",
+    "nameZh": "沉默與寒霜",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSilenceAndFrost"
+  },
+  {
+    "name": "Squandered Prosperity",
+    "nameZh": "失落的繁華",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSquanderedProsperity"
+  },
+  {
+    "name": "Struck by Lightning",
+    "nameZh": "雷劈",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardStruckByLightning"
+  },
+  {
+    "name": "The Academic",
+    "nameZh": "學術界",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAcademic"
+  },
+  {
+    "name": "The Apothecary",
+    "nameZh": "藥劑師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheApothecary"
+  },
+  {
+    "name": "The Awakened",
+    "nameZh": "覺醒",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAwakened"
+  },
+  {
+    "name": "The Brittle Emperor",
+    "nameZh": "碎裂大帝",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBrittleEmperor"
+  },
+  {
+    "name": "The Cache",
+    "nameZh": "囤積",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCache"
+  },
+  {
+    "name": "The Celestial Stone",
+    "nameZh": "璀璨之石",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCelestialStone"
+  },
+  {
+    "name": "The Craving",
+    "nameZh": "想要",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCraving"
+  },
+  {
+    "name": "The Cursed King",
+    "nameZh": "詛咒之王",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCursedKing"
+  },
+  {
+    "name": "The Deceiver",
+    "nameZh": "你這個騙子",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDeceiver"
+  },
+  {
+    "name": "The Demon",
+    "nameZh": "惡魔",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDemon"
+  },
+  {
+    "name": "The Destination",
+    "nameZh": "終點站",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDestination"
+  },
+  {
+    "name": "The Doctor",
+    "nameZh": "瘋醫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDoctor"
+  },
+  {
+    "name": "The Dungeon Master",
+    "nameZh": "地牢大師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDungeonMaster"
+  },
+  {
+    "name": "The Endurance",
+    "nameZh": "忍耐",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEndurance"
+  },
+  {
+    "name": "The Eternal War",
+    "nameZh": "永恆戰爭",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEternalWar"
+  },
+  {
+    "name": "The Eye of Terror",
+    "nameZh": "恐懼之眼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEyeOfTerror"
+  },
+  {
+    "name": "The Eye of the Dragon",
+    "nameZh": "龍眼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEyeOfTheDragon"
+  },
+  {
+    "name": "The Feast",
+    "nameZh": "盛宴",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFeast"
+  },
+  {
+    "name": "The Fiend",
+    "nameZh": "魔鬼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFiend"
+  },
+  {
+    "name": "The Forgotten Treasure",
+    "nameZh": "被遺忘的寶藏",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheForgottenTreasure"
+  },
+  {
+    "name": "The Forsaken",
+    "nameZh": "遺棄",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheForsaken"
+  },
+  {
+    "name": "The Garish Power",
+    "nameZh": "裝飾之力",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGarishPower"
+  },
+  {
+    "name": "The Gulf",
+    "nameZh": "鴻溝",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGulf"
+  },
+  {
+    "name": "The Insane Cat",
+    "nameZh": "瘋貓",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheInsaneCat"
+  },
+  {
+    "name": "The Last Laugh",
+    "nameZh": "最終一笑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLastLaugh"
+  },
+  {
+    "name": "The Life Thief",
+    "nameZh": "竊命者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLifeThief"
+  },
+  {
+    "name": "The Lord in Black",
+    "nameZh": "暗黑之王",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLordInBlack"
+  },
+  {
+    "name": "The Lover",
+    "nameZh": "情人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLover"
+  },
+  {
+    "name": "The Mayor",
+    "nameZh": "市長",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMayor"
+  },
+  {
+    "name": "The Metalsmith's Gift",
+    "nameZh": "鐵匠的贈禮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMetalsmithsGift"
+  },
+  {
+    "name": "The Mind's Eyes",
+    "nameZh": "心靈之眼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMindsEyes"
+  },
+  {
+    "name": "The Mountain",
+    "nameZh": "神山",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMountain"
+  },
+  {
+    "name": "The Offspring",
+    "nameZh": "後裔",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOffspring"
+  },
+  {
+    "name": "The One That Got Away",
+    "nameZh": "逃脫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOneThatGotAway"
+  },
+  {
+    "name": "The One With All",
+    "nameZh": "完人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOneWithAll"
+  },
+  {
+    "name": "The Opulent",
+    "nameZh": "淨白",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheOpulecent"
+  },
+  {
+    "name": "The Penitent",
+    "nameZh": "懺悔者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePenitent"
+  },
+  {
+    "name": "The Polymath",
+    "nameZh": "博學",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePolymath"
+  },
+  {
+    "name": "The Price of Devotion",
+    "nameZh": "奉獻的代價",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePriceOfDevotion"
+  },
+  {
+    "name": "The Primordial",
+    "nameZh": "先祖之物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePrimordial"
+  },
+  {
+    "name": "The Prince of Darkness",
+    "nameZh": "黑暗王子",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePrinceOfDarkness"
+  },
+  {
+    "name": "The Return of the Rat",
+    "nameZh": "鼠歸",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheReturnOfTheRat"
+  },
+  {
+    "name": "The Risk",
+    "nameZh": "危機",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRisk"
+  },
+  {
+    "name": "The Ruthless Ceinture",
+    "nameZh": "無情的珊芎",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRuthlessCeinture"
+  },
+  {
+    "name": "The Samurai's Eye",
+    "nameZh": "武士之眼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSamuraisEye"
+  },
+  {
+    "name": "The Sigil",
+    "nameZh": "魔符",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSigil"
+  },
+  {
+    "name": "The Spark and the Flame",
+    "nameZh": "雷火",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSparkAndTheFlame"
+  },
+  {
+    "name": "The Standoff",
+    "nameZh": "對峙",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheStandoff"
+  },
+  {
+    "name": "The Strategist",
+    "nameZh": "策略家",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheStrategist"
+  },
+  {
+    "name": "The Sword King's Salute",
+    "nameZh": "劍王之禮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSwordKingsSalute"
+  },
+  {
+    "name": "The Thaumaturgist",
+    "nameZh": "大奇術師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheThaumaturgist"
+  },
+  {
+    "name": "The Tumbleweed",
+    "nameZh": "風滾草",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTumbleweed"
+  },
+  {
+    "name": "The Unexpected Prize",
+    "nameZh": "飛來橫財",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheUnexpectedPrize"
+  },
+  {
+    "name": "The Warden",
+    "nameZh": "典獄長",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWarden"
+  },
+  {
+    "name": "The Wretched",
+    "nameZh": "骯髒",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWretched"
+  },
+  {
+    "name": "Thirst for Knowledge",
+    "nameZh": "渴望學識",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThirstForKnowledge"
+  },
+  {
+    "name": "Turn the Other Cheek",
+    "nameZh": "忍辱",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTurnTheOtherCheek"
+  },
+  {
+    "name": "Void of the Elements",
+    "nameZh": "虛空元素",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardVoidOfTheElements"
+  },
+  {
+    "name": "When Currents Blaze",
+    "nameZh": "熾炎爆發",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardWhenCurrentsBlaze"
+  },
+  {
+    "name": "Winter's Embrace",
+    "nameZh": "冬擁",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵飾品或珠寶",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardWintersEmbrace"
+  },
+  {
+    "name": "Abandoned Wealth",
+    "nameZh": "棄財求生",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAbandonedWealth"
+  },
+  {
+    "name": "Acclimatisation",
+    "nameZh": "適者生存",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAcclimatisation"
+  },
+  {
+    "name": "Alluring Bounty",
+    "nameZh": "誘惑之寶",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAlluringBounty"
+  },
+  {
+    "name": "Ambitious Obsession",
+    "nameZh": "上進執迷",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAmbitiousObsession"
+  },
+  {
+    "name": "A Sea of Blue",
+    "nameZh": "藍海",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardASeaOfBlue"
+  },
+  {
+    "name": "Avian Pursuit",
+    "nameZh": "追擊之翼",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAvianPursuit"
+  },
+  {
+    "name": "Brother's Gift",
+    "nameZh": "兄弟之贈",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrothersGift"
+  },
+  {
+    "name": "Brother's Stash",
+    "nameZh": "伯仲財庫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrothersStash"
+  },
+  {
+    "name": "Cartographer's Delight",
+    "nameZh": "製圖師之喜悅",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCartographersDelight"
+  },
+  {
+    "name": "Chaotic Disposition",
+    "nameZh": "渾沌性情",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardChaoticDisposition"
+  },
+  {
+    "name": "Checkmate",
+    "nameZh": "將軍",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCheckmate"
+  },
+  {
+    "name": "Coveted Possession",
+    "nameZh": "飢渴之佔",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCovetedPossession"
+  },
+  {
+    "name": "Darker Half",
+    "nameZh": "晦暗不明",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDarkerHalf"
+  },
+  {
+    "name": "Dementophobia",
+    "nameZh": "癡呆症",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDementophobia"
+  },
+  {
+    "name": "Demigod's Wager",
+    "nameZh": "昇華的賭注",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDemigodsWager"
+  },
+  {
+    "name": "Disdain",
+    "nameZh": "蔑視",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDisdain"
+  },
+  {
+    "name": "Divine Beauty",
+    "nameZh": "神聖之美",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDivineBeauty"
+  },
+  {
+    "name": "Divine Shard",
+    "nameZh": "神聖碎片",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDivineShard"
+  },
+  {
+    "name": "Emperor's Luck",
+    "nameZh": "帝運",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEmperorsLuck"
+  },
+  {
+    "name": "Ever-Changing",
+    "nameZh": "千變萬化",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEverChanging"
+  },
+  {
+    "name": "Harmony of Souls",
+    "nameZh": "靈魂和諧",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHarmonyOfSouls"
+  },
+  {
+    "name": "History",
+    "nameZh": "歷史",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHistory"
+  },
+  {
+    "name": "House of Mirrors",
+    "nameZh": "明鏡",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHouseOfMirrors"
+  },
+  {
+    "name": "Imperfect Memories",
+    "nameZh": "不完美的回憶",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardImperfectMemories"
+  },
+  {
+    "name": "I See Brothers",
+    "nameZh": "來了兄弟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardISeeBrothers"
+  },
+  {
+    "name": "Loyalty",
+    "nameZh": "忠誠",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLoyalty"
+  },
+  {
+    "name": "Lucky Connections",
+    "nameZh": "好運連連",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLuckyConnections"
+  },
+  {
+    "name": "Lucky Deck",
+    "nameZh": "幸運牌組",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLuckyDeck"
+  },
+  {
+    "name": "Monochrome",
+    "nameZh": "非黑即白",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMonochrome"
+  },
+  {
+    "name": "No Traces",
+    "nameZh": "無痕",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardNoTraces"
+  },
+  {
+    "name": "Outfoxed",
+    "nameZh": "反被算計",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardOutfoxed"
+  },
+  {
+    "name": "Parasitic Passengers",
+    "nameZh": "寄生旅人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardParasiticPassengers"
+  },
+  {
+    "name": "Rain of Chaos",
+    "nameZh": "混沌之雨",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRainOfChaos"
+  },
+  {
+    "name": "Runic Luck",
+    "nameZh": "符文之運",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRunicLuck"
+  },
+  {
+    "name": "Seven Years Bad Luck",
+    "nameZh": "七年霉運",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSevenYearsBadLuck"
+  },
+  {
+    "name": "Society's Remorse",
+    "nameZh": "社會的懊悔",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSocietysRemorse"
+  },
+  {
+    "name": "The Cacophony",
+    "nameZh": "不諧之音",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCacophony"
+  },
+  {
+    "name": "The Catalyst",
+    "nameZh": "災變",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCatalyst"
+  },
+  {
+    "name": "The Finishing Touch",
+    "nameZh": "點睛之筆",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFinishingTouch"
+  },
+  {
+    "name": "The Fishmonger",
+    "nameZh": "魚販",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFishmonger"
+  },
+  {
+    "name": "The Fool",
+    "nameZh": "愚人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFool"
+  },
+  {
+    "name": "The Fortunate",
+    "nameZh": "幸運的人",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFortunate"
+  },
+  {
+    "name": "The Gemcutter",
+    "nameZh": "珠寶匠",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGemcutter"
+  },
+  {
+    "name": "The Heroic Shot",
+    "nameZh": "英勇射擊",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHeroicShot"
+  },
+  {
+    "name": "The Hoarder",
+    "nameZh": "寶箱",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHoarder"
+  },
+  {
+    "name": "The Innocent",
+    "nameZh": "善",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheInnocent"
+  },
+  {
+    "name": "The Inventor",
+    "nameZh": "發明家",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheInventor"
+  },
+  {
+    "name": "The Rusted Bard",
+    "nameZh": "吟遊鏽才",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheIronBard"
+  },
+  {
+    "name": "The Journey",
+    "nameZh": "愛旅行",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheJourney"
+  },
+  {
+    "name": "The Lake",
+    "nameZh": "湖泊",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLake"
+  },
+  {
+    "name": "The Long Con",
+    "nameZh": "長期詐騙",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLongCon"
+  },
+  {
+    "name": "The Master Artisan",
+    "nameZh": "工匠大師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMasterArtisan"
+  },
+  {
+    "name": "The Rabbit's Foot",
+    "nameZh": "兔腳",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRabbitsFoot"
+  },
+  {
+    "name": "The Saint's Treasure",
+    "nameZh": "聖徒之財",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSaintsTreasure"
+  },
+  {
+    "name": "The Scholar",
+    "nameZh": "學者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheScholar"
+  },
+  {
+    "name": "The Scout",
+    "nameZh": "童子軍",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheScout"
+  },
+  {
+    "name": "The Seeker",
+    "nameZh": "探尋者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSeeker"
+  },
+  {
+    "name": "The Sephirot",
+    "nameZh": "生命之樹",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSephirot"
+  },
+  {
+    "name": "The Slumbering Beast",
+    "nameZh": "沉眠之獸",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSlumberingBeast"
+  },
+  {
+    "name": "The Survivalist",
+    "nameZh": "求生專家",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSurvivalist"
+  },
+  {
+    "name": "The Tinkerer's Table",
+    "nameZh": "銲匠之桌",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTinkerersTable"
+  },
+  {
+    "name": "The Tireless Extractor",
+    "nameZh": "不休萃取器",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTirelessExtractor"
+  },
+  {
+    "name": "The Transformation",
+    "nameZh": "變形",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTransformation"
+  },
+  {
+    "name": "The Union",
+    "nameZh": "聯姻",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheUnion"
+  },
+  {
+    "name": "The Wrath",
+    "nameZh": "怨忿",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWrath"
+  },
+  {
+    "name": "Three Faces in the Dark",
+    "nameZh": "黑暗三面",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThreeFacesInTheDark"
+  },
+  {
+    "name": "Three Voices",
+    "nameZh": "三聲道",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThreeVoices"
+  },
+  {
+    "name": "Underground Forest",
+    "nameZh": "地底叢林",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardUndergroundForest"
+  },
+  {
+    "name": "Unrequited Love",
+    "nameZh": "單相思",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardUnrequitedLove"
+  },
+  {
+    "name": "Vinia's Token",
+    "nameZh": "薇妮雅的信物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵通貨",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardViniasToken"
+  },
+  {
+    "name": "A Chilling Wind",
+    "nameZh": "凜冽之風",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAChillingWind"
+  },
+  {
+    "name": "Bound by Flame",
+    "nameZh": "縛焰之契",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBoundByFlame"
+  },
+  {
+    "name": "Deathly Designs",
+    "nameZh": "致死記號",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDeathlyDesigns"
+  },
+  {
+    "name": "Desecrated Virtue",
+    "nameZh": "褻瀆的美德",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDesecratedVirtue"
+  },
+  {
+    "name": "Dialla's Subjugation",
+    "nameZh": "達拉之訓",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDiallasSubjugation"
+  },
+  {
+    "name": "Doryani's Epiphany",
+    "nameZh": "多里亞尼的頓悟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDoryanisEpiphany"
+  },
+  {
+    "name": "Dying Anguish",
+    "nameZh": "消逝之怒",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDyingAnguish"
+  },
+  {
+    "name": "Gemcutter's Mercy",
+    "nameZh": "寶石匠的憐憫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGemcuttersMercy"
+  },
+  {
+    "name": "Gemcutter's Promise",
+    "nameZh": "寶石匠的允諾",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGemcuttersPromise"
+  },
+  {
+    "name": "Gift of the Gemling Queen",
+    "nameZh": "寶石皇后的贈禮",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGiftOfTheGemlingQueen"
+  },
+  {
+    "name": "Grave Knowledge",
+    "nameZh": "亡靈智慧",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGraveKnowledge"
+  },
+  {
+    "name": "Home",
+    "nameZh": "家園",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHome"
+  },
+  {
+    "name": "Terrible Secret of Space",
+    "nameZh": "無垠恐懼之密",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTerribleSecretOfSpace"
+  },
+  {
+    "name": "The Artist",
+    "nameZh": "藝者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheArtist"
+  },
+  {
+    "name": "The Bitter Blossom",
+    "nameZh": "苦澀綻放",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBitterBlossom"
+  },
+  {
+    "name": "The Blessing of Moosh",
+    "nameZh": "穆什的祝福",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBlessingOfMoosh"
+  },
+  {
+    "name": "The Bones",
+    "nameZh": "識骨尋蹤",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBones"
+  },
+  {
+    "name": "The Cataclysm",
+    "nameZh": "巨變",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCataclysm"
+  },
+  {
+    "name": "The Doppelganger",
+    "nameZh": "傀儡",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDoppelganger"
+  },
+  {
+    "name": "The Dragon's Heart",
+    "nameZh": "龍之心",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDragonsHeart"
+  },
+  {
+    "name": "The Emptiness",
+    "nameZh": "空虛",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEmptiness"
+  },
+  {
+    "name": "The Enlightened",
+    "nameZh": "智慧啟蒙",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEnlightened"
+  },
+  {
+    "name": "The Fox",
+    "nameZh": "狡狐",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheFox"
+  },
+  {
+    "name": "The Hook",
+    "nameZh": "勾鎖",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHook"
+  },
+  {
+    "name": "The Magma Crab",
+    "nameZh": "岩漿蟹",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMagmaCrab"
+  },
+  {
+    "name": "The Miracle",
+    "nameZh": "奇蹟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMiracle"
+  },
+  {
+    "name": "The Realm",
+    "nameZh": "大平台",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRealm"
+  },
+  {
+    "name": "The Rite of Elements",
+    "nameZh": "元素之儀",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheRiteOfElements"
+  },
+  {
+    "name": "The Skeleton",
+    "nameZh": "骷髏頭",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSkeleton"
+  },
+  {
+    "name": "The Summoner",
+    "nameZh": "召喚師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSummoner"
+  },
+  {
+    "name": "The Wilted Rose",
+    "nameZh": "凋零玫瑰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWiltedRose"
+  },
+  {
+    "name": "Volatile Power",
+    "nameZh": "不穩定的力量",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardVolatilePower"
+  },
+  {
+    "name": "Wealth and Power",
+    "nameZh": "錢與權",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵寶石",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardWealthAndPower"
+  },
+  {
+    "name": "A Fate Worse Than Death",
+    "nameZh": "比死更慘的命運",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAFateWorseThanDeath"
+  },
+  {
+    "name": "Altered Perception",
+    "nameZh": "變動感知",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAlteredPerception"
+  },
+  {
+    "name": "Azure Rage",
+    "nameZh": "碧藍之怒",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAzureRage"
+  },
+  {
+    "name": "Boon of Justice",
+    "nameZh": "正義之福",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBoonOfJustice"
+  },
+  {
+    "name": "Boundless Realms",
+    "nameZh": "無盡之境",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBoundlessRealms"
+  },
+  {
+    "name": "Buried Treasure",
+    "nameZh": "深埋祕寶",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBuriedTreasure"
+  },
+  {
+    "name": "Cameria's Cut",
+    "nameZh": "卡麥歷亞之割",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCameriasCut"
+  },
+  {
+    "name": "Eternal Bonds",
+    "nameZh": "永恆之繫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEternalBonds"
+  },
+  {
+    "name": "Guardian's Challenge",
+    "nameZh": "守護者的挑戰",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardGuardiansChallenge"
+  },
+  {
+    "name": "Her Mask",
+    "nameZh": "她的面具",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHerMask"
+  },
+  {
+    "name": "Justified Ambition",
+    "nameZh": "正義野心",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardJustifiedAmbition"
+  },
+  {
+    "name": "Last Hope",
+    "nameZh": "最後希望",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLastHope"
+  },
+  {
+    "name": "Left to Fate",
+    "nameZh": "聽天由命",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLeftToFate"
+  },
+  {
+    "name": "Lingering Remnants",
+    "nameZh": "殘墟",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLingeringRemnants"
+  },
+  {
+    "name": "Lost Worlds",
+    "nameZh": "失落帝國",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardLostWorlds"
+  },
+  {
+    "name": "Man With Bear",
+    "nameZh": "熊男",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardManWithBear"
+  },
+  {
+    "name": "More is Never Enough",
+    "nameZh": "貪婪無盡",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMoreIsNeverEnough"
+  },
+  {
+    "name": "Rain Tempter",
+    "nameZh": "誘惑之雨",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardRainTempter"
+  },
+  {
+    "name": "Sambodhi's Vow",
+    "nameZh": "菩提誓約",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSambodhisVow"
+  },
+  {
+    "name": "Scholar of the Seas",
+    "nameZh": "海洋學者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardScholarOfTheSeas"
+  },
+  {
+    "name": "Something Dark",
+    "nameZh": "黑暗物質",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSomethingDark"
+  },
+  {
+    "name": "The Arena Champion",
+    "nameZh": "競技場冠軍",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheArenaChampion"
+  },
+  {
+    "name": "The Card Sharp",
+    "nameZh": "老千",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCardSharp"
+  },
+  {
+    "name": "The Deal",
+    "nameZh": "買賣",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDeal"
+  },
+  {
+    "name": "The Dreamland",
+    "nameZh": "夢之國度",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDreamland"
+  },
+  {
+    "name": "The Easy Stroll",
+    "nameZh": "輕鬆漫步",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEasyStroll"
+  },
+  {
+    "name": "The Eldritch Decay",
+    "nameZh": "怪異腐敗",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEldritchDecay"
+  },
+  {
+    "name": "The Encroaching Darkness",
+    "nameZh": "黑暗來犯",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEncroachingDarkness"
+  },
+  {
+    "name": "The Explorer",
+    "nameZh": "探險家",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheExplorer"
+  },
+  {
+    "name": "The Forbidden Fruit",
+    "nameZh": "禁忌之果",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheForbiddenFruit"
+  },
+  {
+    "name": "The Price of Prescience",
+    "nameZh": "預知代價",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePriceOfPrescience"
+  },
+  {
+    "name": "The Price of Protection",
+    "nameZh": "守護的代價",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePriceOfProtection"
+  },
+  {
+    "name": "The Professor",
+    "nameZh": "專家級",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheProfessor"
+  },
+  {
+    "name": "The Side Quest",
+    "nameZh": "支線任務",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSideQuest"
+  },
+  {
+    "name": "The Silly Boy",
+    "nameZh": "傻男孩",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSillyBoy"
+  },
+  {
+    "name": "The Surveyor",
+    "nameZh": "勘查員",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSurveyor"
+  },
+  {
+    "name": "The Trial",
+    "nameZh": "遠征",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTrial"
+  },
+  {
+    "name": "The Twilight Moon",
+    "nameZh": "暮光之月",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheTwilightMoon"
+  },
+  {
+    "name": "The Wolf's Legacy",
+    "nameZh": "狼之聖物",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWolfsLegacy"
+  },
+  {
+    "name": "Treasure Hunter",
+    "nameZh": "賞金獵手",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTreasureHunter"
+  },
+  {
+    "name": "Triskaidekaphobia",
+    "nameZh": "極度癲狂",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵地圖或碎片",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTriskaidekaphobia"
+  },
+  {
+    "name": "Earth Drinker",
+    "nameZh": "大地吞食者",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEarthDrinker"
+  },
+  {
+    "name": "Pearls Before Swine",
+    "nameZh": "明珠投豕",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPearlsBeforeSwine"
+  },
+  {
+    "name": "Succor of the Sinless",
+    "nameZh": "無罪救贖",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardSuccorOfTheSinless"
+  },
+  {
+    "name": "The Damned",
+    "nameZh": "滅世之咒",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDamned"
+  },
+  {
+    "name": "The Dragon",
+    "nameZh": "巨龍",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDragon"
+  },
+  {
+    "name": "The Drunken Aristocrat",
+    "nameZh": "酒醉貴族",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDrunkenAristocrat"
+  },
+  {
+    "name": "The Hunger",
+    "nameZh": "飢餓",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHunger"
+  },
+  {
+    "name": "The Progeny of Lunaris",
+    "nameZh": "月神後嗣",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheProgenyOfLunaris"
+  },
+  {
+    "name": "The Shortcut",
+    "nameZh": "捷徑",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheShortcut"
+  },
+  {
+    "name": "The Surgeon",
+    "nameZh": "外科醫師",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheSurgeon"
+  },
+  {
+    "name": "The Witch",
+    "nameZh": "女巫",
+    "category": "命運卡",
+    "subcategory": "命運卡獎勵藥劑",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWitch"
+  },
+  {
+    "name": "A Dusty Memory",
+    "nameZh": "塵封記憶",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardADustyMemory"
+  },
+  {
+    "name": "Alone in the Darkness",
+    "nameZh": "暗黑孤單中",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAloneInTheDarkness"
+  },
+  {
+    "name": "Arrogance of the Vaal",
+    "nameZh": "瓦爾之傲",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardArroganceOfTheVaal"
+  },
+  {
+    "name": "Auspicious Ambitions",
+    "nameZh": "吉祥之志",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardAuspiciousAmbitions"
+  },
+  {
+    "name": "Baited Expectations",
+    "nameZh": "誘餌之期待",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBaitedExpectations"
+  },
+  {
+    "name": "Boon of the First Ones",
+    "nameZh": "初始者的祝福",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBoonOfTheFirstOnes"
+  },
+  {
+    "name": "Brush, Paint and Palette",
+    "nameZh": "畫筆、顏料和調色盤",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardBrushPaintAndPalette"
+  },
+  {
+    "name": "Chasing Risk",
+    "nameZh": "冒險犯難",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardChasingRisk"
+  },
+  {
+    "name": "Costly Curio",
+    "nameZh": "昂貴古玩",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCostlyCurio"
+  },
+  {
+    "name": "Council of Cats",
+    "nameZh": "貓咪議會",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardCouncilOfCats"
+  },
+  {
+    "name": "Damnation",
+    "nameZh": "咒縛",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDamnation"
+  },
+  {
+    "name": "Doedre's Madness",
+    "nameZh": "德瑞競之狂",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardDoedresMadness"
+  },
+  {
+    "name": "Eldritch Perfection",
+    "nameZh": "完美異能",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardEldritchPerfection"
+  },
+  {
+    "name": "Fateful Meeting",
+    "nameZh": "命運大會",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardFatefulMeeting"
+  },
+  {
+    "name": "Haunting Shadows",
+    "nameZh": "黑影纏繞",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardHauntingShadows"
+  },
+  {
+    "name": "Jack in the Box",
+    "nameZh": "驚喜盒",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardJackInTheBox"
+  },
+  {
+    "name": "Magnum Opus",
+    "nameZh": "巨著",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMagnumOpus"
+  },
+  {
+    "name": "Matryoshka",
+    "nameZh": "套娃",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardMatryoshka"
+  },
+  {
+    "name": "Prejudice",
+    "nameZh": "偏見",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardPrejudice"
+  },
+  {
+    "name": "Temperance",
+    "nameZh": "自我約束",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTemperance"
+  },
+  {
+    "name": "The Admirer",
+    "nameZh": "仰慕者",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAdmirer"
+  },
+  {
+    "name": "The Aesthete",
+    "nameZh": "大藝術家",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAesthete"
+  },
+  {
+    "name": "The Aspirant",
+    "nameZh": "捕夢網",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheAspirant"
+  },
+  {
+    "name": "The Breach",
+    "nameZh": "裂痕",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheBreach"
+  },
+  {
+    "name": "The Calling",
+    "nameZh": "傳喚",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheCalling"
+  },
+  {
+    "name": "The Dreamer",
+    "nameZh": "夢想家",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheDreamer"
+  },
+  {
+    "name": "The Everlasting",
+    "nameZh": "永恆",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheEverlasting"
+  },
+  {
+    "name": "The Forward Gaze",
+    "nameZh": "凝視前方",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheForwardGaze"
+  },
+  {
+    "name": "The Gambler",
+    "nameZh": "賭徒",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheGambler"
+  },
+  {
+    "name": "The Hale Heart",
+    "nameZh": "心心向榮",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheHaleHeart"
+  },
+  {
+    "name": "The Immortal",
+    "nameZh": "永恆不朽",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheImmortal"
+  },
+  {
+    "name": "The Leviathan",
+    "nameZh": "龐然大物",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLeviathan"
+  },
+  {
+    "name": "The Lion",
+    "nameZh": "雄獅",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheLion"
+  },
+  {
+    "name": "The Mad King",
+    "nameZh": "瘋癲之王",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMadKing"
+  },
+  {
+    "name": "The Messenger",
+    "nameZh": "傳訊者",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheMessenger"
+  },
+  {
+    "name": "The Nurse",
+    "nameZh": "護理師",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheNurse"
+  },
+  {
+    "name": "The Patient",
+    "nameZh": "病患",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardThePatient"
+  },
+  {
+    "name": "The Undaunted",
+    "nameZh": "不怕不怕",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheUndaunted"
+  },
+  {
+    "name": "The Valkyrie",
+    "nameZh": "女武神",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheValkyrie"
+  },
+  {
+    "name": "The Void",
+    "nameZh": "虛空",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheVoid"
+  },
+  {
+    "name": "The Wolf",
+    "nameZh": "彪狼",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTheWolf"
+  },
+  {
+    "name": "Time-Lost Relic",
+    "nameZh": "失落遺骨",
+    "category": "命運卡",
+    "subcategory": "其他命運卡",
+    "marketId": "Metadata/Items/DivinationCards/DivinationCardTimeLostRelic"
+  },
+  {
+    "name": "Delirium Orb",
+    "nameZh": "譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "alternativeIds": [
+      "Metadata/Items/Currency/CurrencyAfflictionOrbGeneric",
+      "Metadata/Items/Currency/CurrencyAfflictionOrbHardMode"
+    ]
+  },
+  {
+    "name": "Blacksmith's Delirium Orb",
+    "nameZh": "鐵匠之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbWeapons"
+  },
+  {
+    "name": "Armoursmith's Delirium Orb",
+    "nameZh": "護甲之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbArmour"
+  },
+  {
+    "name": "Jeweller's Delirium Orb",
+    "nameZh": "飾品之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbTrinkets"
+  },
+  {
+    "name": "Fine Delirium Orb",
+    "nameZh": "精良之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "alternativeIds": [
+      "Metadata/Items/Currency/CurrencyAfflictionOrbCurrency",
+      "Metadata/Items/Currency/CurrencyAfflictionOrbHarbinger",
+      "Metadata/Items/Currency/CurrencyAfflictionOrbProphecies"
+    ]
+  },
+  {
+    "name": "Diviner's Delirium Orb",
+    "nameZh": "聖人之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbDivinationCards"
+  },
+  {
+    "name": "Cartographer's Delirium Orb",
+    "nameZh": "製圖之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbMaps"
+  },
+  {
+    "name": "Whispering Delirium Orb",
+    "nameZh": "低語之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbEssences"
+  },
+  {
+    "name": "Singular Delirium Orb",
+    "nameZh": "卓越之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbUniques"
+  },
+  {
+    "name": "Thaumaturge's Delirium Orb",
+    "nameZh": "奇術之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbGems"
+  },
+  {
+    "name": "Abyssal Delirium Orb",
+    "nameZh": "深淵之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbAbyss"
+  },
+  {
+    "name": "Obscured Delirium Orb",
+    "nameZh": "晦澀之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbBreach"
+  },
+  {
+    "name": "Fossilised Delirium Orb",
+    "nameZh": "石化之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbFossils"
+  },
+  {
+    "name": "Timeless Delirium Orb",
+    "nameZh": "永恆之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbIncubators"
+  },
+  {
+    "name": "Blighted Delirium Orb",
+    "nameZh": "凋落之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbBlight"
+  },
+  {
+    "name": "Kalguuran Delirium Orb",
+    "nameZh": "卡爾葛之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbPerandus"
+  },
+  {
+    "name": "Threaded Delirium Orb",
+    "nameZh": "綢帶之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbScarabs"
+  },
+  {
+    "name": "Primal Delirium Orb",
+    "nameZh": "初始之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbTalismans"
+  },
+  {
+    "name": "Imperial Delirium Orb",
+    "nameZh": "帝王之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbLabyrinth"
+  },
+  {
+    "name": "Challenging Delirium Orb",
+    "nameZh": "挑戰之譫妄玉",
+    "category": "譫妄異域",
+    "subcategory": "譫妄玉",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionOrbMetamorphosis"
+  },
+  {
+    "name": "Simulacrum",
+    "nameZh": "幻像異界",
+    "category": "譫妄異域",
+    "marketId": "Metadata/Items/MapFragments/CurrencyAfflictionFragment"
+  },
+  {
+    "name": "Simulacrum Splinter",
+    "nameZh": "幻像斷片",
+    "category": "譫妄異域",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionShard"
+  },
+  {
+    "name": "Refracting Fog",
+    "nameZh": "折射之霧",
+    "category": "譫妄異域",
+    "marketId": "Metadata/Items/Currency/CurrencyAfflictionRerollClusterEnchant"
+  },
+  {
+    "name": "Timeless Karui Emblem",
+    "nameZh": "永恆卡魯徽印",
+    "category": "戰亂之殤",
+    "subcategory": "卡魯戰亂碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyLegionFragmentKarui"
+  },
+  {
+    "name": "Timeless Karui Splinter",
+    "nameZh": "永恆卡魯裂片",
+    "category": "戰亂之殤",
+    "subcategory": "卡魯戰亂碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyLegionKaruiShard"
+  },
+  {
+    "name": "Timeless Maraketh Emblem",
+    "nameZh": "永恆馬拉克斯徽印",
+    "category": "戰亂之殤",
+    "subcategory": "馬拉克斯戰亂碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyLegionFragmentMaraketh"
+  },
+  {
+    "name": "Timeless Maraketh Splinter",
+    "nameZh": "永恆馬拉克斯裂片",
+    "category": "戰亂之殤",
+    "subcategory": "馬拉克斯戰亂碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyLegionMarakethShard"
+  },
+  {
+    "name": "Timeless Eternal Emblem",
+    "nameZh": "永恆不朽帝國徽印",
+    "category": "戰亂之殤",
+    "subcategory": "不朽帝國戰亂碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyLegionFragmentEternal"
+  },
+  {
+    "name": "Timeless Eternal Empire Splinter",
+    "nameZh": "永恆不朽帝國裂片",
+    "category": "戰亂之殤",
+    "subcategory": "不朽帝國戰亂碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyLegionEternalEmpireShard"
+  },
+  {
+    "name": "Timeless Templar Emblem",
+    "nameZh": "永恆聖宗徽印",
+    "category": "戰亂之殤",
+    "subcategory": "聖殿騎士戰亂碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyLegionFragmentTemplar"
+  },
+  {
+    "name": "Timeless Templar Splinter",
+    "nameZh": "永恆聖宗裂片",
+    "category": "戰亂之殤",
+    "subcategory": "聖殿騎士戰亂碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyLegionTemplarShard"
+  },
+  {
+    "name": "Timeless Vaal Emblem",
+    "nameZh": "永恆瓦爾徽印",
+    "category": "戰亂之殤",
+    "subcategory": "瓦爾戰亂碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyLegionFragmentVaal"
+  },
+  {
+    "name": "Timeless Vaal Splinter",
+    "nameZh": "永恆瓦爾裂片",
+    "category": "戰亂之殤",
+    "subcategory": "瓦爾戰亂碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyLegionVaalShard"
+  },
+  {
+    "name": "Karui Enshrouding Crystal",
+    "nameZh": "卡魯壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonGloves"
+  },
+  {
+    "name": "Imperial Enshrouding Crystal",
+    "nameZh": "永恆壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonBoots"
+  },
+  {
+    "name": "Vaal Enshrouding Crystal",
+    "nameZh": "瓦爾壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonHelmet"
+  },
+  {
+    "name": "Templar Enshrouding Crystal",
+    "nameZh": "聖宗壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonShield"
+  },
+  {
+    "name": "Maraketh Enshrouding Crystal",
+    "nameZh": "馬拉克斯壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonBodyArmour"
+  },
+  {
+    "name": "Afarud Enshrouding Crystal",
+    "nameZh": "阿法魯德壟罩晶石",
+    "category": "戰亂之殤",
+    "subcategory": "壟罩水晶",
+    "marketId": "Metadata/Items/Currency/LegionCocoonQuiver"
+  },
+  {
+    "name": "Fragment of the Phoenix",
+    "nameZh": "鳳凰斷片",
+    "category": "碎片",
+    "subcategory": "塑界者",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/ShaperFragment1",
+      "Metadata/Items/MapFragments/CurrencyShaperFragment1"
+    ]
+  },
+  {
+    "name": "Fragment of the Minotaur",
+    "nameZh": "牛頭斷片",
+    "category": "碎片",
+    "subcategory": "塑界者",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/ShaperFragment2",
+      "Metadata/Items/MapFragments/CurrencyShaperFragment2"
+    ]
+  },
+  {
+    "name": "Fragment of the Chimera",
+    "nameZh": "奇美拉斷片",
+    "category": "碎片",
+    "subcategory": "塑界者",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/ShaperFragment3",
+      "Metadata/Items/MapFragments/CurrencyShaperFragment3"
+    ]
+  },
+  {
+    "name": "Fragment of the Hydra",
+    "nameZh": "九頭蛇斷片",
+    "category": "碎片",
+    "subcategory": "塑界者",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/ShaperFragment4",
+      "Metadata/Items/MapFragments/CurrencyShaperFragment4"
+    ]
+  },
+  {
+    "name": "Fragment of Enslavement",
+    "nameZh": "奴役斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyElderFragment1"
+  },
+  {
+    "name": "Fragment of Eradication",
+    "nameZh": "根除斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyElderFragment2"
+  },
+  {
+    "name": "Fragment of Constriction",
+    "nameZh": "干擾斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyElderFragment3"
+  },
+  {
+    "name": "Fragment of Purification",
+    "nameZh": "淨化斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyElderFragment4"
+  },
+  {
+    "name": "Fragment of Terror",
+    "nameZh": "恐懼斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberElderFragment1"
+  },
+  {
+    "name": "Fragment of Emptiness",
+    "nameZh": "空虛斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberElderFragment2"
+  },
+  {
+    "name": "Fragment of Shape",
+    "nameZh": "雕塑斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberElderFragment3"
+  },
+  {
+    "name": "Fragment of Knowledge",
+    "nameZh": "智慧斷片",
+    "category": "碎片",
+    "subcategory": "異界尊師與終極異界尊師",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberElderFragment4"
+  },
+  {
+    "name": "Al-Hezmin's Crest",
+    "nameZh": "奧赫茲明刻紋",
+    "category": "碎片",
+    "subcategory": "喚醒者",
+    "marketId": "Metadata/Items/MapFragments/CurrencySirusFragment1"
+  },
+  {
+    "name": "Baran's Crest",
+    "nameZh": "巴倫刻紋",
+    "category": "碎片",
+    "subcategory": "喚醒者",
+    "marketId": "Metadata/Items/MapFragments/CurrencySirusFragment2"
+  },
+  {
+    "name": "Drox's Crest",
+    "nameZh": "圖拉克斯刻紋",
+    "category": "碎片",
+    "subcategory": "喚醒者",
+    "marketId": "Metadata/Items/MapFragments/CurrencySirusFragment3"
+  },
+  {
+    "name": "Veritania's Crest",
+    "nameZh": "維羅提尼亞刻紋",
+    "category": "碎片",
+    "subcategory": "喚醒者",
+    "marketId": "Metadata/Items/MapFragments/CurrencySirusFragment4"
+  },
+  {
+    "name": "Offering to the Goddess",
+    "nameZh": "女神祭品",
+    "category": "碎片",
+    "subcategory": "帝王迷宮",
+    "marketId": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddess"
+  },
+  {
+    "name": "Tribute to the Goddess",
+    "nameZh": "女神獻禮",
+    "category": "碎片",
+    "subcategory": "帝王迷宮",
+    "marketId": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessTribute"
+  },
+  {
+    "name": "Gift to the Goddess",
+    "nameZh": "女神之贈",
+    "category": "碎片",
+    "subcategory": "帝王迷宮",
+    "marketId": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessGift"
+  },
+  {
+    "name": "Dedication to the Goddess",
+    "nameZh": "女神奉獻",
+    "category": "碎片",
+    "subcategory": "帝王迷宮",
+    "marketId": "Metadata/Items/MapFragments/CurrencyOfferingToTheGoddessDedication"
+  },
+  {
+    "name": "The Maven's Writ",
+    "nameZh": "釋界之令",
+    "category": "碎片",
+    "subcategory": "釋界",
+    "marketId": "Metadata/Items/MapFragments/CurrencyMavenKey"
+  },
+  {
+    "name": "Crescent Splinter",
+    "nameZh": "新月裂片",
+    "category": "碎片",
+    "subcategory": "釋界",
+    "marketId": "Metadata/Items/MapFragments/CurrencyMavenKeyFragment"
+  },
+  {
+    "name": "Cosmic Fragment",
+    "nameZh": "宇宙碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyShaper"
+  },
+  {
+    "name": "Decaying Fragment",
+    "nameZh": "腐朽碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyUberElder"
+  },
+  {
+    "name": "Awakening Fragment",
+    "nameZh": "覺醒碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeySirus"
+  },
+  {
+    "name": "Synthesising Fragment",
+    "nameZh": "追憶碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyCortex"
+  },
+  {
+    "name": "Reality Fragment",
+    "nameZh": "現實碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyMaven"
+  },
+  {
+    "name": "Devouring Fragment",
+    "nameZh": "吞噬碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyEater"
+  },
+  {
+    "name": "Blazing Fragment",
+    "nameZh": "熾熱碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyExarch"
+  },
+  {
+    "name": "Traumatic Fragment",
+    "nameZh": "創傷碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyAnger"
+  },
+  {
+    "name": "Reverent Fragment",
+    "nameZh": "敬畏碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyBenevolence"
+  },
+  {
+    "name": "Lonely Fragment",
+    "nameZh": "孤獨碎片",
+    "category": "碎片",
+    "subcategory": "終極碎片",
+    "marketId": "Metadata/Items/MapFragments/CurrencyUberBossKeyIgnorance"
+  },
+  {
+    "name": "Royal Visage",
+    "nameZh": "皇家面容",
+    "category": "碎片",
+    "subcategory": "穿越",
+    "marketId": "Metadata/Items/MapFragments/CurrencyIncursionUberFragment"
+  },
+  {
+    "name": "Sacrifice at Dusk",
+    "nameZh": "黃昏的奉獻",
+    "category": "碎片",
+    "subcategory": "穿越",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/VaalFragment1_4",
+      "Metadata/Items/MapFragments/CurrencyVaalFragment1_4"
+    ]
+  },
+  {
+    "name": "Sacrifice at Noon",
+    "nameZh": "正午的奉獻",
+    "category": "碎片",
+    "subcategory": "穿越",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/VaalFragment1_3",
+      "Metadata/Items/MapFragments/CurrencyVaalFragment1_3"
+    ]
+  },
+  {
+    "name": "Sacrifice at Midnight",
+    "nameZh": "午夜的奉獻",
+    "category": "碎片",
+    "subcategory": "穿越",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/VaalFragment1_1",
+      "Metadata/Items/MapFragments/CurrencyVaalFragment1_1"
+    ]
+  },
+  {
+    "name": "Sacrifice at Dawn",
+    "nameZh": "黎明的奉獻",
+    "category": "碎片",
+    "subcategory": "穿越",
+    "alternativeIds": [
+      "Metadata/Items/MapFragments/VaalFragment1_2",
+      "Metadata/Items/MapFragments/CurrencyVaalFragment1_2"
+    ]
+  },
+  {
+    "name": "Ritual Splinter",
+    "nameZh": "祭祀裂片",
+    "category": "碎片",
+    "subcategory": "祭祀碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyRitualSplinter"
+  },
+  {
+    "name": "Ritual Vessel",
+    "nameZh": "祭祀碑器",
+    "category": "碎片",
+    "subcategory": "祭祀碎片",
+    "marketId": "Metadata/Items/Currency/CurrencyRitualStone"
+  },
+  {
+    "name": "An Audience With The King",
+    "nameZh": "謁見國王",
+    "category": "碎片",
+    "subcategory": "祭祀碎片",
+    "marketId": "Metadata/Items/MapFragments/RitualBossFragment"
+  },
+  {
+    "name": "Syndicate Medallion",
+    "nameZh": "密教獎章",
+    "category": "碎片",
+    "subcategory": "永生密教",
+    "marketId": "Metadata/Items/MapFragments/CurrencyMastermindsLair"
+  },
+  {
+    "name": "Sacred Blossom",
+    "nameZh": "神聖之花",
+    "category": "碎片",
+    "subcategory": "豐收忌劫",
+    "marketId": "Metadata/Items/MapFragments/CurrencyHarvestBossKey"
+  },
+  {
+    "name": "Echo of Loneliness",
+    "nameZh": "孤獨之迴響",
+    "category": "碎片",
+    "subcategory": "開創者",
+    "marketId": "Metadata/Items/MapFragments/AtlasMemory/CurrencyIgnoranceKey"
+  },
+  {
+    "name": "Echo of Trauma",
+    "nameZh": "創傷之迴響",
+    "category": "碎片",
+    "subcategory": "開創者",
+    "marketId": "Metadata/Items/MapFragments/AtlasMemory/CurrencyFearKey"
+  },
+  {
+    "name": "Echo of Reverence",
+    "nameZh": "敬畏之迴響",
+    "category": "碎片",
+    "subcategory": "開創者",
+    "marketId": "Metadata/Items/MapFragments/AtlasMemory/CurrencyBenevolenceKey"
+  },
+  {
+    "name": "Hivebrain Gland",
+    "nameZh": "巢裔主腦腺體",
+    "category": "碎片",
+    "subcategory": "裂痕",
+    "marketId": "Metadata/Items/MapFragments/CurrencyBrequelBossKey"
+  },
+  {
+    "name": "The Black Barya",
+    "nameZh": "漆黑巨靈之幣",
+    "category": "碎片",
+    "subcategory": "蜃景",
+    "marketId": "Metadata/Items/MapFragments/CurrencyFaridunBossKey"
+  },
+  {
+    "name": "Zorath's Eye of Malevolence",
+    "nameZh": "澤洛斯的惡意之眼",
+    "category": "碎片",
+    "subcategory": "深淵",
+    "marketId": "Metadata/Items/MapFragments/AbyssPinnacleKeyMurderous"
+  },
+  {
+    "name": "Zorath's Eye of Authority",
+    "nameZh": "澤洛斯的強權之眼",
+    "category": "碎片",
+    "subcategory": "深淵",
+    "marketId": "Metadata/Items/MapFragments/AbyssPinnacleKeySearching"
+  },
+  {
+    "name": "Zorath's Eye of the Inevitable",
+    "nameZh": "澤洛斯的必然之眼",
+    "category": "碎片",
+    "subcategory": "深淵",
+    "marketId": "Metadata/Items/MapFragments/AbyssPinnacleKeyHypnotic"
+  },
+  {
+    "name": "Zorath's Eye of the Endless",
+    "nameZh": "澤洛斯的無盡之眼",
+    "category": "碎片",
+    "subcategory": "深淵",
+    "marketId": "Metadata/Items/MapFragments/AbyssPinnacleKeyGhastly"
+  },
+  {
+    "name": "Cursed Poppet",
+    "nameZh": "詛咒魔偶",
+    "category": "碎片",
+    "subcategory": "巫會",
+    "marketId": "Metadata/Items/MapFragments/CurrencyAuguryBossKey"
+  },
+  {
+    "name": "Clear Oil",
+    "nameZh": "清透油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune1"
+  },
+  {
+    "name": "Sepia Oil",
+    "nameZh": "深褐油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune2"
+  },
+  {
+    "name": "Amber Oil",
+    "nameZh": "琥珀油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune3"
+  },
+  {
+    "name": "Verdant Oil",
+    "nameZh": "翠綠油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune4"
+  },
+  {
+    "name": "Teal Oil",
+    "nameZh": "清綠油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune5"
+  },
+  {
+    "name": "Azure Oil",
+    "nameZh": "碧藍油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune6"
+  },
+  {
+    "name": "Indigo Oil",
+    "nameZh": "靛青油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune6b"
+  },
+  {
+    "name": "Violet Oil",
+    "nameZh": "奼紫油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune7"
+  },
+  {
+    "name": "Crimson Oil",
+    "nameZh": "緋紅油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune8"
+  },
+  {
+    "name": "Black Oil",
+    "nameZh": "漆黑油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune9"
+  },
+  {
+    "name": "Opalescent Oil",
+    "nameZh": "乳白油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune10"
+  },
+  {
+    "name": "Silver Oil",
+    "nameZh": "純銀油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune11"
+  },
+  {
+    "name": "Golden Oil",
+    "nameZh": "金黃油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/Mushrune12"
+  },
+  {
+    "name": "Tainted Oil",
+    "nameZh": "汙染油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/MushruneCorrupt"
+  },
+  {
+    "name": "Reflective Oil",
+    "nameZh": "映像油瓶",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/MushruneMirror"
+  },
+  {
+    "name": "Prismatic Oil",
+    "nameZh": "三相之油",
+    "category": "油瓶",
+    "marketId": "Metadata/Items/Currency/MushruneUber"
+  },
+  {
+    "name": "Intrinsic Catalyst",
+    "nameZh": "本質的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityAttribute"
+  },
+  {
+    "name": "Turbulent Catalyst",
+    "nameZh": "洶湧的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityElemental"
+  },
+  {
+    "name": "Imbued Catalyst",
+    "nameZh": "充能的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityCaster"
+  },
+  {
+    "name": "Abrasive Catalyst",
+    "nameZh": "研磨的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityAttack"
+  },
+  {
+    "name": "Noxious Catalyst",
+    "nameZh": "毒性催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityPhysicalChaos"
+  },
+  {
+    "name": "Tempering Catalyst",
+    "nameZh": "冶鍊的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityDefense"
+  },
+  {
+    "name": "Fertile Catalyst",
+    "nameZh": "富饒的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityResource"
+  },
+  {
+    "name": "Prismatic Catalyst",
+    "nameZh": "多稜的催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityResistance"
+  },
+  {
+    "name": "Accelerating Catalyst",
+    "nameZh": "加速催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualitySpeed"
+  },
+  {
+    "name": "Unstable Catalyst",
+    "nameZh": "易變催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityCritical"
+  },
+  {
+    "name": "Tainted Catalyst",
+    "nameZh": "玷汙催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityVaal"
+  },
+  {
+    "name": "Sinistral Catalyst",
+    "nameZh": "左旋催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualityPrefix"
+  },
+  {
+    "name": "Dextral Catalyst",
+    "nameZh": "右旋催化劑",
+    "category": "催化劑",
+    "marketId": "Metadata/Items/Currency/CurrencyJewelleryQualitySuffix"
+  },
+  {
+    "name": "Omen of Return",
+    "nameZh": "返回之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnDeathCreatePortal"
+  },
+  {
+    "name": "Omen of Death-dancing",
+    "nameZh": "死舞之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeAvoidDamage"
+  },
+  {
+    "name": "Omen of Refreshment",
+    "nameZh": "提神之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeRecoverFlaskCharges"
+  },
+  {
+    "name": "Omen of the Soul Devourer",
+    "nameZh": "噬魂者之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnLevelingUpGainSoulEater"
+  },
+  {
+    "name": "Omen of Adrenaline",
+    "nameZh": "腎上腺素之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeGainAdrenaline"
+  },
+  {
+    "name": "Omen of Death's Door",
+    "nameZh": "死者大門之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnCriticalLifeGainShadeForm"
+  },
+  {
+    "name": "Omen of Brilliance",
+    "nameZh": "光輝之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnLevelingUpGainExperienceBuff"
+  },
+  {
+    "name": "Omen of Amelioration",
+    "nameZh": "改善之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnDeathPreventExpLoss"
+  },
+  {
+    "name": "Omen of the Jeweller",
+    "nameZh": "工匠之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnJewellersMakeFullSockets"
+  },
+  {
+    "name": "Omen of Trichromatism",
+    "nameZh": "三色之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnChromaticAddWhiteSockets"
+  },
+  {
+    "name": "Omen of Connections",
+    "nameZh": "連結之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnFusingMakeFullLinks"
+  },
+  {
+    "name": "Omen of Fortune",
+    "nameZh": "財富之預兆",
+    "category": "預兆",
+    "marketId": "Metadata/Items/Currency/AncestralOmenOnChanceMakeUnique"
+  },
+  {
+    "name": "Tattoo of the Arohongui Moonwarden",
+    "nameZh": "艾蘿紅薇月護衛的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui1"
+  },
+  {
+    "name": "Tattoo of the Arohongui Scout",
+    "nameZh": "艾蘿紅薇哨兵的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui2"
+  },
+  {
+    "name": "Tattoo of the Arohongui Warrior",
+    "nameZh": "艾蘿紅薇戰士的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui3"
+  },
+  {
+    "name": "Loyalty Tattoo of Ikiaho",
+    "nameZh": "伊基亞呼的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui6"
+  },
+  {
+    "name": "Tattoo of the Arohongui Makanga",
+    "nameZh": "艾蘿紅薇馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui7"
+  },
+  {
+    "name": "Tattoo of the Ramako Scout",
+    "nameZh": "雷默科哨兵的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako1"
+  },
+  {
+    "name": "Tattoo of the Ramako Archer",
+    "nameZh": "雷默科射手的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako2"
+  },
+  {
+    "name": "Tattoo of the Ramako Sniper",
+    "nameZh": "雷默科狙擊手的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako3"
+  },
+  {
+    "name": "Tattoo of the Ramako Fleetfoot",
+    "nameZh": "雷默科偵瞬步的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako4"
+  },
+  {
+    "name": "Tattoo of the Ramako Shaman",
+    "nameZh": "雷默科薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako5"
+  },
+  {
+    "name": "Loyalty Tattoo of Ahuana",
+    "nameZh": "阿呼阿娜的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako6"
+  },
+  {
+    "name": "Tattoo of the Ramako Makanga",
+    "nameZh": "雷默科馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRamako7"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Naturalist",
+    "nameZh": "塔赫亞自然的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa1"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Scout",
+    "nameZh": "塔赫亞哨兵的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa2"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Herbalist",
+    "nameZh": "塔赫亞藥草師的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa4"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Makanga",
+    "nameZh": "塔赫亞馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa7"
+  },
+  {
+    "name": "Tattoo of the Tasalio Tideshifter",
+    "nameZh": "塔薩里奧潮汐變幻者的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio2"
+  },
+  {
+    "name": "Tattoo of the Tasalio Warrior",
+    "nameZh": "塔薩里奧戰士的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio4"
+  },
+  {
+    "name": "Tattoo of the Tasalio Scout",
+    "nameZh": "塔薩里奧哨兵的紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio5"
+  },
+  {
+    "name": "Loyalty Tattoo of Rakiata",
+    "nameZh": "萊基亞塔的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "敏捷紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio6"
+  },
+  {
+    "name": "Tattoo of the Arohongui Warmonger",
+    "nameZh": "艾蘿紅薇戰鬥王的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui4"
+  },
+  {
+    "name": "Tattoo of the Arohongui Shaman",
+    "nameZh": "艾蘿紅薇薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooArohongui5"
+  },
+  {
+    "name": "Tattoo of the Hinekora Warrior",
+    "nameZh": "悉妮蔻拉戰士的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora1"
+  },
+  {
+    "name": "Tattoo of the Hinekora Deathwarden",
+    "nameZh": "悉妮蔻拉死護衛的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora2"
+  },
+  {
+    "name": "Tattoo of the Hinekora Shaman",
+    "nameZh": "悉妮蔻拉薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora3"
+  },
+  {
+    "name": "Tattoo of the Hinekora Storyteller",
+    "nameZh": "悉妮蔻拉說書人的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora4"
+  },
+  {
+    "name": "Tattoo of the Hinekora Warmonger",
+    "nameZh": "悉妮蔻拉戰鬥王的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora5"
+  },
+  {
+    "name": "Loyalty Tattoo of Tawhanuku",
+    "nameZh": "塔瓦努庫的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora6"
+  },
+  {
+    "name": "Tattoo of the Hinekora Makanga",
+    "nameZh": "悉妮蔻拉馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooHinekora7"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Warrior",
+    "nameZh": "塔赫亞戰士的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa3"
+  },
+  {
+    "name": "Tattoo of the Tawhoa Shaman",
+    "nameZh": "塔赫亞薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa5"
+  },
+  {
+    "name": "Loyalty Tattoo of Maata",
+    "nameZh": "瑪塔的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTawhoa6"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Turtle",
+    "nameZh": "隆格庫萊巨龜的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai4"
+  },
+  {
+    "name": "Tattoo of the Tasalio Shaman",
+    "nameZh": "塔薩里奧薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio3"
+  },
+  {
+    "name": "Tattoo of the Tasalio Makanga",
+    "nameZh": "塔薩里奧馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio7"
+  },
+  {
+    "name": "Tattoo of the Kitava Heart Eater",
+    "nameZh": "奇塔弗嗜心者的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava4"
+  },
+  {
+    "name": "Tattoo of the Valako Stormrider",
+    "nameZh": "瓦拉庫風暴馭者的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako1"
+  },
+  {
+    "name": "Tattoo of the Valako Scout",
+    "nameZh": "瓦拉庫哨兵的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako2"
+  },
+  {
+    "name": "Tattoo of the Valako Warrior",
+    "nameZh": "瓦拉庫戰士的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako3"
+  },
+  {
+    "name": "Tattoo of the Valako Shaman",
+    "nameZh": "瓦拉庫薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako5"
+  },
+  {
+    "name": "Loyalty Tattoo of Kiloava",
+    "nameZh": "基洛阿瓦的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako6"
+  },
+  {
+    "name": "Tattoo of the Valako Makanga",
+    "nameZh": "瓦拉庫馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "智慧紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako7"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Firewalker",
+    "nameZh": "拿瑪乎火行者的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu1"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Shaman",
+    "nameZh": "拿瑪乎薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu2"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Warrior",
+    "nameZh": "拿瑪乎戰士的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu3"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Warmonger",
+    "nameZh": "拿瑪乎戰鬥王的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu4"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Woodcarver",
+    "nameZh": "拿瑪乎木工的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu5"
+  },
+  {
+    "name": "Loyalty Tattoo of Kaom",
+    "nameZh": "岡姆的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu6"
+  },
+  {
+    "name": "Tattoo of the Ngamahu Makanga",
+    "nameZh": "拿瑪乎馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooNgamahu7"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Warrior",
+    "nameZh": "隆格庫萊戰士的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai1"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Brute",
+    "nameZh": "隆格庫萊暴徒的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai2"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Goliath",
+    "nameZh": "隆格庫萊巨獸的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai3"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Guard",
+    "nameZh": "隆格庫萊守衛的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai5"
+  },
+  {
+    "name": "Loyalty Tattoo of Kahuturoa",
+    "nameZh": "卡胡圖羅亞的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai6"
+  },
+  {
+    "name": "Tattoo of the Rongokurai Makanga",
+    "nameZh": "隆格庫萊馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooRongokurai7"
+  },
+  {
+    "name": "Tattoo of the Tasalio Bladedancer",
+    "nameZh": "塔薩里奧舞劍者的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTasalio1"
+  },
+  {
+    "name": "Tattoo of the Kitava Blood Drinker",
+    "nameZh": "奇塔弗飲血者的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava1"
+  },
+  {
+    "name": "Tattoo of the Kitava Rebel",
+    "nameZh": "奇塔弗叛亂的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava2"
+  },
+  {
+    "name": "Tattoo of the Kitava Warrior",
+    "nameZh": "奇塔弗戰士的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava3"
+  },
+  {
+    "name": "Tattoo of the Kitava Shaman",
+    "nameZh": "奇塔弗薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava5"
+  },
+  {
+    "name": "Loyalty Tattoo of Utula",
+    "nameZh": "烏圖拉的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava6"
+  },
+  {
+    "name": "Tattoo of the Kitava Makanga",
+    "nameZh": "奇塔弗馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooKitava7"
+  },
+  {
+    "name": "Tattoo of the Tukohama Shaman",
+    "nameZh": "圖克哈瑪薩滿的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama1"
+  },
+  {
+    "name": "Tattoo of the Tukohama Warrior",
+    "nameZh": "圖克哈瑪戰士的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama2"
+  },
+  {
+    "name": "Tattoo of the Tukohama Brawler",
+    "nameZh": "圖克哈瑪鬥士的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama3"
+  },
+  {
+    "name": "Tattoo of the Tukohama Warmonger",
+    "nameZh": "圖克哈瑪戰鬥王的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama4"
+  },
+  {
+    "name": "Tattoo of the Tukohama Warcaller",
+    "nameZh": "圖克哈瑪戰爭喚者的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama5"
+  },
+  {
+    "name": "Loyalty Tattoo of Akoya",
+    "nameZh": "艾古亞的忠誠紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama6"
+  },
+  {
+    "name": "Tattoo of the Tukohama Makanga",
+    "nameZh": "圖克哈瑪馬坎加的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooTukohama7"
+  },
+  {
+    "name": "Tattoo of the Valako Shieldbearer",
+    "nameZh": "瓦拉庫護盾大師的紋身",
+    "category": "紋身",
+    "subcategory": "力量紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooValako4"
+  },
+  {
+    "name": "Honoured Tattoo of the Dove",
+    "nameZh": "鴿子的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode1"
+  },
+  {
+    "name": "Honoured Tattoo of the Sky",
+    "nameZh": "天際的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode2"
+  },
+  {
+    "name": "Honoured Tattoo of the Tuatara",
+    "nameZh": "蜥蜴人的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode3"
+  },
+  {
+    "name": "Honoured Tattoo of the Pillager",
+    "nameZh": "劫掠者的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode4"
+  },
+  {
+    "name": "Honoured Tattoo of the Turtle",
+    "nameZh": "巨龜的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode5"
+  },
+  {
+    "name": "Honoured Tattoo of the Oak",
+    "nameZh": "歐克的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode6"
+  },
+  {
+    "name": "Honoured Tattoo of the Hatungo",
+    "nameZh": "靈語者的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode7"
+  },
+  {
+    "name": "Honoured Tattoo of the Flock",
+    "nameZh": "群的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialSmallNode8"
+  },
+  {
+    "name": "Honoured Tattoo of the Warlord",
+    "nameZh": "戰爭君王的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr1"
+  },
+  {
+    "name": "Honoured Tattoo of the Mountain",
+    "nameZh": "山巒的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr2"
+  },
+  {
+    "name": "Honoured Tattoo of the Pa",
+    "nameZh": "帕的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableStr3"
+  },
+  {
+    "name": "Honoured Tattoo of the Hunter",
+    "nameZh": "獵人的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex1"
+  },
+  {
+    "name": "Honoured Tattoo of the Barbarian",
+    "nameZh": "野蠻人的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex2"
+  },
+  {
+    "name": "Honoured Tattoo of the Berserker",
+    "nameZh": "暴徒的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableDex3"
+  },
+  {
+    "name": "Honoured Tattoo of the Wise",
+    "nameZh": "智者的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt1"
+  },
+  {
+    "name": "Honoured Tattoo of the Storm",
+    "nameZh": "風暴的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt2"
+  },
+  {
+    "name": "Honoured Tattoo of the Flood",
+    "nameZh": "水難的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialNotableInt3"
+  },
+  {
+    "name": "Ancestral Tattoo of Bloodlines",
+    "nameZh": "血族的祖靈紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique1"
+  },
+  {
+    "name": "Honoured Tattoo of the Makanga",
+    "nameZh": "馬坎加的尊榮紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique2"
+  },
+  {
+    "name": "Journey Tattoo of the Body",
+    "nameZh": "軀體的歷練紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique3"
+  },
+  {
+    "name": "Journey Tattoo of the Mind",
+    "nameZh": "心智的歷練紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique4"
+  },
+  {
+    "name": "Journey Tattoo of the Soul",
+    "nameZh": "靈魂的歷練紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique5"
+  },
+  {
+    "name": "Journey Tattoo of Makanui",
+    "nameZh": "馬卡努伊的歷練紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique6"
+  },
+  {
+    "name": "Forbidden Tattoo of the Ranger",
+    "nameZh": "遊俠的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Ranger"
+  },
+  {
+    "name": "Forbidden Tattoo of the Duelist",
+    "nameZh": "決鬥者的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Duelist"
+  },
+  {
+    "name": "Forbidden Tattoo of the Marauder",
+    "nameZh": "野蠻人的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Marauder"
+  },
+  {
+    "name": "Forbidden Tattoo of the Templar",
+    "nameZh": "聖堂武僧的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Templar"
+  },
+  {
+    "name": "Forbidden Tattoo of the Witch",
+    "nameZh": "女巫的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Witch"
+  },
+  {
+    "name": "Forbidden Tattoo of the Shadow",
+    "nameZh": "暗影刺客的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Shadow"
+  },
+  {
+    "name": "Forbidden Tattoo of the Scion",
+    "nameZh": "貴族的禁忌紋身",
+    "category": "紋身",
+    "subcategory": "特殊紋身",
+    "marketId": "Metadata/Items/Currency/AncestralTattooSpecialUnique7Scion"
+  },
+  {
+    "name": "Exotic Coinage",
+    "nameZh": "異域幣鑄",
+    "category": "探險聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyRefreshBarter"
+  },
+  {
+    "name": "Scrap Metal",
+    "nameZh": "廢金屬",
+    "category": "探險聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyRefreshDealer"
+  },
+  {
+    "name": "Astragali",
+    "nameZh": "骰子",
+    "category": "探險聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyRefreshGambler"
+  },
+  {
+    "name": "Burial Medallion",
+    "nameZh": "埋葬獎章",
+    "category": "探險聯盟",
+    "marketId": "Metadata/Items/Currency/CurrencyRefreshSaga"
+  },
+  {
+    "name": "Wild Crystallised Lifeforce",
+    "nameZh": "野性結晶生靈之力",
+    "category": "生靈之力",
+    "marketId": "Metadata/Items/Currency/HarvestSeedRed"
+  },
+  {
+    "name": "Vivid Crystallised Lifeforce",
+    "nameZh": "靈現結晶生靈之力",
+    "category": "生靈之力",
+    "marketId": "Metadata/Items/Currency/HarvestSeedGreen"
+  },
+  {
+    "name": "Primal Crystallised Lifeforce",
+    "nameZh": "原始結晶生靈之力",
+    "category": "生靈之力",
+    "marketId": "Metadata/Items/Currency/HarvestSeedBlue"
+  },
+  {
+    "name": "Sacred Crystallised Lifeforce",
+    "nameZh": "神聖結晶生靈之力",
+    "category": "生靈之力",
+    "marketId": "Metadata/Items/Currency/HarvestSeedBoss"
+  },
+  {
+    "name": "Crystallised Rancour",
+    "nameZh": "晶化仇怨",
+    "category": "生靈之力",
+    "marketId": "Metadata/Items/Currency/HarvestSeedFaridun"
+  },
+  {
+    "name": "Runegraft of the River",
+    "nameZh": "河川符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftLowLifeRestore"
+  },
+  {
+    "name": "Runegraft of the Fortress",
+    "nameZh": "堡壘符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftAttributeGlobalDefences"
+  },
+  {
+    "name": "Runegraft of the Combatant",
+    "nameZh": "戰鬥者符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftMatchedAttackDamage"
+  },
+  {
+    "name": "Runegraft of the Sinistral",
+    "nameZh": "左旋符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftFlatOffhandAttackTime"
+  },
+  {
+    "name": "Runegraft of the Bound",
+    "nameZh": "緊密符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftBootsGloves"
+  },
+  {
+    "name": "Runegraft of the Warp",
+    "nameZh": "扭曲符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftBuffScaling"
+  },
+  {
+    "name": "Runegraft of the Soulwick",
+    "nameZh": "魂芯符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftSouls"
+  },
+  {
+    "name": "Runegraft of Bellows",
+    "nameZh": "轟鳴符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftWarcrySpeed"
+  },
+  {
+    "name": "Runegraft of Gemcraft",
+    "nameZh": "寶石工藝符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftSupportLevels"
+  },
+  {
+    "name": "Runegraft of Blasphemy",
+    "nameZh": "瀆神符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftRandomCurse"
+  },
+  {
+    "name": "Runegraft of Time",
+    "nameZh": "時間符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftCooldownRefresh"
+  },
+  {
+    "name": "Runegraft of Treachery",
+    "nameZh": "背信符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftTreacherousAuras"
+  },
+  {
+    "name": "Runegraft of Quaffing",
+    "nameZh": "狂飲符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftLifeFromManaFlasks"
+  },
+  {
+    "name": "Runegraft of Restitching",
+    "nameZh": "重新縫合符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftCritRecoup"
+  },
+  {
+    "name": "Runegraft of Loyalty",
+    "nameZh": "忠誠符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftAilmentRedirect"
+  },
+  {
+    "name": "Runegraft of the Witchmark",
+    "nameZh": "巫印符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftSpellLifeCost"
+  },
+  {
+    "name": "Runegraft of the Novamark",
+    "nameZh": "星印符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftNovaMarkedTarget"
+  },
+  {
+    "name": "Runegraft of Refraction",
+    "nameZh": "折射符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftChainMana"
+  },
+  {
+    "name": "Runegraft of the Jeweller",
+    "nameZh": "工匠符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftDamagePerSocket"
+  },
+  {
+    "name": "Runegraft of Stability",
+    "nameZh": "穩定符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftUnexciting"
+  },
+  {
+    "name": "Runegraft of the Angler",
+    "nameZh": "長竿符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftFishing"
+  },
+  {
+    "name": "Runegraft of Consecration",
+    "nameZh": "奉獻符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftConsecratedGround"
+  },
+  {
+    "name": "Runegraft of Fury",
+    "nameZh": "憤怒符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftLifeFlaskRage"
+  },
+  {
+    "name": "Runegraft of Rallying",
+    "nameZh": "召集符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftFortificationBanner"
+  },
+  {
+    "name": "Runegraft of Rotblood",
+    "nameZh": "腐血符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftPoisonConversion"
+  },
+  {
+    "name": "Runegraft of the Imbued",
+    "nameZh": "灌注符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftTinctures"
+  },
+  {
+    "name": "Runegraft of the Agile",
+    "nameZh": "迅敏符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftElusive"
+  },
+  {
+    "name": "Runegraft of Suffering",
+    "nameZh": "折磨符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftSuffering"
+  },
+  {
+    "name": "Runegraft of the Spellbound",
+    "nameZh": "魔縛符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftSpellbound"
+  },
+  {
+    "name": "Runegraft of Resurgence",
+    "nameZh": "復甦符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftResurgence"
+  },
+  {
+    "name": "Runegraft of Connection",
+    "nameZh": "聯繫符文之結",
+    "category": "符文之結",
+    "marketId": "Metadata/Items/Currency/RunegraftConnection"
+  }
+]

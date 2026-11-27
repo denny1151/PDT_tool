@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PDT</title>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="app.js?v=whole-orbs"></script>
+  <script type="module" src="app.js?v=faustus"></script>
 </head>
 <body>
   <main>
@@ -15,25 +15,24 @@
     </header>
     <section class="summary" aria-label="市場概況">
       <article><span>目前聯盟</span><strong id="league">—</strong></article>
-      <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong></article>
+      <article><span>參考匯率 · 每顆神聖石可換多少混沌石</span><strong id="rate">—</strong><small id="rate-source"></small></article>
       <article><span>GGG 小時成交均價 · 混沌石／神聖石</span><strong id="history">—</strong><small id="history-time"></small></article>
     </section>
     <section class="panel" aria-labelledby="market-heading">
       <div class="section-head">
-        <div><h2 id="market-heading">市場掃描</h2><p id="status" role="status">讀取行情快照…</p></div>
-        <button type="button" id="refresh">更新快照</button>
+        <div><h2 id="market-heading">弗斯特通貨交換</h2><p id="status" role="status">讀取行情快照…</p><p id="api-status"></p></div>
+        <button type="button" id="refresh">重讀快照</button>
       </div>
       <div class="filters">
         <label>類別<select id="category"><option value="all">全部</option></select></label>
         <label>品項搜尋<input id="search" type="search" placeholder="輸入中文或英文名稱"></label>
-        <label>最低掛單數<input id="min-listings" type="number" min="0" step="1" value="0"></label>
         <label>目標報酬率 (%)<input id="target" type="number" min="0" step="0.1" value="10"></label>
         <label>每批交易件數<input id="batch-size" type="number" min="1" step="1" max="100000" value="1"></label>
       </div>
-      <p class="hint">跨幣試算按整批估算。成交均價乘上件數後，買入預算向上取整，賣出收入向下取整；缺交易對或整批賣不到 1 顆時顯示「—」。毛利未扣費用。</p>
+      <p class="hint">參考價來自 poe.ninja。跨幣價差使用同一小時的 GGG 成交均價，整批買入向上取整、賣出向下取整。缺任一交易對或整批賣不到 1 顆時留白。</p>
       <div class="table-wrap" tabindex="0" role="region" aria-label="行情表">
         <table>
-          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">混沌石買・神聖石賣</th><th scope="col">神聖石買・混沌石賣</th><th scope="col" data-sort="spread"><button type="button">整批價差 (折合 C)</button></th><th scope="col" data-sort="listings"><button type="button">掛單數</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
+          <thead><tr><th scope="col">品項</th><th scope="col">類別</th><th scope="col" data-sort="chaos"><button type="button">單件參考價 (C)</button></th><th scope="col">單件參考價 (D)</th><th scope="col" title="每件參考價 × 件數 ÷（1＋目標報酬率），向下取整">整批買入上限 (C)</th><th scope="col">混沌石買・神聖石賣</th><th scope="col">神聖石買・混沌石賣</th><th scope="col" data-sort="spread"><button type="button">整批價差 (折合 C)</button></th><th scope="col" data-sort="volume"><button type="button">交易額 (C)</button></th><th scope="col">試算</th></tr></thead>
           <tbody id="rows"></tbody>
         </table>
       </div>
@@ -58,7 +57,7 @@
         <div><span>毛利 / 1k 金幣</span><strong id="gold-yield">—</strong></div>
       </div>
     </section>
-    <footer><a href="https://poe.ninja/docs/api">poe.ninja API</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG Currency Exchange</a><a href="https://github.com/Hsiung-Shao/PobTools-zh/blob/main/NOTICE.md">PobTools-zh 繁中詞庫</a><a href="https://poedb.tw/tw/">流亡編年史</a><span>非官方粉絲工具。遊戲資料 © Grinding Gear Games。</span></footer>
+    <footer><a href="https://poedb.tw/tw/Currency_Exchange">流亡編年史品項清單</a><a href="https://repoe-fork.github.io/">RePoE 物品 ID</a><a href="https://poe.ninja/docs/api">poe.ninja 參考價</a><a href="https://www.pathofexile.com/developer/docs/reference#currencyexchange">GGG 成交資料</a><span>非官方粉絲工具。遊戲資料 © Grinding Gear Games。</span></footer>
   </main>
 </body>
 </html>

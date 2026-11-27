@@ -12,6 +12,7 @@ let snapshot;
 let sort = 'spread';
 let ascending = false;
 let page = 0;
+let limitTimer;
 
 function format(value, unit = '') {
   if (!Number.isFinite(value)) return '—';
@@ -52,7 +53,7 @@ function withQuotes(item, divineRate, quantity) {
 }
 
 function quoteCell(row, route, buyUnit, sellUnit) {
-  const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '—');
+  const td = cell(row, route ? `${format(route.buy, ` ${buyUnit}`)} 買 → ${format(route.sell, ` ${sellUnit}`)} 賣` : '');
   if (!route) return;
   const profit = document.createElement('small');
   profit.textContent = `估計毛利 ${format(route.gross, ' C')} · 報酬率 ${format(route.roi, '%')}`;
@@ -63,15 +64,12 @@ function quoteCell(row, route, buyUnit, sellUnit) {
 function renderRows() {
   const query = $('search').value.trim().toLowerCase();
   const category = $('category').value;
-  const minimum = Math.max(0, $('min-listings').valueAsNumber || 0);
   const target = Math.max(0, $('target').valueAsNumber || 0) / 100;
   const quantity = $('batch-size').valueAsNumber;
   const validBatch = Number.isSafeInteger(quantity) && quantity >= 1 && $('batch-size').validity.valid;
   const matches = (snapshot?.items ?? []).filter((item) =>
     (category === 'all' || category === item.category) &&
-    [item.name, item.nameZh, item.variant, item.variantZh]
-      .some((name) => name?.toLowerCase().includes(query)) &&
-    (!minimum || item.listings >= minimum))
+    [item.name, item.nameZh].some((name) => name?.toLowerCase().includes(query)))
     .map((item) => validBatch ? withQuotes(item, snapshot.divine, quantity) : item);
 
   matches.sort((a, b) => {
@@ -94,19 +92,18 @@ function renderRows() {
     const row = $('rows').insertRow();
     const name = cell(row, item.nameZh ?? item.name);
     if (item.nameZh) name.title = item.name;
-    if (item.variant) {
-      const variant = document.createElement('small');
-      variant.textContent = item.variantZh ?? item.variant;
-      name.append(variant);
+    const group = cell(row, item.category);
+    if (item.subcategory) {
+      const subgroup = document.createElement('small');
+      subgroup.textContent = item.subcategory;
+      group.append(subgroup);
     }
-    cell(row, snapshot.categories[item.category]);
     cell(row, format(item.chaos));
     cell(row, format(item.divine ?? item.chaos / snapshot.divine));
-    cell(row, format(validBatch ? Math.floor(item.chaos * quantity / (1 + target)) : NaN));
+    cell(row, format(validBatch && item.chaos > 0 ? Math.floor(item.chaos * quantity / (1 + target)) : NaN));
     quoteCell(row, item.chaosRoute, 'C', 'D');
     quoteCell(row, item.divineRoute, 'D', 'C');
-    cell(row, format(item.spread)).className = tone(item.spread);
-    cell(row, format(item.listings));
+    cell(row, Number.isFinite(item.spread) ? format(item.spread) : '').className = tone(item.spread);
     cell(row, format(item.volume));
     const button = document.createElement('button');
     button.type = 'button';
@@ -116,7 +113,7 @@ function renderRows() {
     row.insertCell().append(button);
   }
   if (!matches.length) {
-    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 11;
+    cell($('rows').insertRow(), snapshot ? '沒有符合篩選的品項。' : '尚未取得行情。').colSpan = 10;
   }
   $('page').textContent = `${pages ? page + 1 : 0} / ${pages} 頁 · ${format(matches.length)} 項`;
   $('prev').disabled = page === 0;
@@ -126,7 +123,7 @@ function renderRows() {
 function selectItem(item, quantity) {
   const route = item.bestRoute;
   const note = route ? '已帶入整批估算，可改填掛單總價' : `每件參考賣價 ${format(item.chaos, ' C')}`;
-  $('selected').textContent = [item.nameZh ?? item.name, item.variantZh ?? item.variant, note].filter(Boolean).join(' · ');
+  $('selected').textContent = [item.nameZh ?? item.name, note].join(' · ');
   controls.buy.value = route?.buy ?? '';
   controls.buyUnit.value = route?.buyUnit ?? 'chaos';
   controls.sell.value = route?.sell ?? '';
@@ -185,25 +182,48 @@ function setUnits() {
   }
 }
 
+function renderSources() {
+  clearInterval(limitTimer);
+  const { sources, history, items } = snapshot;
+  const paired = items.filter((item) => item.chaosPerItem > 0 && item.divinePerItem > 0).length;
+  const show = () => {
+    const status = Object.entries(sources).map(([name, source]) => {
+      if (source.limited) {
+        if (!source.retryAt) return `${name} 限流（HTTP 429，未提供等待時間）`;
+        const seconds = Math.ceil((source.retryAt - Date.now()) / 1000);
+        return seconds > 0 ? `${name} 限流（HTTP 429，剩 ${seconds} 秒）` : `${name} 限流等待已結束，待下次快照`;
+      }
+      if (source.failed) return `${name} ${source.ok ? '部分請求失敗' : '請求失敗'}（${source.lastError}）`;
+      if (!source.ok) return `${name} 未查詢`;
+      return name === 'GGG' && !history ? 'GGG 已回應，暫無成交摘要' : `${name} 已取得資料`;
+    });
+    $('api-status').textContent = [...status, `同時有 C、D 成交 ${paired}／${items.length} 項`].join(' · ');
+    if (!Object.values(sources).some(({ limited, retryAt }) => limited && retryAt > Date.now())) clearInterval(limitTimer);
+  };
+  if (Object.values(sources).some(({ limited, retryAt }) => limited && retryAt > Date.now())) limitTimer = setInterval(show, 1000);
+  show();
+}
+
 async function refresh() {
   const button = $('refresh');
   button.disabled = true;
   try {
-    const response = await fetch('./data/market.json?v=cross-trade', { cache: 'no-cache' });
+    const response = await fetch('./data/market.json?v=faustus', { cache: 'no-cache' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
+    if (!data.sources || !Array.isArray(data.categories)) throw new Error('Stale market snapshot');
     snapshot = data;
     const picked = $('category').value;
-    $('category').replaceChildren(option('all', '全部'), ...Object.entries(snapshot.categories)
-      .map(([id, label]) => option(id, label)));
-    $('category').value = snapshot.categories[picked] ? picked : 'all';
-    $('league').textContent = snapshot.league.name;
+    $('category').replaceChildren(option('all', '全部'), ...snapshot.categories.map((category) => option(category, category)));
+    $('category').value = snapshot.categories.includes(picked) ? picked : 'all';
+    $('league').textContent = snapshot.league?.name ?? '—';
     $('rate').textContent = format(snapshot.divine);
-    $('trade').href = `https://www.pathofexile.com/trade/search/${encodeURIComponent(snapshot.league.id)}`;
+    $('rate-source').textContent = snapshot.fxSource ?? '';
+    $('trade').href = `https://www.pathofexile.com/trade/search/${encodeURIComponent(snapshot.league?.id ?? '')}`;
     $('history').textContent = format(snapshot.history?.rate);
     $('history-time').textContent = snapshot.history ? `${timestamp.format(snapshot.history.hour * 1000)} 台灣時間` : '';
-    const partial = snapshot.unavailable.length ? ` · 暫缺：${snapshot.unavailable.join('、')}` : '';
-    $('status').textContent = `抓取時間 ${timestamp.format(new Date(snapshot.fetchedAt))} 台灣時間${partial}`;
+    $('status').textContent = `抓取時間 ${timestamp.format(new Date(snapshot.fetchedAt))} 台灣時間${snapshot.leagueCached ? ' · 沿用上次聯盟' : ''}`;
+    renderSources();
     setUnits();
     calculate();
   } catch {
@@ -214,7 +234,7 @@ async function refresh() {
   }
 }
 
-for (const field of ['category', 'search', 'min-listings', 'target', 'batch-size']) {
+for (const field of ['category', 'search', 'target', 'batch-size']) {
   $(field).addEventListener('input', () => { page = 0; renderRows(); });
 }
 for (const heading of headings) {
